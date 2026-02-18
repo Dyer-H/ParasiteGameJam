@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://7jt0177lsf8f"]
+
+[ext_resource type="Texture2D" uid="uid://clulvujj60xr5" path="res://Inventory/GUIResources/graybackground.jpg" id="1_cguwc"]
+[ext_resource type="Script" uid="uid://mk8j5c3yl7tw" path="res://Inventory/Scripts/NodeScripts/inventory_ui.gd" id="1_wicfy"]
+[ext_resource type="PackedScene" uid="uid://b667mogh8qc3t" path="res://Inventory/Scenes/InventoryPanel.tscn" id="2_cguwc"]
+
+[node name="Node2D" type="Node2D" unique_id=1266612056]
+
+[node name="HUD Layer" type="CanvasLayer" parent="." unique_id=1880397914]
+
+[node name="InventoryUI" type="Control" parent="HUD Layer" unique_id=2131333093]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wicfy")
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD Layer/InventoryUI" unique_id=937401516]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryBackground" type="TextureRect" parent="HUD Layer/InventoryUI/CenterContainer" unique_id=668436878]
+custom_minimum_size = Vector2(300, 110)
+layout_mode = 2
+texture = ExtResource("1_cguwc")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground" unique_id=2096510181]
+custom_minimum_size = Vector2(300, 110)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 110.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer" unique_id=1724773810]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 6
+
+[node name="InventoryPanel" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1499421121 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel2" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=322087233 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel3" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1964599489 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel4" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=960677342 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel5" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1166856410 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel6" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=74325174 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel7" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1874282897 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel8" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1364478948 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel9" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1302802993 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel10" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1650444969 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel11" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=417013636 instance=ExtResource("2_cguwc")]
+layout_mode = 2
+
+[node name="InventoryPanel12" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer/GridContainer" unique_id=1886059989 instance=ExtResource("2_cguwc")]
+layout_mode = 2
