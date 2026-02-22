@@ -4,13 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://ovpq6scpmx1x" path="res://HUDLayer/Inventory/GUIResources/greenbackground.jpg" id="1_qbds2"]
 
 [node name="InventoryPanel" type="Panel" unique_id=1499421121]
-custom_minimum_size = Vector2(40, 40)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_jf1sw")
 
 [node name="background" type="TextureRect" parent="." unique_id=1491660361]
-custom_minimum_size = Vector2(40, 40)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -18,7 +16,6 @@ texture = ExtResource("1_qbds2")
 expand_mode = 1
 
 [node name="item_display" type="TextureRect" parent="." unique_id=1785560305]
-custom_minimum_size = Vector2(40, 40)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

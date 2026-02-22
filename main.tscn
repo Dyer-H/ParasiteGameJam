@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cynpmxbl61o7l"]
+
+[ext_resource type="Script" uid="uid://mk8j5c3yl7tw" path="res://HUDLayer/Inventory/Scripts/NodeScripts/inventory_ui.gd" id="1_5vw27"]
+[ext_resource type="Texture2D" uid="uid://clulvujj60xr5" path="res://HUDLayer/Inventory/GUIResources/graybackground.jpg" id="2_kek77"]
+[ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="4_efxa6"]
+[ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="5_dg77c"]
+[ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="6_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://co2a7p8eh5r3" path="res://PlayerControl/player.tscn" id="7_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bjgddccx71t3b" path="res://PlayerControl/tile_map.tscn" id="8_vivmo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
+font = ExtResource("6_ycdy4")
+font_size = 56
+
+[node name="Main" type="Node2D" unique_id=546777818]
+
+[node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
+
+[node name="InventoryUI" type="Control" parent="HUD Layer" unique_id=1703268915]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5vw27")
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD Layer/InventoryUI" unique_id=1132447065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryBackground" type="TextureRect" parent="HUD Layer/InventoryUI/CenterContainer" unique_id=1180562485]
+layout_mode = 2
+texture = ExtResource("2_kek77")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground" unique_id=1158168970]
+custom_minimum_size = Vector2(300, 110)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 110.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="HUD Layer/InventoryUI/CenterContainer/InventoryBackground/MarginContainer" unique_id=895860123]
+layout_mode = 2
+
+[node name="HP_STAM" type="Control" parent="HUD Layer" unique_id=1913129958]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=829904280]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 340.0
+offset_bottom = 57.0
+script = ExtResource("4_efxa6")
+
+[node name="StaminaBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=268769180]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 340.0
+offset_bottom = 113.0
+script = ExtResource("5_dg77c")
+
+[node name="HealthLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=871429175]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 78.0
+offset_bottom = 64.0
+text = "HP"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="StaminaLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=206372054]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 78.0
+offset_bottom = 120.0
+text = "ST"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="CharacterBody2D" parent="." unique_id=1404929867 instance=ExtResource("7_w48qg")]
+position = Vector2(-15, 0)
+scale = Vector2(0.15999681, 0.1551533)
+disable_mode = 2
+safe_margin = 1.461
+
+[node name="TileMap" parent="." unique_id=95229785 instance=ExtResource("8_vivmo")]
