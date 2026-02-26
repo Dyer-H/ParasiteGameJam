@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="4_efxa6"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="5_dg77c"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="6_ycdy4"]
-[ext_resource type="PackedScene" uid="uid://co2a7p8eh5r3" path="res://PlayerControl/player.tscn" id="7_w48qg"]
-[ext_resource type="PackedScene" uid="uid://bjgddccx71t3b" path="res://PlayerControl/tile_map.tscn" id="8_vivmo"]
+[ext_resource type="PackedScene" uid="uid://fau1n6w7ujb2" path="res://PlayerControl/Scenes/map.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://co2a7p8eh5r3" path="res://PlayerControl/Scenes/player.tscn" id="7_w48qg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("6_ycdy4")
@@ -98,4 +98,4 @@ scale = Vector2(0.15999681, 0.1551533)
 disable_mode = 2
 safe_margin = 1.461
 
-[node name="TileMap" parent="." unique_id=95229785 instance=ExtResource("8_vivmo")]
+[node name="Map" parent="." unique_id=1027391774 instance=ExtResource("7_272bh")]

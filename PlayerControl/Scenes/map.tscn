@@ -1,0 +1,45 @@
+[gd_scene format=4 uid="uid://fau1n6w7ujb2"]
+
+[ext_resource type="Texture2D" uid="uid://cej6er3irj4mo" path="res://PlayerControl/GUIResources/Isometric RPG Tileset 64×32 Pixel Art V1.1/AssetsV1/grass01.png" id="1_2krl7"]
+[ext_resource type="Texture2D" uid="uid://cbsg86e010ukq" path="res://PlayerControl/GUIResources/Isometric RPG Tileset 64×32 Pixel Art V1.1/AssetsV1/grass02.png" id="2_4xdai"]
+[ext_resource type="Texture2D" uid="uid://vsbmeew3htja" path="res://PlayerControl/GUIResources/Isometric RPG Tileset 64×32 Pixel Art V1.1/AssetsV1/grass03.png" id="3_ddck1"]
+[ext_resource type="Texture2D" uid="uid://cbcj5q3k7p1n3" path="res://PlayerControl/GUIResources/Isometric RPG Tileset 64×32 Pixel Art V1.1/AssetsV1/grass04.png" id="4_ycfwc"]
+[ext_resource type="Texture2D" uid="uid://dgbmyw6woylet" path="res://PlayerControl/GUIResources/Isometric RPG Tileset 64×32 Pixel Art V1.1/AssetsV1/flowerBlueCluster.png" id="5_4xdai"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_beb8y"]
+texture = ExtResource("1_2krl7")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86lvv"]
+texture = ExtResource("2_4xdai")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pp77u"]
+texture = ExtResource("3_ddck1")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnd0e"]
+texture = ExtResource("4_ycfwc")
+texture_region_size = Vector2i(64, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddck1"]
+texture = ExtResource("5_4xdai")
+texture_region_size = Vector2i(40, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jxnmd"]
+tile_shape = 1
+tile_size = Vector2i(64, 32)
+sources/0 = SubResource("TileSetAtlasSource_beb8y")
+sources/1 = SubResource("TileSetAtlasSource_86lvv")
+sources/2 = SubResource("TileSetAtlasSource_pp77u")
+sources/3 = SubResource("TileSetAtlasSource_pnd0e")
+sources/4 = SubResource("TileSetAtlasSource_ddck1")
+
+[node name="Map" type="TileMapLayer" unique_id=1027391774]
+tile_map_data = PackedByteArray("AAD/////AgAAAAAAAAAAAAAAAQAAAAAAAAAAAP//AQAAAAAAAAAAAP7/AgAAAAAAAAABAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAD+////AQAAAAAAAAD///7/AQAAAAAAAAD///3/AQAAAAAAAAAAAPz/AQAAAAAAAAAAAP3/AQAAAAAAAAABAP7/AgAAAAAAAAABAP//AQAAAAAAAAD//wMAAQAAAAAAAAD//wIAAgAAAAAAAAD+/wEAAgAAAAAAAAD+/wAAAgAAAAAAAAD+//3/AgAAAAAAAAD+//7/AgAAAAAAAAD9////AQAAAAAAAAD///z/AgAAAAAAAAD///v/AgAAAAAAAAABAAIAAgAAAAAAAAAAAAMAAgAAAAAAAAABAP3/AgAAAAAAAAD+/wUAAgAAAAAAAAD+/wIAAgAAAAAAAAD8/wEAAgAAAAAAAAD8//3/AgAAAAAAAAD9//v/AgAAAAAAAAD+//v/AgAAAAAAAAAAAPv/AgAAAAAAAAACAAAAAgAAAAAAAAAAAAUAAgAAAAAAAAD+/wMAAwAAAAAAAAD+/wQAAwAAAAAAAAD9/wAAAwAAAAAAAAD///n/AwAAAAAAAAABAAEAAwAAAAAAAAACAAQAAwAAAAAAAAACAAIAAwAAAAAAAAACAP3/AwAAAAAAAAACAPr/AwAAAAAAAAAAAPn/AwAAAAAAAAD+//n/AwAAAAAAAAD9//7/AwAAAAAAAAD9//3/AQAAAAAAAAD///r/AQAAAAAAAAD//wUAAgAAAAAAAAD9/wEAAQAAAAAAAAD9/wIAAQAAAAAAAAD9/wMAAgAAAAAAAAD8/wAAAgAAAAAAAAD8//7/AgAAAAAAAAD7////AgAAAAAAAAD8////AgAAAAAAAAD//wQAAgAAAAAAAAD//wYAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAYAAgAAAAAAAAD//wcAAgAAAAAAAAAAAAgAAgAAAAAAAAAAAAcAAgAAAAAAAAABAAYAAgAAAAAAAAD9//z/AgAAAAAAAAD+//z/AgAAAAAAAAD+//r/AgAAAAAAAAD///j/AgAAAAAAAAD///f/AgAAAAAAAAAAAPj/AgAAAAAAAAAAAPr/AgAAAAAAAAABAPr/AgAAAAAAAAAAAPb/AgAAAAAAAAAAAPf/AgAAAAAAAAABAPj/AgAAAAAAAAABAPn/AgAAAAAAAAABAPv/AgAAAAAAAAABAPz/AgAAAAAAAAACAPz/AgAAAAAAAAACAPv/AgAAAAAAAAACAP7/AgAAAAAAAAACAP//AgAAAAAAAAADAP7/AgAAAAAAAAADAPz/AgAAAAAAAAADAP3/AgAAAAAAAAABAAQAAgAAAAAAAAABAAMAAgAAAAAAAAABAAUAAgAAAAAAAAACAAMAAgAAAAAAAAACAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAAAAgAAAAAAAAADAAEAAgAAAAAAAAADAP//AgAAAAAAAAAEAAAAAgAAAAAAAAAEAP7/AgAAAAAAAAAEAP//AgAAAAAAAAA=")
+tile_set = SubResource("TileSet_jxnmd")

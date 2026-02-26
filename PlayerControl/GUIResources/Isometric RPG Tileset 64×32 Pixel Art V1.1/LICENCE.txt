@@ -1,0 +1,15 @@
+License – Isometric RPG Tileset (64×32 Pixel Art)
+
+You are allowed to:
+- Use these assets in commercial and non-commercial projects.
+- Modify, edit, recolor or combine the assets.
+- Include the assets inside your game or software.
+
+You are NOT allowed to:
+- Redistribute, resell or share the assets as they are.
+- Publish the tileset, edited or not, as another asset pack.
+
+Attribution:
+- Credit is appreciated but not required. (“Tileset by Woulette”)
+
+By downloading this pack, you agree to these terms.
