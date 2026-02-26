@@ -21,7 +21,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 #function asks whether or not the slot is available to drop data into
 #we can just say that this is always yes
 #could add custom behavior for custom slots if wanted
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return true
 #function sets the item data at the position it was dropped in
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
@@ -29,10 +29,10 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	data.clearItem()
 
 #function sets the panel size in pixels
-func setPanelSize(size: int) -> void:
-	self.set_custom_minimum_size(Vector2(size, size))
-	background.set_custom_minimum_size(Vector2(size, size))
-	item_display.set_custom_minimum_size(Vector2(size, size))
+func setPanelSize(p_size: int) -> void:
+	self.set_custom_minimum_size(Vector2(p_size, p_size))
+	background.set_custom_minimum_size(Vector2(p_size, p_size))
+	item_display.set_custom_minimum_size(Vector2(p_size, p_size))
 #function sets the item for this panel instance
 func setItem(item: InventoryItem) -> void:
 	inventoryItem = item
