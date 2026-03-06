@@ -1,17 +1,17 @@
 #SCRIPT TIED TO INVENTORY UI CONTROL NODE
 #CONTAINS INVENTORY LOGIC
 extends Control
-
+var stats=playerStats.new()
 #hyperparameters (control margins and columns and such)
 @export var margin_size_margin_container: int = 10 #number of pixels for margin around all cells
 @export var margin_size_grid_container: int = 5 #number of pixels for margin between cells
-@export var num_columns_grid_container: int = 3 #number of grid items per row (please don't set to 0)
-@export var num_total_slots: int = 5 #number of total inventory slots (please don't set to 0)
+@export var num_columns_grid_container: int = 4 #number of grid items per row (please don't set to 0)
+@export var num_total_slots: int = stats.slots #number of total inventory slots (please don't set to 0)
 @export var size_per_slot: int = 80 #number of pixels for SQUARE inventory slot (width) (please don't set to 0)
 
 #UI Elements
 @onready var inventoryBackground: TextureRect = $CenterContainer/InventoryBackground
-@onready var marginContainer: MarginContainer = $CenterContainer/InventoryBackground/MarginContainer
+@onready var marginContainer: MarginContainer = $CenterContainer/InwdventoryBackground/MarginContainer
 @onready var gridContainer: GridContainer = $CenterContainer/InventoryBackground/MarginContainer/GridContainer
 const wood: Resource = preload("res://HUDLayer/Inventory/ResourceInstances/wood.tres")
 const inventoryPanel = preload("res://HUDLayer/Inventory/Scenes/InventoryPanel.tscn")
