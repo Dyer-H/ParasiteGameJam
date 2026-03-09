@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://fau1n6w7ujb2" path="res://Map Scenes/map.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="7_w48qg"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://3h63vcg67f5r" path="res://projectile.tscn" id="9_kek77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("6_ycdy4")
@@ -103,5 +104,6 @@ label_settings = SubResource("LabelSettings_6jrgu")
 zoom = Vector2(3, 3)
 
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("7_w48qg")]
+projectile = ExtResource("9_kek77")
 
 [node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_5vw27")]

@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
 const SPEED = 80.0
 
@@ -30,6 +31,11 @@ func _process(_delta: float) -> void:
 #again because we don't want movement tied to framerate
 func _physics_process(_delta: float) -> void:
 	get_input()
+	if(Input.is_action_just_pressed("Shoot")):
+		var newProjectile=projectile.instantiate() as Node2D
+		get_tree().current_scene.add_child(newProjectile)
+		newProjectile.global_position=global_position
+		newProjectile.look_at(get_global_mouse_position())
 
 #gets vector based on values set in project settings
 #can modify the speed using global parameter or in project settings

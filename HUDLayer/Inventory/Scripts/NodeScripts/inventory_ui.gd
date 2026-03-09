@@ -42,7 +42,7 @@ func updateInventoryUI() -> void:
 	setNumColumns()
 	setNumRows(doRoundUpDivision(num_total_slots, num_columns_grid_container))
 	var margin_dict: Dictionary = setInternalMargins()
-	setExternalMargins()
+	setExternalMargins() # FUNCTION HAVING TROUBLE PLS CHECK IT OUT
 	setGridContainerSize(margin_dict)
 	setInventoryBackgroundSize()
 	createInventoryPanels()
