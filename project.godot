@@ -14,6 +14,10 @@ config/name="ParasiteGameJam"
 run/main_scene="uid://cynpmxbl61o7l"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+globals="*uid://cxubem6hf5jlb"
+
 [display]
 
 window/size/viewport_width=1920

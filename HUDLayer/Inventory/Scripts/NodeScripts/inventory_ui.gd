@@ -11,7 +11,7 @@ var stats=playerStats.new()
 
 #UI Elements
 @onready var inventoryBackground: TextureRect = $CenterContainer/InventoryBackground
-@onready var marginContainer: MarginContainer = $CenterContainer/InwdventoryBackground/MarginContainer
+@onready var marginContainer: MarginContainer = $CenterContainer/InventoryBackground/MarginContainer
 @onready var gridContainer: GridContainer = $CenterContainer/InventoryBackground/MarginContainer/GridContainer
 const wood: Resource = preload("res://HUDLayer/Inventory/ResourceInstances/wood.tres")
 const inventoryPanel = preload("res://HUDLayer/Inventory/Scenes/InventoryPanel.tscn")
