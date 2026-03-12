@@ -19,7 +19,7 @@ func _physics_process(_delta: float) -> void:
 			newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
 
 #gets vector based on values set in project settings
-#discretizes then moves that direction
+#discr etizes then moves that direction
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var discretized_direction = Globals.discretize_movement_direction(input_direction.normalized())
