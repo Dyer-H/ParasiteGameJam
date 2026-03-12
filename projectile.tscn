@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://3h63vcg67f5r"]
+
+[ext_resource type="Script" uid="uid://dtxj8n8pkq4qk" path="res://projectile.gd" id="1_qxf0c"]
+[ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://extra sprites/pellet.png" id="2_dgwo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+
+[node name="projectile" type="Area2D" unique_id=850689398]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_qxf0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302115727]
+light_mask = 0
+position = Vector2(0, -0.99999994)
+rotation = 1.5707964
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_dgwo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1425211465]
+position = Vector2(0, -120)
+scale = Vector2(6, 12)
+shape = SubResource("RectangleShape2D_4c57u")
+debug_color = Color(0.9604005, 0, 0.5189599, 0.41960785)

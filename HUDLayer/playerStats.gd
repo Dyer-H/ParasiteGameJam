@@ -9,12 +9,14 @@ extends Node
 class_name playerStats
 
 var health:int
-var stamina:int
+var stamina:int 
+var slots:int # Amount of inventory slots
 
 # No getter functions required since we can just use playerStats.health for fetching info
 func _init(): 
 	health=100
 	stamina=100
+	slots=4
 
 func playerDamage(amount): # Using an amount so it should be easier to implement enemies doing different damage amounts
 	health-=amount
