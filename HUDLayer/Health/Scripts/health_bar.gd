@@ -14,3 +14,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	self.value=stats.health # Set own value to health stat
 	
+
+func change_health(damage: int):
+	stats.health -= damage
+	print(stats.health)

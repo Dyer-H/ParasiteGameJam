@@ -101,3 +101,7 @@ zoom = Vector2(3, 3)
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("7_w48qg")]
 
 [node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_5vw27")]
+position = Vector2(-62, -28)
+
+[node name="Potato2" parent="." unique_id=1517970831 instance=ExtResource("8_5vw27")]
+position = Vector2(120, -55)

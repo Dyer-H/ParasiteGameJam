@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
 const SPEED = 80.0
 
 #literally just animation code -> no need to touch
@@ -38,3 +39,8 @@ func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = input_direction * SPEED
 	move_and_slide()
+
+# Called when taking damage
+# Can be referrenced in other scripts in node2D passed
+func take_damage(damage:int): 
+	healthbar.change_health(damage)
