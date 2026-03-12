@@ -9,10 +9,13 @@ const SPEED = 80.0
 func _physics_process(_delta: float) -> void:
 	get_input()
 	if(Input.is_action_just_pressed("Shoot")):
-		var newProjectile=projectile.instantiate() as Node2D
-		get_tree().current_scene.add_child(newProjectile)
-		newProjectile.global_position=global_position
-		newProjectile.look_at(get_global_mouse_position())
+		var dev=-15+randi_range(-5,5) # This is the starting deviation for the shot (degrees off from normal
+		for i in range(7): # range(number of pellets to generate)
+			var newProjectile=projectile.instantiate() as Node2D
+			get_tree().current_scene.add_child(newProjectile)
+			newProjectile.global_position=global_position
+			newProjectile.look_at(get_global_mouse_position())
+			newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
 
 #gets vector based on values set in project settings
 #discretizes then moves that direction
