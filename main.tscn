@@ -68,3 +68,7 @@ zoom = Vector2(3, 3)
 projectile = ExtResource("9_kek77")
 
 [node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_5vw27")]
+position = Vector2(-62, -28)
+
+[node name="Potato2" parent="." unique_id=1517970831 instance=ExtResource("8_5vw27")]
+position = Vector2(120, -55)

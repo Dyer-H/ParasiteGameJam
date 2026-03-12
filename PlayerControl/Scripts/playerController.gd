@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
 const SPEED = 80.0
 
 #this function will have to pass delta to the next eventually
@@ -25,6 +26,11 @@ func get_input():
 	play_animation(discretized_direction)
 	velocity = discretized_direction * SPEED
 	move_and_slide()
+
+# Called when taking damage
+# Can be referrenced in other scripts in node2D passed
+func take_damage(damage:int): 
+	healthbar.change_health(damage)
 	
 #expects a discretized vector (defined in global class)
 func play_animation(direction: Vector2):	
