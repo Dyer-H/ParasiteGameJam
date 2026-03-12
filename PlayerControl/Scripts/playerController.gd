@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
-const SPEED = 80.0
+const SPEED = 80.0 
 
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
