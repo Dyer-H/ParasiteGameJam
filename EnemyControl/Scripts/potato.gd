@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var player: CharacterBody2D = get_node("../Player")
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var detection_area = $DetectionArea/CollisionShape2D
 const SPEED = 40.0
 var health = 100
 var dmg = 2
@@ -15,12 +16,14 @@ var hit_cooldown = 0
 func _physics_process(_delta: float) -> void:
 	if !dead:
 		# Make sure the collision area is on if it isn't dead
-		$DetectionArea/CollisionShape2D.disabled = false
+		detection_area.disabled = false
 		if player_in_area:
 			move_to_position(player.position)
+		else:
+			animated_sprite.stop()
 	else:
 		# Make sure the collision area is off if it is dead
-		$DetectionArea/CollisionShape2D.disabled = true
+		detection_area.disabled = true
 	if player_hit and hit_cooldown <= 0:
 		player.take_damage(dmg)
 		hit_cooldown = 25

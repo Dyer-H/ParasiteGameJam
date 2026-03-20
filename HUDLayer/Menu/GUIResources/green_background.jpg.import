@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deylv84rq1uty"
-path="res://.godot/imported/wood.jpg-f37217c464e8acd56942c73236b67abc.ctex"
+uid="uid://db3oxx771q4l"
+path="res://.godot/imported/green_background.jpg-5320260c3e5a5ecfcbe261784e5c910b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Inventory/GUIResources/wood.jpg"
-dest_files=["res://.godot/imported/wood.jpg-f37217c464e8acd56942c73236b67abc.ctex"]
+source_file="res://HUDLayer/Menu/GUIResources/green_background.jpg"
+dest_files=["res://.godot/imported/green_background.jpg-5320260c3e5a5ecfcbe261784e5c910b.ctex"]
 
 [params]
 

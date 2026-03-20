@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clulvujj60xr5"
-path="res://.godot/imported/graybackground.jpg-21b686c779f8d475bbf7d756c8d71580.ctex"
+uid="uid://qcapu1xh6wqb"
+path="res://.godot/imported/pellet.png-ca45404fba66ea2ce4290b2bccfcea91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Inventory/GUIResources/graybackground.jpg"
-dest_files=["res://.godot/imported/graybackground.jpg-21b686c779f8d475bbf7d756c8d71580.ctex"]
+source_file="res://PlayerControl/GUIResources/Gun/pellet.png"
+dest_files=["res://.godot/imported/pellet.png-ca45404fba66ea2ce4290b2bccfcea91.ctex"]
 
 [params]
 

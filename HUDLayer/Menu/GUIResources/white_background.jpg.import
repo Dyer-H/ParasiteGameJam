@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs4kfxcmlle4q"
-path="res://.godot/imported/white_background.jpg-b428e03425e042dfd608f979e540befb.ctex"
+uid="uid://cpa6cypqpme75"
+path="res://.godot/imported/white_background.jpg-15a57d8f67c4056d1104aaa8e3124cc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Inventory/GUIResources/white_background.jpg"
-dest_files=["res://.godot/imported/white_background.jpg-b428e03425e042dfd608f979e540befb.ctex"]
+source_file="res://HUDLayer/Menu/GUIResources/white_background.jpg"
+dest_files=["res://.godot/imported/white_background.jpg-15a57d8f67c4056d1104aaa8e3124cc0.ctex"]
 
 [params]
 

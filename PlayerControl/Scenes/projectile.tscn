@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3h63vcg67f5r"]
 
-[ext_resource type="Script" uid="uid://dtxj8n8pkq4qk" path="res://projectile.gd" id="1_qxf0c"]
-[ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://extra sprites/pellet.png" id="2_dgwo2"]
+[ext_resource type="Script" uid="uid://dtxj8n8pkq4qk" path="res://PlayerControl/Scripts/projectile.gd" id="1_qxf0c"]
+[ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://PlayerControl/GUIResources/Gun/pellet.png" id="2_dgwo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
 size = Vector2(8.333335, 0.8333335)

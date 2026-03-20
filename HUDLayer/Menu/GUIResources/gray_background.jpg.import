@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qcapu1xh6wqb"
-path="res://.godot/imported/pellet.png-eaaa6cfa4bab21cfb966b2c935b1b650.ctex"
+uid="uid://dkm12q3e28btm"
+path="res://.godot/imported/gray_background.jpg-a7c3a15b4448b0316180eb6da4e26ebe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://extra sprites/pellet.png"
-dest_files=["res://.godot/imported/pellet.png-eaaa6cfa4bab21cfb966b2c935b1b650.ctex"]
+source_file="res://HUDLayer/Menu/GUIResources/gray_background.jpg"
+dest_files=["res://.godot/imported/gray_background.jpg-a7c3a15b4448b0316180eb6da4e26ebe.ctex"]
 
 [params]
 

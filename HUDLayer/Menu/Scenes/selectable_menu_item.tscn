@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cynnms3kyigvg"]
 
-[ext_resource type="Texture2D" uid="uid://c8jbuocgslke1" path="res://HUDLayer/Inventory/GUIResources/black_background.jpg" id="1_63s2n"]
-[ext_resource type="Texture2D" uid="uid://ovpq6scpmx1x" path="res://HUDLayer/Inventory/GUIResources/greenbackground.jpg" id="1_miwrp"]
-[ext_resource type="Texture2D" uid="uid://cs4kfxcmlle4q" path="res://HUDLayer/Inventory/GUIResources/white_background.jpg" id="2_r11vh"]
+[ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="1_63s2n"]
+[ext_resource type="Texture2D" uid="uid://cpa6cypqpme75" path="res://HUDLayer/Menu/GUIResources/white_background.jpg" id="2_r11vh"]
 [ext_resource type="Script" uid="uid://ctgjwb4y3ohao" path="res://HUDLayer/Menu/Scripts/selectable_menu_item.gd" id="2_twq5v"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_nyrg2"]
+[ext_resource type="Texture2D" uid="uid://pmdp83j6x6vf" path="res://HUDLayer/Menu/GUIResources/blue_background.png" id="4_twq5v"]
 
 [node name="Border" type="TextureRect" unique_id=1169973129]
 offset_right = 1000.0
@@ -44,7 +44,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Background" type="TextureRect" parent="BorderMargin/Selection/SelectionMargin" unique_id=1541039039]
 layout_mode = 2
-texture = ExtResource("1_miwrp")
+texture = ExtResource("4_twq5v")
 expand_mode = 1
 
 [node name="Item Label" type="Label" parent="BorderMargin/Selection/SelectionMargin/Background" unique_id=17700814]
@@ -54,7 +54,6 @@ offset_right = 607.0
 offset_bottom = 107.0
 theme_override_fonts/font = ExtResource("4_nyrg2")
 theme_override_font_sizes/font_size = 38
-text = "Weapon"
 vertical_alignment = 1
 
 [node name="Price Label" type="Label" parent="BorderMargin/Selection/SelectionMargin/Background" unique_id=203356897]
@@ -65,6 +64,5 @@ offset_right = 891.0
 offset_bottom = 106.0
 theme_override_fonts/font = ExtResource("4_nyrg2")
 theme_override_font_sizes/font_size = 38
-text = "200"
 horizontal_alignment = 2
 vertical_alignment = 1

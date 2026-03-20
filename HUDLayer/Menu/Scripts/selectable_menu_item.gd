@@ -1,6 +1,6 @@
 #Please don't mess with anything in the selectable_menu_item scene via the inspector dock
-#If anything needs to be changed, do it via the code I have provided below
-#You are allowed to change the instatiated scene in the menu scene via the exported variables though
+#If anything needs to be changed, do it via the code provided below
+#You can change the instatiated scene in the menu scene via the exported variables though
 
 extends TextureRect
 

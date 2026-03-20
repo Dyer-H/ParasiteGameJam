@@ -6,7 +6,7 @@ extends Node
 # Seems really similar to Kotlin tbh
 # no C++ ;(
 
-class_name playerStats
+class_name player
 
 var health:int
 var stamina:int 

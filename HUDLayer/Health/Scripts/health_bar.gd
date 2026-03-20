@@ -1,7 +1,7 @@
 extends ProgressBar
 
 # Called when the node enters the scene tree for the first time.
-var stats=playerStats.new()
+var stats=player.new()
 
 func _ready() -> void:
 	var sb=StyleBoxFlat.new() # Create stylebox object
