@@ -9,9 +9,13 @@ extends Resource
 
 #All functions should send an emit_changed signal so other scripts can be notified when the resource is changed
 
+class_name playerStats
+
 @export var health: int
 @export var stamina: int 
 @export var coins: int
+@export var weapon_level: int
+@export var suit_level: int
 
 #function used for coin testing input
 func set_coins(coin_val: int) -> void:

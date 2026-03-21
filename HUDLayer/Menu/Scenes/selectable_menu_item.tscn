@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cynnms3kyigvg"]
 
 [ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="1_63s2n"]
-[ext_resource type="Texture2D" uid="uid://cpa6cypqpme75" path="res://HUDLayer/Menu/GUIResources/white_background.jpg" id="2_r11vh"]
 [ext_resource type="Script" uid="uid://ctgjwb4y3ohao" path="res://HUDLayer/Menu/Scripts/selectable_menu_item.gd" id="2_twq5v"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_nyrg2"]
 [ext_resource type="Texture2D" uid="uid://pmdp83j6x6vf" path="res://HUDLayer/Menu/GUIResources/blue_background.png" id="4_twq5v"]
@@ -27,7 +26,7 @@ theme_override_constants/margin_bottom = 3
 
 [node name="Selection" type="TextureRect" parent="BorderMargin" unique_id=1120796893]
 layout_mode = 2
-texture = ExtResource("2_r11vh")
+texture = ExtResource("4_twq5v")
 expand_mode = 1
 
 [node name="SelectionMargin" type="MarginContainer" parent="BorderMargin/Selection" unique_id=1520533778]

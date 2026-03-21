@@ -1,23 +1,26 @@
-#Please don't mess with anything in the selectable_menu_item scene via the inspector dock
-#If anything needs to be changed, do it via the code provided below
-#You can change the instatiated scene in the menu scene via the exported variables though
-
 extends TextureRect
 
-#some reasonable defaults I came up with for the following parameters
-#welcome to change any of these
-@export var menu_item_width = 1000
-@export var menu_item_height = 122
-@export var border_margin_size = 3
-@export var selection_margin_size = 5
-
-@onready var borderMargin: MarginContainer = $BorderMargin
 @onready var selection: TextureRect = $BorderMargin/Selection
-@onready var selectionMargin: MarginContainer = $BorderMargin/Selection/SelectionMargin
 @onready var background: TextureRect = $BorderMargin/Selection/SelectionMargin/Background
+@onready var itemLabel: Label = $"BorderMargin/Selection/SelectionMargin/Background/Item Label"
+@onready var itemPrice: Label = $"BorderMargin/Selection/SelectionMargin/Background/Price Label"
 
-func _set_initial_sizes():
-	print("nothing")
+var selection_texture = preload("res://HUDLayer/Menu/GUIResources/white_background.jpg")
+var isSelected = false
+var item: menuItemResource
 
-func update_menu_item_size(rectangle_size: Vector2):
-	self.size = rectangle_size
+func toggle_selection() -> void:
+	if isSelected:
+		selection.texture = background.texture
+		isSelected = false
+		return
+	selection.texture = selection_texture
+	isSelected = true
+
+func set_menu_item(menu_item: menuItemResource) -> void:
+	item = menu_item
+	_populate_from_resource()
+
+func _populate_from_resource() -> void:
+	itemLabel.text = item.name
+	itemPrice.text = str(item.price)

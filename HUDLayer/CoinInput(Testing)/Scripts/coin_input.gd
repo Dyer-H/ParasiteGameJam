@@ -10,7 +10,7 @@ extends Control
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
 #sets the visibility to false
-#also connects the text_submitted signal from the line edit to custom function defined below
+#connects the text_submitted signal from the line edit to custom function defined below
 func _ready() -> void:
 	self.visible = false
 	self.process_mode = Node.PROCESS_MODE_ALWAYS

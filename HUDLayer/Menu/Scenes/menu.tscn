@@ -71,11 +71,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(1000, 122)
 layout_mode = 2
 
-[node name="Border3" parent="TextureRect/GridContainer" unique_id=1250742014 instance=ExtResource("2_q5wl8")]
-custom_minimum_size = Vector2(1000, 122)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1143191591]
+[node name="DescriptionBackground" type="TextureRect" parent="TextureRect" unique_id=1143191591]
 layout_mode = 0
 offset_left = 1112.0
 offset_top = 170.0
@@ -83,3 +79,22 @@ offset_right = 1555.0
 offset_bottom = 705.0
 texture = ExtResource("5_clypp")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/DescriptionBackground" unique_id=651948709]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ItemDescription" type="Label" parent="TextureRect/DescriptionBackground/MarginContainer" unique_id=956699930]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_xn22a")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
