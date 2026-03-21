@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b1r2kx1utvxqm"]
+
+[ext_resource type="Texture2D" uid="uid://bigp0il7sraj3" path="res://HUDLayer/CoinDisplay/GUIResources/pixel_coin.png" id="1_0e3pq"]
+[ext_resource type="Script" uid="uid://bpgu6otgnw5sn" path="res://HUDLayer/CoinDisplay/Scripts/coin.gd" id="1_3xwa4"]
+[ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="1_y6p8u"]
+
+[node name="Coin" type="Control" unique_id=1060038100]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+script = ExtResource("1_3xwa4")
+
+[node name="CoinNumber" type="Label" parent="." unique_id=598126881]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -436.0
+offset_right = -122.0
+offset_bottom = 102.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_y6p8u")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CoinTexture" type="TextureRect" parent="." unique_id=349413962]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("1_0e3pq")
+expand_mode = 1

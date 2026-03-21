@@ -7,7 +7,18 @@ extends Resource
 #(Any script that modifies the resource will modify the resource across all scripts accesssing it)
 #The resource is found in res://PlayerControl/Resources/player_stats.tres
 
-class_name playerStats
+#All functions should send an emit_changed signal so other scripts can be notified when the resource is changed
 
 @export var health: int
 @export var stamina: int 
+@export var coins: int
+
+#function used for coin testing input
+func set_coins(coin_val: int) -> void:
+	if coin_val > 999:
+		coins = 999
+	elif coin_val < 0:
+		coins = 0
+	else:
+		coins = coin_val
+	emit_changed()

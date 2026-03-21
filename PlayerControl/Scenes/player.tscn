@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxsg6j2ri1gim"]
 
-[ext_resource type="Script" uid="uid://cvcb3m7bibcxt" path="res://PlayerControl/Scripts/movement.gd" id="1_bv3ae"]
+[ext_resource type="Script" uid="uid://cvcb3m7bibcxt" path="res://PlayerControl/Scripts/player.gd" id="1_bv3ae"]
 [ext_resource type="Texture2D" uid="uid://ddem76b7sfrde" path="res://PlayerControl/GUIResources/CharacterSprites/Small-8-Direction-Characters_by_AxulArt.png" id="1_q6obg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6obg"]

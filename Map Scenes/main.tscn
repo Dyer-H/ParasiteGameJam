@@ -4,8 +4,10 @@
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="2_a6lk4"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="3_qbhuo"]
 [ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="4_6m3bi"]
+[ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="5_a6lk4"]
 [ext_resource type="PackedScene" uid="uid://fau1n6w7ujb2" path="res://Map Scenes/map.tscn" id="5_j4ykm"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="6_3r23j"]
+[ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="6_qbhuo"]
 [ext_resource type="PackedScene" uid="uid://3h63vcg67f5r" path="res://PlayerControl/Scenes/projectile.tscn" id="7_w32mb"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="8_2ruw3"]
 
@@ -58,6 +60,10 @@ text = "ST"
 label_settings = SubResource("LabelSettings_6jrgu")
 
 [node name="Menu" parent="HUD Layer" unique_id=852909639 instance=ExtResource("4_6m3bi")]
+
+[node name="Coin" parent="HUD Layer" unique_id=1060038100 instance=ExtResource("5_a6lk4")]
+
+[node name="CoinInput" parent="HUD Layer" unique_id=574592859 instance=ExtResource("6_qbhuo")]
 
 [node name="Map" parent="." unique_id=1027391774 instance=ExtResource("5_j4ykm")]
 
