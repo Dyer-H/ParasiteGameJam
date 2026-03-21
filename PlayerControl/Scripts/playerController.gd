@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
+@onready var damage_numbers_origin = $DamageNumbersOrigin
 const SPEED = 80.0 
 
 #this function will have to pass delta to the next eventually
@@ -11,7 +12,7 @@ func _physics_process(_delta: float) -> void:
 	get_input()
 	if(Input.is_action_just_pressed("Shoot")):
 		var dev=-15+randi_range(-5,5) # This is the starting deviation for the shot (degrees off from normal
-		for i in range(7): # range(number of pellets to generate)
+		for i in range(5): # range(number of pellets to generate)
 			var newProjectile=projectile.instantiate() as Node2D
 			get_tree().current_scene.add_child(newProjectile)
 			newProjectile.global_position=global_position
@@ -31,7 +32,11 @@ func get_input():
 # Can be referrenced in other scripts in node2D passed
 func take_damage(damage:int): 
 	healthbar.change_health(damage)
+	damage_numbers_origin.display_number(damage, damage_numbers_origin.global_position, false)
 	
+func pickup():
+	pass
+
 #expects a discretized vector (defined in global class)
 func play_animation(direction: Vector2):	
 	match direction:

@@ -2,9 +2,12 @@ extends CharacterBody2D
 
 @onready var player: CharacterBody2D = get_node("../Player")
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var damage_numbers_origin = $DamageNumbersOrigin
+@onready var detection_zone = $DetectionArea/CollisionShape2D
+
 const SPEED = 40.0
-var health = 100
-var dmg = 2
+@export var health = 24
+@export var dmg = 2
 var dead = false
 var player_in_area = false
 var player_hit = false
@@ -13,14 +16,13 @@ var hit_cooldown = 0
 #will probably change this later so that this doesn't get recalculated every frame
 #can probably get away with once every half second or something
 func _physics_process(_delta: float) -> void:
-	if !dead:
+	if dead:
+		return
+	elif !dead:
 		# Make sure the collision area is on if it isn't dead
-		$DetectionArea/CollisionShape2D.disabled = false
+		detection_zone.disabled = false
 		if player_in_area:
 			move_to_position(player.position)
-	else:
-		# Make sure the collision area is off if it is dead
-		$DetectionArea/CollisionShape2D.disabled = true
 	if player_hit and hit_cooldown <= 0:
 		player.take_damage(dmg)
 		hit_cooldown = 25
@@ -53,23 +55,17 @@ func play_animation(direction: Vector2):
 			animated_sprite.play("down_right")
 		Globals.DOWN_LEFT:
 			animated_sprite.play("down_left")
-
-# Detects when a body enters the area
-func _on_detection_area_body_entered(body: Node2D) -> void:
-	if "Player" in body.name: # Detecting if body has that player function
-		player_in_area = true
-
-# Same function as before but for body leaving the area
-func _on_detection_area_body_exited(body: Node2D) -> void:
-	if "Player" in body.name:
-		player_in_area = false
-
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	if "Player" in body.name:
-		player_hit = true
-
-
-func _on_damage_box_body_exited(body: Node2D) -> void:
-	if "Player" in body.name:
-		player_hit = false
-		hit_cooldown = 0
+			
+func take_damage(damage:int,crit:float):
+	var is_crit = crit > randf() # Calculating crit based off chance
+	if is_crit:
+		damage = 2*damage
+	health -= damage
+	# Displaying Damage Numbers
+	damage_numbers_origin.display_number(damage, damage_numbers_origin.global_position, is_crit)
+	
+	
+	if health <= 0:
+		dead = true
+		self.queue_free()
+		return

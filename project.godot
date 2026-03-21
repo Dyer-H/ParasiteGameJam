@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 globals="*uid://cxubem6hf5jlb"
+DamageNumbers="*uid://8skdr0lmrptw"
 
 [display]
 

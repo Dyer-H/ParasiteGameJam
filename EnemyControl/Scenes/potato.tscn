@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://khwf5aql3uu6" path="res://EnemyControl/GUIResources/EnemySprites/Potato_SpriteSheet.png" id="1_tglrm"]
 [ext_resource type="Script" uid="uid://b8cafm4tw56jg" path="res://EnemyControl/Scripts/potato.gd" id="1_uq1l3"]
+[ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scenes/hitbox.gd" id="3_1se55"]
+[ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scenes/detection_area.gd" id="3_xn1xs"]
+[ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="5_qkpkm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uq1l3"]
 atlas = ExtResource("1_tglrm")
@@ -231,14 +234,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_uq1l3"]
 radius = 3.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn1xs"]
+radius = 57.00877
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1se55"]
 radius = 5.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xn1xs"]
-radius = 42.0119
-
 [node name="Baddie" type="CharacterBody2D" unique_id=1361659599]
 script = ExtResource("1_uq1l3")
+health = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=78546283]
 sprite_frames = SubResource("SpriteFrames_xe6o5")
@@ -251,19 +255,32 @@ position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_uq1l3")
 disabled = true
 
-[node name="DamageBox" type="Area2D" parent="." unique_id=146750961]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox" unique_id=209233235]
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_1se55")
-
 [node name="DetectionArea" type="Area2D" parent="." unique_id=473157905]
+script = ExtResource("3_xn1xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=215647260]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_xn1xs")
 
-[connection signal="body_entered" from="DamageBox" to="." method="_on_hitbox_body_entered"]
-[connection signal="body_exited" from="DamageBox" to="." method="_on_damage_box_body_exited"]
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=146750961]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=209233235]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_1se55")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=534504797]
+script = ExtResource("3_1se55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=175941696]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_1se55")
+
+[node name="DamageNumbersOrigin" type="Node2D" parent="." unique_id=501032650]
+position = Vector2(0, -7)
+script = ExtResource("5_qkpkm")
+
+[connection signal="body_entered" from="DetectionArea" to="DetectionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="DetectionArea" method="_on_body_exited"]
+[connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="Hitbox" method="_on_body_exited"]

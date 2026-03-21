@@ -17,4 +17,3 @@ func _process(_delta: float) -> void:
 
 func change_health(damage: int):
 	stats.health -= damage
-	print(stats.health)
