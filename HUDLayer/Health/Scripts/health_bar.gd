@@ -7,13 +7,8 @@ func _ready() -> void:
 	var sb=StyleBoxFlat.new() # Create stylebox object
 	add_theme_stylebox_override("fill",sb) # Add a fill override to the stylebox
 	sb.bg_color=Color("ff596f") # Set fill color
+	self.value = stats.health
+	stats.changed.connect(_on_stats_changed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	self.value=stats.health # Set own value to health stat
-	
-
-func change_health(damage: int):
-	stats.health -= damage
-	print(stats.health)
+func _on_stats_changed() -> void:
+	self.value = stats.health

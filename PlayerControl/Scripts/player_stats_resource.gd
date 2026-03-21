@@ -26,3 +26,13 @@ func set_coins(coin_val: int) -> void:
 	else:
 		coins = coin_val
 	emit_changed()
+
+#function used to subtract from health
+#cannot go below 0
+func take_damage(damage: int) -> void:
+	var new_health = health - damage
+	if new_health < 0:
+		health = 0
+	else:
+		health = new_health
+	emit_changed()

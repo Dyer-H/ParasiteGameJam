@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ctgjwb4y3ohao" path="res://HUDLayer/Menu/Scripts/selectable_menu_item.gd" id="2_twq5v"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_nyrg2"]
 [ext_resource type="Texture2D" uid="uid://pmdp83j6x6vf" path="res://HUDLayer/Menu/GUIResources/blue_background.png" id="4_twq5v"]
+[ext_resource type="Texture2D" uid="uid://bigp0il7sraj3" path="res://HUDLayer/CoinDisplay/GUIResources/pixel_coin.png" id="5_twq5v"]
 
 [node name="Border" type="TextureRect" unique_id=1169973129]
 offset_right = 1000.0
@@ -65,3 +66,13 @@ theme_override_fonts/font = ExtResource("4_nyrg2")
 theme_override_font_sizes/font_size = 38
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BorderMargin/Selection/SelectionMargin/Background" unique_id=94004141]
+layout_mode = 0
+offset_left = 870.0
+offset_top = -11.0
+offset_right = 1019.0
+offset_bottom = 138.0
+texture = ExtResource("5_twq5v")
+expand_mode = 1
+stretch_mode = 5

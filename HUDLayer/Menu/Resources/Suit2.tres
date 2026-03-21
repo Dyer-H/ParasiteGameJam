@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="menuItemResource" format=3 uid="uid://co8cd5fsyf3xl"]
+
+[ext_resource type="Script" uid="uid://cqxpgix2noijf" path="res://HUDLayer/Menu/Scripts/menu_item_resource.gd" id="1_2ujvd"]
+
+[resource]
+script = ExtResource("1_2ujvd")
+name = "Hazmat Suit"
+price = 150
+description = "Upgrades Hazmat Suit Yet Again Again"
+metadata/_custom_type_script = "uid://cqxpgix2noijf"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="menuItemResource" format=3 uid="uid://cnppla145p0pu"]
+
+[ext_resource type="Script" uid="uid://cqxpgix2noijf" path="res://HUDLayer/Menu/Scripts/menu_item_resource.gd" id="1_earhy"]
+
+[resource]
+script = ExtResource("1_earhy")
+name = "Shotgun"
+price = 100
+description = "Something Something goes Here"
+metadata/_custom_type_script = "uid://cqxpgix2noijf"
