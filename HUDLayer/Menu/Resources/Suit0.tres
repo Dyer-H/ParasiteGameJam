@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="menuItemResource" format=3 uid="uid://gd4qt8xhoj0o"]
+[gd_resource type="Resource" script_class="suitItemResource" format=3 uid="uid://gd4qt8xhoj0o"]
 
-[ext_resource type="Script" uid="uid://cqxpgix2noijf" path="res://HUDLayer/Menu/Scripts/menu_item_resource.gd" id="1_hujuq"]
+[ext_resource type="Script" uid="uid://4w75tqncwioi" path="res://HUDLayer/Menu/Scripts/suit_menu_item.gd" id="1_hujuq"]
 
 [resource]
 script = ExtResource("1_hujuq")
-name = "Hazmat Suit"
+health = 10
+defense = 20
+name = "Hazmat Suit (lvl 1)"
 price = 50
-description = "Upgrades Hazmat Suit"
-metadata/_custom_type_script = "uid://cqxpgix2noijf"
+description = "This will upgrade your suit"
+metadata/_custom_type_script = "uid://4w75tqncwioi"

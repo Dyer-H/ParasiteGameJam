@@ -23,29 +23,26 @@ func _process(_delta: float) -> void:
 		self.visible = true
 		_pause_game()
 
-func _on_item_clicked(event, menu_item) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index != MOUSE_BUTTON_LEFT:
-			return
-		var pos = menu_items.find(menu_item)
-		if !isItemSelected:
-			menu_item.toggle_selection()
-			_set_description(menu_item.item.description)
-			selectedItem = pos
-			isItemSelected = true
-			return
-		if pos == selectedItem:
-			menu_item.toggle_selection()
-			_clear_description()
-			isItemSelected = false
-			return
-		menu_items[selectedItem].toggle_selection()
+func _on_item_clicked(menu_item) -> void:
+	var pos = menu_items.find(menu_item)
+	if !isItemSelected:
 		menu_item.toggle_selection()
 		_set_description(menu_item.item.description)
 		selectedItem = pos
+		isItemSelected = true
 		return
+	if pos == selectedItem:
+		menu_item.toggle_selection()
+		_clear_description()
+		isItemSelected = false
+		return
+	menu_items[selectedItem].toggle_selection()
+	menu_item.toggle_selection()
+	_set_description(menu_item.item.description)
+	selectedItem = pos
 
 func _populate_menu_items() -> void:
+	#start here
 	var weapon_resource_string = _generate_weapon_resource_string_from_stat(stats.weapon_level)
 	var suit_resource_string = _generate_suit_resource_string_from_stat(stats.suit_level)
 	var weapon_item = load(weapon_resource_string)
@@ -53,7 +50,8 @@ func _populate_menu_items() -> void:
 	menu_items[0].set_menu_item(weapon_item)
 	menu_items[1].set_menu_item(suit_item)
 	for menu_item in menu_items:
-		menu_item.gui_input.connect(_on_item_clicked.bind(menu_item))
+		var button = menu_item.get_node("BorderMargin/Button")
+		button.pressed.connect(_on_item_clicked.bind(menu_item))	
 
 func _set_description(text: String) -> void:
 	description.text = text

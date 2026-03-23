@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="menuItemResource" format=3 uid="uid://dshhssv5fc840"]
+[gd_resource type="Resource" script_class="weaponItemResource" format=3 uid="uid://dfdl6vflt8sb5"]
 
-[ext_resource type="Script" uid="uid://cqxpgix2noijf" path="res://HUDLayer/Menu/Scripts/menu_item_resource.gd" id="1_earhy"]
+[ext_resource type="Script" uid="uid://bi4vxudcexy53" path="res://HUDLayer/Menu/Scripts/weapon_menu_item.gd" id="1_hetmj"]
 
 [resource]
-script = ExtResource("1_earhy")
-name = "Shotgun"
+script = ExtResource("1_hetmj")
+num_bullets = 3
+damage = 20
+name = "Weapon (lvl 1)"
 price = 50
-description = "Upgrades shotgun damage"
-metadata/_custom_type_script = "uid://cqxpgix2noijf"
+description = "This will upgrade your weapon"
+metadata/_custom_type_script = "uid://bi4vxudcexy53"
