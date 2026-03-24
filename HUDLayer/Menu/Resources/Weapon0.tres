@@ -7,6 +7,6 @@ script = ExtResource("1_hetmj")
 num_bullets = 3
 damage = 20
 name = "Weapon (lvl 1)"
-price = 50
+price = 20
 description = "This will upgrade your weapon"
 metadata/_custom_type_script = "uid://bi4vxudcexy53"

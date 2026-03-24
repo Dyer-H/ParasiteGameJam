@@ -7,6 +7,6 @@ script = ExtResource("1_hujuq")
 health = 10
 defense = 20
 name = "Hazmat Suit (lvl 1)"
-price = 50
+price = 10
 description = "This will upgrade your suit"
 metadata/_custom_type_script = "uid://4w75tqncwioi"

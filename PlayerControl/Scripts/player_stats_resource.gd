@@ -36,3 +36,11 @@ func take_damage(damage: int) -> void:
 	else:
 		health = new_health
 	emit_changed()
+
+func increment_weapon_level() -> void:
+	weapon_level += 1
+	emit_changed()
+
+func increment_suit_level() -> void:
+	suit_level += 1
+	emit_changed()
