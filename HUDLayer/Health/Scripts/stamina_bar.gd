@@ -12,3 +12,7 @@ func _ready() -> void:
 
 func _on_stats_changed() -> void:
 	self.value = stats.stamina
+	
+func change_stamina(val):
+	self.value+=val
+	stats.stamina-=33

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
+@onready var stambar = $"../HUD Layer/HP_STAM/StaminaBar"
 const DASH_DURATION=0.2 # Dash time (seconds)
 const DEFAULT_SPEED=80.0
 var SPEED = 80.0 
@@ -21,13 +22,19 @@ func _physics_process(_delta: float) -> void:
 			newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
 	if(Input.is_action_just_pressed("Dash")):
 		dash()
-		
 # Boosts the player speed for a set time (DASH_DURATION)
 func dash():
-	SPEED=(SPEED*3)
-	await get_tree().create_timer(DASH_DURATION).timeout # Create timer
-	SPEED=DEFAULT_SPEED
+	if(stambar.value>33):
+		stambar.change_stamina(-33)
+		SPEED=(SPEED*3)
+		await get_tree().create_timer(DASH_DURATION).timeout # Create timer
+		SPEED=DEFAULT_SPEED
+		await get_tree().create_timer(2.0).timeout
+		while(stambar.value<100): # regen
+			stambar.change_stamina(1)
+			await get_tree().create_timer(0.2).timeout
 	
+
 	
 #gets vector based on values set in project settings
 #discr etizes then moves that direction
