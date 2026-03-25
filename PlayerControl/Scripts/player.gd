@@ -7,6 +7,7 @@ extends CharacterBody2D
 const DASH_DURATION=0.2 # Dash time (seconds)
 const DEFAULT_SPEED=80.0
 var SPEED = 80.0 
+var stamRegen=false
 
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
@@ -29,8 +30,10 @@ func dash():
 		SPEED=(SPEED*3)
 		await get_tree().create_timer(DASH_DURATION).timeout # Create timer
 		SPEED=DEFAULT_SPEED
+		stamRegen=false
 		await get_tree().create_timer(2.0).timeout
-		while(stambar.value<100): # regen
+		stamRegen=true
+		while(stambar.value<100&&stamRegen): # regen
 			stambar.change_stamina(1)
 			await get_tree().create_timer(0.2).timeout
 	

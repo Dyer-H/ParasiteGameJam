@@ -44,3 +44,7 @@ func increment_weapon_level() -> void:
 func increment_suit_level() -> void:
 	suit_level += 1
 	emit_changed()
+
+func change_stamina(val)->void:
+	self.value+=val
+	stamina-=val
