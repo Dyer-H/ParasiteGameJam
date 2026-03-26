@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bjdktwxl3yfvk"]
+
+[ext_resource type="Texture2D" uid="uid://dmdccd55ooiyl" path="res://Map Scenes/GUIResources/BaseArea/lobby.png" id="1_ll2xe"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1653438255]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1299349025]
+y_sort_enabled = true
+position = Vector2(0, -2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ll2xe")
+offset = Vector2(500, 200)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1870814885]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=137202674]
+polygon = PackedVector2Array(-16, 172, 241, 45, -14, -83, -271, 45, -16, 172, -274, 45, -14, -88, 248, 45)
+
+[node name="Control Table 1" type="StaticBody2D" parent="." unique_id=1926332204]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 1" unique_id=788245988]
+polygon = PackedVector2Array(24, 71, 11, 63, -7, 72, -71, 39, -87, 48, -7, 88)
+
+[node name="Control Table 2" type="StaticBody2D" parent="." unique_id=93731776]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 2" unique_id=1557469508]
+position = Vector2(80, -40)
+polygon = PackedVector2Array(-31, 98, -47, 91, -22, 79, -88, 47, -73, 39, 9, 78)
+
+[node name="Control Table 3" type="StaticBody2D" parent="." unique_id=270420168]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 3" unique_id=2029689682]
+position = Vector2(-38, -68)
+polygon = PackedVector2Array(24, 70, 9, 62, -39, 87, -22, 95)

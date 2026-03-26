@@ -282,7 +282,7 @@ script = ExtResource("1_bv3ae")
 sprite_frames = SubResource("SpriteFrames_ap5lh")
 animation = &"walk_up_right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=486104916]
+[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=486104916]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_bv3ae")
 
