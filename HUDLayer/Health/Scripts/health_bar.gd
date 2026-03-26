@@ -10,16 +10,5 @@ func _ready() -> void:
 	self.value = stats.health
 	stats.changed.connect(_on_stats_changed)
 
-<<<<<<< HEAD
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	self.value=stats.health # Set own value to health stat
-	
-
-func change_health(damage: int):
-	stats.health -= damage
-=======
 func _on_stats_changed() -> void:
 	self.value = stats.health
->>>>>>> c90828b15f3bfc39c5166e7ff33c1a156d68cdd7

@@ -1,11 +1,10 @@
-[gd_scene format=3 uid="uid://3h63vcg67f5r"]
+[gd_scene format=3 uid="uid://bvd2piu26bmad"]
 
 [ext_resource type="Script" uid="uid://dtxj8n8pkq4qk" path="res://PlayerControl/Scripts/projectile.gd" id="1_qxf0c"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://extra sprites/pellet.png" id="2_dgwo2"]
-=======
 [ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://PlayerControl/GUIResources/Gun/pellet.png" id="2_dgwo2"]
->>>>>>> c90828b15f3bfc39c5166e7ff33c1a156d68cdd7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(8.333335, 0.8333336)
 
 [node name="projectile" type="Area2D" unique_id=850689398]
 scale = Vector2(0.2, 0.2)
@@ -18,7 +17,8 @@ rotation = 1.5707964
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_dgwo2")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=268145935]
-position = Vector2(-3.8146977e-06, 2.843751)
-scale = Vector2(1, 1.4375)
-polygon = PackedVector2Array(-24.999998, -4.9999995, -24.999998, 0, -0.4190979, 0, 24.999998, 0, 24.999998, -4.9999995)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1425211465]
+position = Vector2(1.1920922e-06, 8.526511e-13)
+scale = Vector2(5.999998, 11.999996)
+shape = SubResource("RectangleShape2D_4c57u")
+debug_color = Color(0.9604005, 0, 0.5189599, 0.41960785)

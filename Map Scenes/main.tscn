@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cynpmxbl61o7l"]
+
+[ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="1_1a0i0"]
+[ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="2_a6lk4"]
+[ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="3_qbhuo"]
+[ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="4_6m3bi"]
+[ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="5_a6lk4"]
+[ext_resource type="PackedScene" uid="uid://fau1n6w7ujb2" path="res://Map Scenes/map.tscn" id="5_j4ykm"]
+[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="6_3r23j"]
+[ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="6_qbhuo"]
+[ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="7_w32mb"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="8_2ruw3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
+font = ExtResource("3_qbhuo")
+font_size = 56
+
+[node name="Main" type="Node2D" unique_id=546777818]
+
+[node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
+
+[node name="HP_STAM" type="Control" parent="HUD Layer" unique_id=1913129958]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=829904280]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 340.0
+offset_bottom = 57.0
+script = ExtResource("1_1a0i0")
+
+[node name="StaminaBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=268769180]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 340.0
+offset_bottom = 113.0
+script = ExtResource("2_a6lk4")
+
+[node name="HealthLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=871429175]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 78.0
+offset_bottom = 64.0
+text = "HP"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="StaminaLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=206372054]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 78.0
+offset_bottom = 120.0
+text = "ST"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="Menu" parent="HUD Layer" unique_id=852909639 instance=ExtResource("4_6m3bi")]
+
+[node name="Coin" parent="HUD Layer" unique_id=1060038100 instance=ExtResource("5_a6lk4")]
+
+[node name="CoinInput" parent="HUD Layer" unique_id=574592859 instance=ExtResource("6_qbhuo")]
+
+[node name="Map" parent="." unique_id=1027391774 instance=ExtResource("5_j4ykm")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1851495139]
+zoom = Vector2(3, 3)
+
+[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("6_3r23j")]
+projectile = ExtResource("7_w32mb")
+
+[node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_2ruw3")]
+position = Vector2(-62, -28)
+
+[node name="Potato2" parent="." unique_id=1517970831 instance=ExtResource("8_2ruw3")]
+position = Vector2(120, -55)
