@@ -71,20 +71,26 @@ label_settings = SubResource("LabelSettings_6jrgu")
 zoom = Vector2(3, 3)
 
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("6_3r23j")]
-position = Vector2(-11, 23)
+position = Vector2(-9, 28)
 projectile = ExtResource("7_w32mb")
 
 [node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_2ruw3")]
-position = Vector2(-35, -54)
+position = Vector2(-41, -57)
 
 [node name="Potato2" parent="." unique_id=1517970831 instance=ExtResource("8_2ruw3")]
-position = Vector2(56, -31)
+position = Vector2(12, -56)
 
 [node name="Potato3" parent="." unique_id=148144394 instance=ExtResource("8_2ruw3")]
-position = Vector2(137, -2)
+position = Vector2(-13, -72)
 
 [node name="Potato4" parent="." unique_id=393348912 instance=ExtResource("8_2ruw3")]
-position = Vector2(89, 50)
+position = Vector2(-137, 23)
 
 [node name="Potato5" parent="." unique_id=2105227479 instance=ExtResource("8_2ruw3")]
-position = Vector2(-129, 1)
+position = Vector2(-115, -14)
+
+[node name="Potato6" parent="." unique_id=1885385104 instance=ExtResource("8_2ruw3")]
+position = Vector2(142, 0)
+
+[node name="Potato7" parent="." unique_id=1592119939 instance=ExtResource("8_2ruw3")]
+position = Vector2(158, 20)
