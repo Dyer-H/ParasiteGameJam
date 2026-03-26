@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="suitItemResource" format=3 uid="uid://co8cd5fsyf3xl"]
+
+[ext_resource type="Script" uid="uid://4w75tqncwioi" path="res://HUDLayer/Menu/Scripts/suit_menu_item.gd" id="1_2ujvd"]
+
+[resource]
+script = ExtResource("1_2ujvd")
+name = "Hazmat Suit (lvl 3)"
+metadata/_custom_type_script = "uid://4w75tqncwioi"

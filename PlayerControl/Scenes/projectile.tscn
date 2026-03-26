@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://3h63vcg67f5r"]
 
 [ext_resource type="Script" uid="uid://dtxj8n8pkq4qk" path="res://PlayerControl/Scripts/projectile.gd" id="1_qxf0c"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://extra sprites/pellet.png" id="2_dgwo2"]
+=======
+[ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://PlayerControl/GUIResources/Gun/pellet.png" id="2_dgwo2"]
+>>>>>>> c90828b15f3bfc39c5166e7ff33c1a156d68cdd7
 
 [node name="projectile" type="Area2D" unique_id=850689398]
 scale = Vector2(0.2, 0.2)

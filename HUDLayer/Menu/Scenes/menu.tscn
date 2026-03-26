@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://b1aniu3pij8en"]
 
 [ext_resource type="Script" uid="uid://bspiwsu5pbb8q" path="res://HUDLayer/Menu/Scripts/menu.gd" id="1_clypp"]
-[ext_resource type="Texture2D" uid="uid://clulvujj60xr5" path="res://HUDLayer/Inventory/GUIResources/graybackground.jpg" id="1_q5wl8"]
-[ext_resource type="Texture2D" uid="uid://ovpq6scpmx1x" path="res://HUDLayer/Inventory/GUIResources/greenbackground.jpg" id="2_lcmtb"]
+[ext_resource type="Texture2D" uid="uid://dkm12q3e28btm" path="res://HUDLayer/Menu/GUIResources/gray_background.jpg" id="2_clypp"]
 [ext_resource type="PackedScene" uid="uid://cynnms3kyigvg" path="res://HUDLayer/Menu/Scenes/selectable_menu_item.tscn" id="2_q5wl8"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="2_xn22a"]
+[ext_resource type="Texture2D" uid="uid://pmdp83j6x6vf" path="res://HUDLayer/Menu/GUIResources/blue_background.png" id="5_clypp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_clypp"]
+bg_color = Color(0.026666641, 0, 0.4, 1)
 
 [node name="Menu" type="Control" unique_id=852909639]
 layout_mode = 3
@@ -30,7 +33,7 @@ offset_right = 800.0
 offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_q5wl8")
+texture = ExtResource("2_clypp")
 
 [node name="UpgradeLabel" type="Label" parent="TextureRect" unique_id=2109063208]
 layout_mode = 0
@@ -71,15 +74,51 @@ layout_mode = 2
 custom_minimum_size = Vector2(1000, 122)
 layout_mode = 2
 
-[node name="Border3" parent="TextureRect/GridContainer" unique_id=1250742014 instance=ExtResource("2_q5wl8")]
-custom_minimum_size = Vector2(1000, 122)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1143191591]
+[node name="DescriptionBackground" type="TextureRect" parent="TextureRect" unique_id=1143191591]
 layout_mode = 0
 offset_left = 1112.0
 offset_top = 170.0
 offset_right = 1555.0
 offset_bottom = 705.0
-texture = ExtResource("2_lcmtb")
+texture = ExtResource("5_clypp")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/DescriptionBackground" unique_id=651948709]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ItemDescription" type="Label" parent="TextureRect/DescriptionBackground/MarginContainer" unique_id=956699930]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_xn22a")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="UpgradeButton" type="Button" parent="TextureRect/DescriptionBackground" unique_id=1932256098]
+visible = false
+layout_mode = 0
+offset_left = 14.0
+offset_top = 459.0
+offset_right = 428.0
+offset_bottom = 521.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_clypp")
+
+[node name="UpgradeButtonLabel" type="Label" parent="TextureRect/DescriptionBackground/UpgradeButton" unique_id=1640296359]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xn22a")
+theme_override_font_sizes/font_size = 41
+horizontal_alignment = 1
+vertical_alignment = 1

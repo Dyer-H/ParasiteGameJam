@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dqgvje7qkgtup"]
 
-[ext_resource type="Texture2D" uid="uid://884kq8xo34if" path="res://extra sprites/Basic_coin.png" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://884kq8xo34if" path="res://PlayerControl/GUIResources/Gun/Basic_coin.png" id="1_0t63x"]
 [ext_resource type="Script" uid="uid://c42ircql6463w" path="res://coin.gd" id="1_v7riw"]
-[ext_resource type="Texture2D" uid="uid://bf33j3wy48vu1" path="res://extra sprites/Basic_coin_last_frame.png" id="2_v7riw"]
+[ext_resource type="Texture2D" uid="uid://bf33j3wy48vu1" path="res://PlayerControl/GUIResources/Gun/Basic_coin_last_frame.png" id="2_v7riw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdq0q"]
 atlas = ExtResource("1_0t63x")
