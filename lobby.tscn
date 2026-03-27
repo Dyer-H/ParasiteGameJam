@@ -23,18 +23,18 @@ polygon = PackedVector2Array(-17, 172, 242, 43, -15, -86, -271, 43, -13, 172, -2
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 1" unique_id=788245988]
-polygon = PackedVector2Array(25, 71, 11, 63, -7, 71, -69, 38, -87, 48, -7, 88)
+polygon = PackedVector2Array(25, 70, 8, 60, -6, 68, -70, 36, -87, 46, -7, 86)
 
 [node name="Control Table 2" type="StaticBody2D" parent="." unique_id=93731776]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 2" unique_id=1557469508]
 position = Vector2(80, -40)
-polygon = PackedVector2Array(-31, 98, -47, 91, -22, 79, -88, 47, -71, 38, 9, 78)
+polygon = PackedVector2Array(-30, 99, -47, 91, -22, 79, -88, 47, -71, 38, 9, 78)
 
 [node name="Control Table 3" type="StaticBody2D" parent="." unique_id=270420168]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 3" unique_id=2029689682]
 position = Vector2(-38, -68)
-polygon = PackedVector2Array(24, 70, 9, 62, -39, 87, -22, 95)
+polygon = PackedVector2Array(24, 70, 8, 62, -39, 87, -22, 95)
