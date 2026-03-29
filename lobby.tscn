@@ -5,6 +5,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1653438255]
+position = Vector2(0, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1299349025]
 y_sort_enabled = true
@@ -17,24 +18,24 @@ offset = Vector2(500, 200)
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=137202674]
-polygon = PackedVector2Array(-17, 172, 242, 43, -15, -86, -271, 43, -13, 172, -274, 43, -14, -92, 246, 42)
+polygon = PackedVector2Array(-69, 198, 242, 43, -15, -86, -271, 43, 53, 205, -384, 43, -13, -132, 346, 43)
 
-[node name="Control Table 1" type="StaticBody2D" parent="." unique_id=1926332204]
+[node name="Walls2" type="StaticBody2D" parent="." unique_id=1926332204]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 1" unique_id=788245988]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls2" unique_id=788245988]
 polygon = PackedVector2Array(25, 70, 8, 60, -6, 68, -70, 36, -87, 46, -7, 86)
 
-[node name="Control Table 2" type="StaticBody2D" parent="." unique_id=93731776]
+[node name="Walls3" type="StaticBody2D" parent="." unique_id=93731776]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 2" unique_id=1557469508]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls3" unique_id=1557469508]
 position = Vector2(80, -40)
 polygon = PackedVector2Array(-30, 99, -47, 91, -22, 79, -88, 47, -71, 38, 9, 78)
 
-[node name="Control Table 3" type="StaticBody2D" parent="." unique_id=270420168]
+[node name="Walls4" type="StaticBody2D" parent="." unique_id=270420168]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control Table 3" unique_id=2029689682]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls4" unique_id=2029689682]
 position = Vector2(-38, -68)
 polygon = PackedVector2Array(24, 70, 8, 62, -39, 87, -22, 95)

@@ -275,10 +275,6 @@ animations = [{
 radius = 2.0
 height = 6.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00xxd"]
-radius = 5.0
-height = 16.0
-
 [node name="Player" type="CharacterBody2D" unique_id=1364000813]
 y_sort_enabled = true
 script = ExtResource("1_bv3ae")
@@ -287,17 +283,10 @@ script = ExtResource("1_bv3ae")
 sprite_frames = SubResource("SpriteFrames_ap5lh")
 animation = &"walk_up_right"
 
-[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=486104916]
+[node name="PlayerCollisionBox" type="CollisionShape2D" parent="." unique_id=486104916]
 position = Vector2(0, 8)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_bv3ae")
-
-[node name="Detect Player Box" type="Area2D" parent="." unique_id=1220701192]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Player Box" unique_id=597921529]
-position = Vector2(0, 2)
-shape = SubResource("CapsuleShape2D_00xxd")
-disabled = true
 
 [node name="DamageNumbersOrigin" type="Node2D" parent="." unique_id=125051727]
 position = Vector2(0, -7)

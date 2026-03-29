@@ -18,3 +18,5 @@ texture = ExtResource("2_dgwo2")
 position = Vector2(3.8146973e-06, 2.8437505)
 scale = Vector2(1.0000001, 1.4375)
 polygon = PackedVector2Array(-24.999998, 0, 24.999998, 0, 24.999998, -4.9999995, -24.999998, -4.9999995)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
