@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="rangeItemResource" format=3 uid="uid://c4yuepdb1dvst"]
+
+[ext_resource type="Script" uid="uid://derm35gce706q" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/range_menu_item.gd" id="1_mw254"]
+
+[resource]
+script = ExtResource("1_mw254")
+name = "Range"
+description = "Nothing"
+max_lvl = true
+metadata/_custom_type_script = "uid://derm35gce706q"

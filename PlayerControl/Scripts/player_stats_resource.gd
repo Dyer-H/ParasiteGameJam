@@ -24,7 +24,15 @@ class_name playerStats
 @export var player_speed: int
 
 @export var coins: int
+
 @export var health_level: int
+@export var stam_level: int
+@export var damage_level: int
+@export var range_level: int
+@export var crit_level: int
+@export var dash_level: int
+@export var speed_level: int
+
 @export var weapon_level: int
 @export var suit_level: int
 
@@ -72,12 +80,24 @@ func set_player_speed(new_player_speed: int) -> void:
 func increment_health_level() -> void:
 	health_level += 1
 
-func increment_weapon_level() -> void:
-	weapon_level += 1
+func increment_stam_level() -> void:
+	stam_level += 1
+	
+func increment_damage_level() -> void:
+	damage_level += 1
 
-func increment_suit_level() -> void:
-	suit_level += 1
-
+func increment_range_level() -> void:
+	range_level += 1
+	
+func increment_crit_level() -> void:
+	crit_level += 1
+	
+func increment_dash_level() -> void:
+	dash_level += 1
+	
+func increment_speed_level() -> void:
+	speed_level += 1
+	
 func change_stamina(val)->void:
 	self.value+=val
 	stamina-=val

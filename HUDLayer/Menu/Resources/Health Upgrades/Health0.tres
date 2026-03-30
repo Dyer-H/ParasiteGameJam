@@ -7,5 +7,5 @@ script = ExtResource("1_1jfem")
 health = 120
 name = "Health"
 price = 10
-description = "Something"
+description = "Upgrades Health by +20 points"
 metadata/_custom_type_script = "uid://naxyopnxed6d"

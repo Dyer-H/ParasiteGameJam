@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="dashItemResource" format=3 uid="uid://bau78l1na7dvs"]
+
+[ext_resource type="Script" uid="uid://chwwuhbfiox6u" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/dash_menu_item.gd" id="1_bgc50"]
+
+[resource]
+script = ExtResource("1_bgc50")
+name = "Dash"
+description = "Nothing"
+max_lvl = true
+metadata/_custom_type_script = "uid://chwwuhbfiox6u"

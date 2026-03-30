@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+#Dyer's Neovim Ignores
+/addons
+/project.godot

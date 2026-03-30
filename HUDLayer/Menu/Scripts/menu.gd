@@ -1,6 +1,5 @@
 extends Control
 
-#this should always be selectable menu items
 @onready var description = $TextureRect/DescriptionBackground/MarginContainer/ItemDescription
 @onready var upgradeButton = $TextureRect/DescriptionBackground/UpgradeButton
 @onready var upgradeButtonLabel = $TextureRect/DescriptionBackground/UpgradeButton/UpgradeButtonLabel
@@ -48,7 +47,7 @@ func _process(_delta: float) -> void:
 		self.visible = true
 		_pause_game()
 
-#this happens every time a menu item (left two boxes) are clicked
+#this happens every time a menu item is clicked
 func _on_item_clicked(menu_item) -> void:
 	var pos = menu_items.find(menu_item)
 	if !isItemSelected:
@@ -73,20 +72,35 @@ func _on_upgrade_button_clicked() -> void:
 	var price = current_selection.item.price
 	stats.set_coins(stats.coins - price)
 	match selectedItem:
-		0:
-			stats.increment_weapon_level()
-		1:
-			stats.increment_suit_level()
+		ItemPositions.HEALTH_ITEM:
+			stats.increment_health_level()
+			_update_health_upgrade()
+		ItemPositions.STAM_ITEM:
+			stats.increment_stam_level()
+			_update_stam_upgrade()
+		ItemPositions.DAMAGE_ITEM:
+			stats.increment_damage_level()
+			_update_damage_upgrade()
+		ItemPositions.CRIT_ITEM:
+			stats.increment_crit_level()
+			_update_crit_upgrade()
+		ItemPositions.DASH_ITEM:
+			stats.increment_dash_level()
+			_update_dash_upgrade()
+		ItemPositions.SPEED_ITEM:
+			stats.increment_speed_level()
+			_update_speed_upgrade()
 	current_selection.toggle_selection()
 	_clear_description_field()
-	_update_menu_item()
 	isItemSelected = false
 
 #populates menu items at ready
 func _populate_menu_items() -> void:
 	_create_selectable_menu_items()
 	_set_initial_menu_items()
+	_set_initial_menu_item_listeners()
 
+#creates number of selectable menu items based on the enum at top
 func _create_selectable_menu_items() -> void:
 	var num_item_positions = ItemPositions.keys().size()
 	for i in range(num_item_positions):
@@ -95,11 +109,21 @@ func _create_selectable_menu_items() -> void:
 		itemBox.add_child(new_selectable_menu_item)
 	menu_items = itemBox.get_children()
 
+#calls all update functions to set the values in the selectable menu items
 func _set_initial_menu_items() -> void:
 	_update_health_upgrade()
 	_update_stam_upgrade()
 	_update_damage_upgrade()
+	_update_range_upgrade()
+	_update_crit_upgrade()
+	_update_dash_upgrade() 
 	_update_speed_upgrade()
+	
+func _set_initial_menu_item_listeners() -> void: 
+	for menu_item in menu_items:
+		var button = menu_item.get_node("BorderMargin/Button")
+		button.pressed.connect(_on_item_clicked.bind(menu_item))
+	upgradeButton.pressed.connect(_on_upgrade_button_clicked)
 
 func _update_health_upgrade() -> void:
 	var health_resource_string = _generate_health_resource_string_from_stat(stats.health_level)
@@ -107,34 +131,35 @@ func _update_health_upgrade() -> void:
 	menu_items[ItemPositions.HEALTH_ITEM].set_menu_item(health_item)
 
 func _update_stam_upgrade() -> void:
-	var stam_resource_string = _generate_speed_resource_string_from_stat(stats.health_level)
+	var stam_resource_string = _generate_stam_resource_string_from_stat(stats.stam_level)
 	var stam_item = load(stam_resource_string)
 	menu_items[ItemPositions.STAM_ITEM].set_menu_item(stam_item)
 
 func _update_damage_upgrade() -> void:
-	var damage_resource_string = _generate_damage_resource_string_from_stat(stats.health_level)
+	var damage_resource_string = _generate_damage_resource_string_from_stat(stats.damage_level)
 	var damage_item = load(damage_resource_string)
 	menu_items[ItemPositions.DAMAGE_ITEM].set_menu_item(damage_item)
 
+func _update_range_upgrade() -> void:
+	var range_resource_string = _generate_range_resource_string_from_stat(stats.range_level)
+	var range_item = load(range_resource_string)
+	menu_items[ItemPositions.RANGE_ITEM].set_menu_item(range_item)
+	
+func _update_crit_upgrade() -> void:
+	var crit_resource_string = _generate_crit_resource_string_from_stat(stats.crit_level)
+	var crit_item = load(crit_resource_string)
+	menu_items[ItemPositions.CRIT_ITEM].set_menu_item(crit_item)
+	
+func _update_dash_upgrade() -> void:
+	var dash_resource_string = _generate_dash_resource_string_from_stat(stats.dash_level)
+	var dash_item = load(dash_resource_string)
+	menu_items[ItemPositions.DASH_ITEM].set_menu_item(dash_item)
+
 func _update_speed_upgrade() -> void:
-	var speed_resource_string = _generate_speed_resource_string_from_stat(stats.health_level)
+	var speed_resource_string = _generate_speed_resource_string_from_stat(stats.speed_level)
 	var speed_item = load(speed_resource_string)
 	menu_items[ItemPositions.SPEED_ITEM].set_menu_item(speed_item)
 
-#gross function
-#might rewrite but whatev
-#updates menu item based on which one it is?
-func _update_menu_item() -> void:
-	match selectedItem: 
-		0: 
-			var weapon_resource_string = _generate_weapon_resource_string_from_stat(stats.weapon_level)
-			var weapon_item = load(weapon_resource_string)
-			menu_items[0].set_menu_item(weapon_item)
-		1:
-			var suit_resource_string = _generate_suit_resource_string_from_stat(stats.suit_level)
-			var suit_item = load(suit_resource_string)
-			menu_items[1].set_menu_item(suit_item)
-	
 #function to set description field
 #could probably store button text as a resource but eh
 func _set_description_field(item: menuItemResource) -> void:
@@ -171,15 +196,9 @@ func _clear_button_text() -> void:
 func _clear_description_text() -> void:
 	description.text = ""
 
-#two jank functions that generate strings to the resources that need to be loaded
+#functions that generate strings to the resources that need to be loaded
 #for menu items
 #opted for resources because that way there is saved data
-func _generate_weapon_resource_string_from_stat(upgrade_level: int) -> String:
-	return "res://HUDLayer/Menu/Resources/Weapon" + str(upgrade_level) + ".tres"
-
-func _generate_suit_resource_string_from_stat(upgrade_level: int) -> String:
-	return "res://HUDLayer/Menu/Resources/Suit" + str(upgrade_level) + ".tres"
-
 func _generate_health_resource_string_from_stat(upgrade_level: int) -> String:
 	return "res://HUDLayer/Menu/Resources/Health Upgrades/Health" + str(upgrade_level) + ".tres"
 	
@@ -188,6 +207,15 @@ func _generate_stam_resource_string_from_stat(upgrade_level: int) -> String:
 	
 func _generate_damage_resource_string_from_stat(upgrade_level: int) -> String:
 	return "res://HUDLayer/Menu/Resources/Damage Upgrades/Damage" + str(upgrade_level) + ".tres"
+
+func _generate_range_resource_string_from_stat(upgrade_level: int) -> String:
+	return "res://HUDLayer/Menu/Resources/Range Upgrades/Range" + str(upgrade_level) + ".tres"
+
+func _generate_crit_resource_string_from_stat(upgrade_level: int) -> String:
+	return "res://HUDLayer/Menu/Resources/Crit Upgrades/Crit" + str(upgrade_level) + ".tres"
+
+func _generate_dash_resource_string_from_stat(upgrade_level: int) -> String:
+	return "res://HUDLayer/Menu/Resources/Dash Upgrades/Dash" + str(upgrade_level) + ".tres"
 
 func _generate_speed_resource_string_from_stat(upgrade_level: int) -> String:
 	return "res://HUDLayer/Menu/Resources/Speed Upgrades/Speed" + str(upgrade_level) + ".tres"

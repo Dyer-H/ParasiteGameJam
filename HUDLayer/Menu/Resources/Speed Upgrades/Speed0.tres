@@ -7,5 +7,5 @@ script = ExtResource("1_qkbvy")
 player_speed = 80
 name = "Speed"
 price = 20
-description = "Something"
+description = "Upgrades Speed by 2x"
 metadata/_custom_type_script = "uid://bhbtt1t15gbqt"
