@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="weaponItemResource" format=3 uid="uid://dc6ouui3mq4i3"]
 
-[ext_resource type="Script" uid="uid://bi4vxudcexy53" path="res://HUDLayer/Menu/Scripts/weapon_menu_item.gd" id="1_u778m"]
+[ext_resource type="Script" uid="uid://bi4vxudcexy53" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/weapon_menu_item.gd" id="1_u778m"]
 
 [resource]
 script = ExtResource("1_u778m")

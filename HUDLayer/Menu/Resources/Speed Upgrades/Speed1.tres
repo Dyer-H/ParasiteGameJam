@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="speedItemResource" format=3 uid="uid://b7swow5v455rw"]
+
+[ext_resource type="Script" uid="uid://bhbtt1t15gbqt" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/speed_menu_item.gd" id="1_8nvoq"]
+
+[resource]
+script = ExtResource("1_8nvoq")
+name = "Speed (max lvl)"
+description = "Nothing"
+max_lvl = true
+metadata/_custom_type_script = "uid://bhbtt1t15gbqt"

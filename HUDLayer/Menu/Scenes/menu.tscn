@@ -60,6 +60,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="TextureRect" unique_id=1671164437]
+visible = false
 layout_mode = 0
 offset_left = 75.0
 offset_top = 171.0
@@ -122,3 +123,13 @@ theme_override_fonts/font = ExtResource("2_xn22a")
 theme_override_font_sizes/font_size = 41
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect" unique_id=315072945]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 171.0
+offset_right = 1077.0
+offset_bottom = 702.0
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect/ScrollContainer" unique_id=2095073308]
+layout_mode = 2

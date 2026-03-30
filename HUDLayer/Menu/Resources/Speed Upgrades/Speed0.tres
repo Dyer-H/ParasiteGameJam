@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="speedItemResource" format=3 uid="uid://m83r624hvfcj"]
+
+[ext_resource type="Script" uid="uid://bhbtt1t15gbqt" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/speed_menu_item.gd" id="1_qkbvy"]
+
+[resource]
+script = ExtResource("1_qkbvy")
+player_speed = 80
+name = "Speed"
+price = 20
+description = "Something"
+metadata/_custom_type_script = "uid://bhbtt1t15gbqt"

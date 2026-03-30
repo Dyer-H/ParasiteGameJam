@@ -13,9 +13,21 @@ class_name playerStats
 
 @export var health: int
 @export var stamina: int 
+
+@export var max_health: int
+@export var max_stamina: int
+@export var gun_damage: int
+
+@export var bullet_range: float
+@export var crit_chance: float
+@export var dash_regen: float
+@export var player_speed: int
+
 @export var coins: int
+@export var health_level: int
 @export var weapon_level: int
 @export var suit_level: int
+
 
 #function used for coin testing input
 func set_coins(coin_val: int) -> void:
@@ -37,13 +49,34 @@ func take_damage(damage: int) -> void:
 		health = new_health
 	emit_changed()
 
+func set_max_health(new_max_health: int) -> void:
+	max_health = new_max_health
+	emit_changed()
+
+func set_bullet_range(new_range: float) -> void:
+	bullet_range = new_range
+	emit_changed()
+	
+func set_crit_chance(new_crit_chance: float) -> void:
+	crit_chance = new_crit_chance
+	emit_changed()
+	
+func set_dash_regen(new_dash_regen: float) -> void:
+	dash_regen = new_dash_regen
+	emit_changed()
+	
+func set_player_speed(new_player_speed: int) -> void:
+	player_speed = new_player_speed
+	emit_changed()
+
+func increment_health_level() -> void:
+	health_level += 1
+
 func increment_weapon_level() -> void:
 	weapon_level += 1
-	emit_changed()
 
 func increment_suit_level() -> void:
 	suit_level += 1
-	emit_changed()
 
 func change_stamina(val)->void:
 	self.value+=val

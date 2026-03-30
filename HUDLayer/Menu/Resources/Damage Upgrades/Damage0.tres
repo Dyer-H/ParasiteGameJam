@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="damageItemResource" format=3 uid="uid://cqtk3wjnsuw28"]
+
+[ext_resource type="Script" uid="uid://cptayb7y8yo4p" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/damage_menu_item.gd" id="1_3ys8l"]
+
+[resource]
+script = ExtResource("1_3ys8l")
+damage = 20
+name = "Damage"
+price = 20
+description = "Something"
+metadata/_custom_type_script = "uid://cptayb7y8yo4p"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="stamItemResource" format=3 uid="uid://dv60iu5touut"]
+
+[ext_resource type="Script" uid="uid://bt4iv0kuywsvn" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/stam_menu_item.gd" id="1_fviue"]
+
+[resource]
+script = ExtResource("1_fviue")
+metadata/_custom_type_script = "uid://bt4iv0kuywsvn"
