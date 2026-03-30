@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_g6a4x")
-bullet_range = 2.5
-name = "Range"
+bullet_range = 0.15
+name = "Range (lvl 1)"
 price = 10
-description = "Upgrades Range"
+description = "Upgrades Range By A Factor of 1.5"
 metadata/_custom_type_script = "uid://derm35gce706q"

@@ -63,7 +63,7 @@ func play_animation(direction: Vector2):
 		Globals.DOWN_LEFT:
 			animated_sprite.play("down_left")
 			
-func take_damage(damage:int,crit:float):
+func take_damage(damage:int, crit:float):
 	var is_crit = crit > randf() # Calculating crit based off chance
 	if is_crit:
 		damage = 2*damage

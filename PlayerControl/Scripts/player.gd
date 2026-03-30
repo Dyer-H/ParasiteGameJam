@@ -2,10 +2,8 @@ extends CharacterBody2D
 
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var healthbar = $"../HUD Layer/HP_STAM/HealthBar"
 @onready var damage_numbers_origin = $DamageNumbersOrigin
 
-@onready var stambar = $"../HUD Layer/HP_STAM/StaminaBar"
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
 const DASH_DURATION=0.2 # Dash time (seconds)

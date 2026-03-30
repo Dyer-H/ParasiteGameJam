@@ -83,9 +83,18 @@ func _on_upgrade_button_clicked() -> void:
 			stats.set_max_stamina(max_stam)
 			_update_stam_upgrade()
 		ItemPositions.DAMAGE_ITEM:
+			var new_damage = current_selection.item.damage
+			stats.gun_damage = new_damage
 			stats.increment_damage_level()
 			_update_damage_upgrade()
+		ItemPositions.RANGE_ITEM:
+			var new_range = current_selection.item.bullet_range
+			stats.bullet_range = new_range
+			stats.increment_range_level()
+			_update_range_upgrade()
 		ItemPositions.CRIT_ITEM:
+			var new_crit = current_selection.item.crit_chance
+			stats.crit_chance = new_crit
 			stats.increment_crit_level()
 			_update_crit_upgrade()
 		ItemPositions.DASH_ITEM:

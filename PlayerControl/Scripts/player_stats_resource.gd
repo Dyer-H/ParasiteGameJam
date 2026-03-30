@@ -33,10 +33,6 @@ class_name playerStats
 @export var dash_level: int
 @export var speed_level: int
 
-@export var weapon_level: int
-@export var suit_level: int
-
-
 #function used for coin testing input
 func set_coins(coin_val: int) -> void:
 	if coin_val > 999:
