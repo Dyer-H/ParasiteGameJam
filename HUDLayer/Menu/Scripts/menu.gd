@@ -73,10 +73,14 @@ func _on_upgrade_button_clicked() -> void:
 	stats.set_coins(stats.coins - price)
 	match selectedItem:
 		ItemPositions.HEALTH_ITEM:
+			var max_health = current_selection.item.health
+			stats.set_max_health(max_health)
 			stats.increment_health_level()
 			_update_health_upgrade()
 		ItemPositions.STAM_ITEM:
+			var max_stam = current_selection.item.stamina
 			stats.increment_stam_level()
+			stats.set_max_stamina(max_stam)
 			_update_stam_upgrade()
 		ItemPositions.DAMAGE_ITEM:
 			stats.increment_damage_level()
@@ -85,9 +89,13 @@ func _on_upgrade_button_clicked() -> void:
 			stats.increment_crit_level()
 			_update_crit_upgrade()
 		ItemPositions.DASH_ITEM:
+			var new_dash = current_selection.item.dash_regen
+			stats.dash_regen = new_dash
 			stats.increment_dash_level()
 			_update_dash_upgrade()
 		ItemPositions.SPEED_ITEM:
+			var new_speed = current_selection.item.player_speed
+			stats.player_speed = new_speed
 			stats.increment_speed_level()
 			_update_speed_upgrade()
 	current_selection.toggle_selection()

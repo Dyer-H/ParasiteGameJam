@@ -47,36 +47,32 @@ func set_coins(coin_val: int) -> void:
 		coins = coin_val
 	emit_changed()
 
-#function used to subtract from health
-#cannot go below 0
-func take_damage(damage: int) -> void:
-	var new_health = health - damage
-	if new_health < 0:
+func set_health(new_health: int) -> void:
+	if new_health > max_health:
+		health = max_health
+	elif new_health < 0:
 		health = 0
 	else:
 		health = new_health
 	emit_changed()
-
-func set_max_health(new_max_health: int) -> void:
-	max_health = new_max_health
-	emit_changed()
-
-func set_bullet_range(new_range: float) -> void:
-	bullet_range = new_range
-	emit_changed()
 	
-func set_crit_chance(new_crit_chance: float) -> void:
-	crit_chance = new_crit_chance
-	emit_changed()
-	
-func set_dash_regen(new_dash_regen: float) -> void:
-	dash_regen = new_dash_regen
-	emit_changed()
-	
-func set_player_speed(new_player_speed: int) -> void:
-	player_speed = new_player_speed
+func set_max_health(new_health: int) -> void:
+	max_health = new_health
 	emit_changed()
 
+func set_stamina(new_stamina: int) -> void:
+	if new_stamina > max_stamina:
+		stamina = max_stamina
+	elif new_stamina < 0:
+		stamina = 0
+	else:
+		stamina = new_stamina
+	emit_changed()
+
+func set_max_stamina(new_stamina: int) -> void:
+	max_stamina = new_stamina
+	emit_changed()
+	
 func increment_health_level() -> void:
 	health_level += 1
 
@@ -97,7 +93,3 @@ func increment_dash_level() -> void:
 	
 func increment_speed_level() -> void:
 	speed_level += 1
-	
-func change_stamina(val)->void:
-	self.value+=val
-	stamina-=val

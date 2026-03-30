@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_ju8x5")
-dash_regen = 2.0
-name = "Dash"
+dash_regen = 1.0
+name = "Dash (lvl 1)"
 price = 10
-description = "Something"
+description = "Decreases dash regen wait time by a factor of 2"
 metadata/_custom_type_script = "uid://chwwuhbfiox6u"

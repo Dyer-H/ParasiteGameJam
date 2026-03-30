@@ -6,4 +6,8 @@
 script = ExtResource("1_6vkvx")
 health = 100
 stamina = 100
+max_health = 100
+max_stamina = 100
+dash_regen = 2.0
+player_speed = 40
 metadata/_custom_type_script = "uid://dihuvudx7mp07"

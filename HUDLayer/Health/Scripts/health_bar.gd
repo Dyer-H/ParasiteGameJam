@@ -12,3 +12,4 @@ func _ready() -> void:
 
 func _on_stats_changed() -> void:
 	self.value = stats.health
+	self.max_value = stats.max_health

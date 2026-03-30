@@ -12,7 +12,4 @@ func _ready() -> void:
 
 func _on_stats_changed() -> void:
 	self.value = stats.stamina
-	
-func change_stamina(val)->void:
-	self.value+=val
-	stats.stamina-=val
+	self.max_value = stats.max_stamina
