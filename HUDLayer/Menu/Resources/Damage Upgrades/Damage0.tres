@@ -6,6 +6,6 @@
 script = ExtResource("1_3ys8l")
 damage = 3
 name = "Damage (lvl 1)"
-price = 20
+price = 50
 description = "Adds 1 damage to base bullet (no crit)"
 metadata/_custom_type_script = "uid://cptayb7y8yo4p"
