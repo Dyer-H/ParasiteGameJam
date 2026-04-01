@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="6_qbhuo"]
 [ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="7_w32mb"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="8_2ruw3"]
-[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://lobby.tscn" id="10_qbhuo"]
-[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://big_baddie.tscn" id="11_6m3bi"]
+[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map Scenes/lobby.tscn" id="10_qbhuo"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/big_baddie.tscn" id="11_6m3bi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("3_qbhuo")

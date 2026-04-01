@@ -275,6 +275,9 @@ animations = [{
 radius = 2.0
 height = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_00xxd"]
+radius = 12.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1364000813]
 y_sort_enabled = true
 script = ExtResource("1_bv3ae")
@@ -291,3 +294,11 @@ shape = SubResource("CapsuleShape2D_bv3ae")
 [node name="DamageNumbersOrigin" type="Node2D" parent="." unique_id=125051727]
 position = Vector2(0, -7)
 script = ExtResource("3_00xxd")
+
+[node name="PickupRange" type="Area2D" parent="." unique_id=78876983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupRange" unique_id=732242493]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_00xxd")
+
+[connection signal="area_entered" from="PickupRange" to="." method="_on_pickup_range_area_entered"]

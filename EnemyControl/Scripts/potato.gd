@@ -15,6 +15,9 @@ var player_in_area = false
 var player_hit = false
 var hit_cooldown = 0
 
+@export var item_drop: Array[PackedScene]
+@export var item_drop_chances: Array[float]
+
 #will probably change this later so that this doesn't get recalculated every frame
 #can probably get away with once every half second or something
 func _physics_process(_delta: float) -> void:
@@ -74,5 +77,42 @@ func take_damage(damage:int, crit:float):
 	
 	if health <= 0:
 		dead = true
+		
+		if item_drop.size() >0:
+			_fix_item_drop_arrays()
+			_drop_item()
+			
 		self.queue_free()
 		return
+
+# Resize the arrays so the chance stays with the items
+func _fix_item_drop_arrays() -> void:
+	if item_drop_chances.size() < item_drop.size():
+		item_drop_chances.resize(item_drop.size())
+	elif item_drop.size() < item_drop_chances.size():
+		item_drop.resize(item_drop_chances.size())
+		
+
+func _drop_item() -> void:
+	var drops = randi_range(0,4)
+	for d in drops:
+		var total_weight: float = 0.0
+		for weight in item_drop_chances:
+			total_weight += weight
+		
+		var rand: float = randf_range(0.0, total_weight)
+		var updated_drop_value: float = 0.0
+		
+		for i in item_drop_chances.size():
+			updated_drop_value += item_drop_chances[i]
+			if rand <= updated_drop_value:
+				if item_drop[i] == null:
+					return
+				
+				var item: Node2D = item_drop[i].instantiate()
+				var angle = randf() * TAU  # TAU = 2 * PI
+				var distance = randf_range(1,3)
+				var offset = Vector2(cos(angle), sin(angle)) * distance
+				item.global_position = global_position + offset
+				get_tree().current_scene.call_deferred("add_child", item)
+				break

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8cafm4tw56jg" path="res://EnemyControl/Scripts/potato.gd" id="1_tv334"]
 [ext_resource type="Texture2D" uid="uid://khwf5aql3uu6" path="res://EnemyControl/GUIResources/EnemySprites/Potato_SpriteSheet.png" id="2_1hj60"]
+[ext_resource type="PackedScene" uid="uid://dqgvje7qkgtup" path="res://coin.tscn" id="2_e3aeq"]
 [ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scenes/detection_area.gd" id="3_01wqo"]
 [ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scenes/hitbox.gd" id="4_xfn0n"]
 [ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="5_p16dw"]
@@ -244,6 +245,8 @@ radius = 11.0
 script = ExtResource("1_tv334")
 health = 70
 dmg = 5
+item_drop = Array[PackedScene]([ExtResource("2_e3aeq")])
+item_drop_chances = Array[float]([0.6])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=78546283]
 position = Vector2(2, 5)

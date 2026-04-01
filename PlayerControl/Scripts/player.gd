@@ -51,9 +51,6 @@ func get_input():
 	velocity = discretized_direction * stats.player_speed
 	move_and_slide()
 
-func pickup():
-	pass
-
 #expects a discretized vector (defined in global class)
 func play_animation(direction: Vector2):	
 	match direction:
@@ -75,3 +72,9 @@ func play_animation(direction: Vector2):
 			animated_sprite.play("walk_down_left")
 		_: 
 			animated_sprite.stop()
+
+
+func _on_pickup_range_area_entered(area: Area2D) -> void:
+	if area.get_parent().has_method("pickup_coin"):
+		area.get_parent().pickup_coin()
+		stats.set_coins(stats.coins+5)
