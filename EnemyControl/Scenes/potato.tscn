@@ -2,8 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://khwf5aql3uu6" path="res://EnemyControl/GUIResources/EnemySprites/Potato_SpriteSheet.png" id="1_tglrm"]
 [ext_resource type="Script" uid="uid://b8cafm4tw56jg" path="res://EnemyControl/Scripts/potato.gd" id="1_uq1l3"]
-[ext_resource type="PackedScene" uid="uid://dqgvje7qkgtup" path="res://coin.tscn" id="2_jasr4"]
+[ext_resource type="PackedScene" uid="uid://dqgvje7qkgtup" path="res://Drops/coin.tscn" id="2_jasr4"]
 [ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scenes/hitbox.gd" id="3_1se55"]
+[ext_resource type="PackedScene" uid="uid://cjuf1jyo4r2k5" path="res://Drops/health_potion.tscn" id="3_a7kam"]
 [ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scenes/detection_area.gd" id="3_xn1xs"]
 [ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="5_qkpkm"]
 
@@ -244,8 +245,8 @@ radius = 11.0
 [node name="Baddie" type="CharacterBody2D" unique_id=1361659599]
 script = ExtResource("1_uq1l3")
 health = 50
-item_drop = Array[PackedScene]([ExtResource("2_jasr4")])
-item_drop_chances = Array[float]([0.7])
+item_drop = Array[PackedScene]([ExtResource("2_jasr4"), ExtResource("3_a7kam")])
+item_drop_chances = Array[float]([0.7, 0.3])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=78546283]
 sprite_frames = SubResource("SpriteFrames_xe6o5")

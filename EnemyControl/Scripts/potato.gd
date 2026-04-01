@@ -94,7 +94,7 @@ func _fix_item_drop_arrays() -> void:
 		
 
 func _drop_item() -> void:
-	var drops = randi_range(0,4)
+	var drops = randi_range(0,3)
 	for d in drops:
 		var total_weight: float = 0.0
 		for weight in item_drop_chances:
@@ -111,7 +111,7 @@ func _drop_item() -> void:
 				
 				var item: Node2D = item_drop[i].instantiate()
 				var angle = randf() * TAU  # TAU = 2 * PI
-				var distance = randf_range(1,3)
+				var distance = randf_range(0,10)
 				var offset = Vector2(cos(angle), sin(angle)) * distance
 				item.global_position = global_position + offset
 				get_tree().current_scene.call_deferred("add_child", item)

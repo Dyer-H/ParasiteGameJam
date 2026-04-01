@@ -78,3 +78,6 @@ func _on_pickup_range_area_entered(area: Area2D) -> void:
 	if area.get_parent().has_method("pickup_coin"):
 		area.get_parent().pickup_coin()
 		stats.set_coins(stats.coins+5)
+	if area.get_parent().has_method("heal"):
+		var heal = area.get_parent().heal()
+		stats.set_health(stats.health+heal)
