@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwvoh2rcxmeu7"]
+
+[ext_resource type="Texture2D" uid="uid://fmae0xxdxum6" path="res://greenroom.png" id="1_xrb6i"]
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1030943014]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789598699]
+texture = ExtResource("1_xrb6i")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1761325427]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1501656678]
+polygon = PackedVector2Array(-21, 203, 261, 62, 6, -66, -246, 62, 23, 200, -286, 59, 7, -110, 296, 65)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1346716162]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=441857845]
+polygon = PackedVector2Array(9, 93, 71, 61, -25, 11, -87, 45)
