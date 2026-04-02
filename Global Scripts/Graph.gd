@@ -3,6 +3,7 @@ extends Node
 var startNode:GraphNode
 var nodes:Array[GraphNode]
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var tempNode:GraphNode=GraphNode.new()
@@ -15,11 +16,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func addNode(id:int,connection:int): # Connection is nodeID we're connecting to, id is the id of the new node
+func addNode(parent:GraphNode,id:int): # Connection is nodeID we're connecting to, id is the id of the new node
 	var newNode:GraphNode=GraphNode.new()
+	newNode.parent=parent
 	newNode.id=id
-	for node in nodes: # Find connecting node
-		if(node.id==connection):
-			newNode.connections.append(node)
-			node.connections.append(Node)
+	parent.children.append(newNode)
+	
 	nodes.append(newNode)
