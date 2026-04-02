@@ -8,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="6_3r23j"]
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="6_qbhuo"]
 [ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="7_w32mb"]
-[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="8_2ruw3"]
 [ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map Scenes/lobby.tscn" id="10_qbhuo"]
-[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/big_baddie.tscn" id="11_6m3bi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("3_qbhuo")
@@ -74,33 +72,3 @@ zoom = Vector2(3, 3)
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("6_3r23j")]
 position = Vector2(-127, 90)
 projectile = ExtResource("7_w32mb")
-
-[node name="Potato" parent="." unique_id=1361659599 instance=ExtResource("8_2ruw3")]
-position = Vector2(-61, -39)
-
-[node name="Potato2" parent="." unique_id=1517970831 instance=ExtResource("8_2ruw3")]
-position = Vector2(21, -38)
-
-[node name="Potato3" parent="." unique_id=148144394 instance=ExtResource("8_2ruw3")]
-position = Vector2(-2, -57)
-
-[node name="Potato4" parent="." unique_id=393348912 instance=ExtResource("8_2ruw3")]
-position = Vector2(-4, -25)
-
-[node name="Potato5" parent="." unique_id=2105227479 instance=ExtResource("8_2ruw3")]
-position = Vector2(65, -14)
-
-[node name="Potato6" parent="." unique_id=1885385104 instance=ExtResource("8_2ruw3")]
-position = Vector2(110, 15)
-
-[node name="Potato7" parent="." unique_id=1592119939 instance=ExtResource("8_2ruw3")]
-position = Vector2(164, 32)
-
-[node name="Big Baddie" parent="." unique_id=391219585 instance=ExtResource("11_6m3bi")]
-position = Vector2(125, 51)
-
-[node name="Big Baddie2" parent="." unique_id=1375416156 instance=ExtResource("11_6m3bi")]
-position = Vector2(-29, -46)
-
-[node name="Big Baddie3" parent="." unique_id=568754753 instance=ExtResource("11_6m3bi")]
-position = Vector2(85, 100)

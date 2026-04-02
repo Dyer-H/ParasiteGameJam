@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bwvoh2rcxmeu7"]
 
 [ext_resource type="Texture2D" uid="uid://fmae0xxdxum6" path="res://greenroom.png" id="1_xrb6i"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_cooli"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_8bcm0"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1030943014]
 
@@ -10,9 +12,21 @@ texture = ExtResource("1_xrb6i")
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1761325427]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1501656678]
-polygon = PackedVector2Array(-21, 203, 261, 62, 6, -66, -246, 62, 23, 200, -286, 59, 7, -110, 296, 65)
+polygon = PackedVector2Array(-21, 203, 261, 62, 6, -66, -246, 62, 38, 208, -286, 59, 7, -110, 298, 62)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1346716162]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=441857845]
 polygon = PackedVector2Array(9, 93, 71, 61, -25, 11, -87, 45)
+
+[node name="Big Baddie3" parent="." unique_id=1361659599 instance=ExtResource("2_cooli")]
+position = Vector2(189, 56)
+
+[node name="Baddie" parent="." unique_id=1125384050 instance=ExtResource("3_8bcm0")]
+position = Vector2(30, -24)
+
+[node name="Baddie2" parent="." unique_id=2027105306 instance=ExtResource("3_8bcm0")]
+position = Vector2(-81, -19)
+
+[node name="Baddie3" parent="." unique_id=129130736 instance=ExtResource("3_8bcm0")]
+position = Vector2(58, 131)

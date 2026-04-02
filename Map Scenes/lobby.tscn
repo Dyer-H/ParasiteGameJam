@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjdktwxl3yfvk"]
 
 [ext_resource type="Texture2D" uid="uid://dmdccd55ooiyl" path="res://Map Scenes/GUIResources/BaseArea/lobby.png" id="1_ll2xe"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ehp8u"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_uayq0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
@@ -39,3 +41,15 @@ physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls4" unique_id=2029689682]
 position = Vector2(-38, -68)
 polygon = PackedVector2Array(24, 70, 8, 63, -39, 87, -22, 95)
+
+[node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_ehp8u")]
+position = Vector2(-15, -39)
+
+[node name="Big Baddie" parent="." unique_id=1929128890 instance=ExtResource("3_uayq0")]
+position = Vector2(146, 38)
+
+[node name="Baddie2" parent="." unique_id=262312345 instance=ExtResource("2_ehp8u")]
+position = Vector2(-61, -53)
+
+[node name="Baddie3" parent="." unique_id=270553193 instance=ExtResource("2_ehp8u")]
+position = Vector2(-13, -70)
