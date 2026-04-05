@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bauskw3dwuyr0"
-path="res://.godot/imported/Health-Potion.png-730a29985f1f6bf7fa84304ce1cdcf87.ctex"
+uid="uid://b623bpjd5ilui"
+path="res://.godot/imported/redroom_2.png-1d96cdecf626bde0e200f41e024afb03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Menu/Resources/Damage Upgrades/Health-Potion.png"
-dest_files=["res://.godot/imported/Health-Potion.png-730a29985f1f6bf7fa84304ce1cdcf87.ctex"]
+source_file="res://Map Scenes/Map Sprites/redroom_2.png"
+dest_files=["res://.godot/imported/redroom_2.png-1d96cdecf626bde0e200f41e024afb03.ctex"]
 
 [params]
 

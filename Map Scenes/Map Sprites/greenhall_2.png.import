@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhnqk82byn1o8"
-path="res://.godot/imported/redhall.png-a4e251ef43f206f5c361fdf1d7138f6e.ctex"
+uid="uid://c1wwbm1hjtrtm"
+path="res://.godot/imported/greenhall_2.png-b25e74af82f4da75d1da7e40b5fb2784.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://redhall.png"
-dest_files=["res://.godot/imported/redhall.png-a4e251ef43f206f5c361fdf1d7138f6e.ctex"]
+source_file="res://Map Scenes/Map Sprites/greenhall_2.png"
+dest_files=["res://.godot/imported/greenhall_2.png-b25e74af82f4da75d1da7e40b5fb2784.ctex"]
 
 [params]
 

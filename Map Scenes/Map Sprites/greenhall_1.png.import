@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8knggrbg8r6r"
-path="res://.godot/imported/redroom.png-ab105179a7d4b066e052ece90e004a64.ctex"
+uid="uid://cim2dn8edd5px"
+path="res://.godot/imported/greenhall_1.png-d253c7321db1779481cb957216c4b5da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://redroom.png"
-dest_files=["res://.godot/imported/redroom.png-ab105179a7d4b066e052ece90e004a64.ctex"]
+source_file="res://Map Scenes/Map Sprites/greenhall_1.png"
+dest_files=["res://.godot/imported/greenhall_1.png-d253c7321db1779481cb957216c4b5da.ctex"]
 
 [params]
 

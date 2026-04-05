@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1hegpadgbwda"
-path="res://.godot/imported/greenhall2.png-aa7a31c1fec42c38821d2641ccb63c7f.ctex"
+uid="uid://fmae0xxdxum6"
+path="res://.godot/imported/greenroom_1.png-7db565ff9a2c2d7738a0dee12ea58bbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Menu/Resources/Damage Upgrades/greenhall2.png"
-dest_files=["res://.godot/imported/greenhall2.png-aa7a31c1fec42c38821d2641ccb63c7f.ctex"]
+source_file="res://Map Scenes/Map Sprites/greenroom_1.png"
+dest_files=["res://.godot/imported/greenroom_1.png-7db565ff9a2c2d7738a0dee12ea58bbb.ctex"]
 
 [params]
 

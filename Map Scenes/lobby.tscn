@@ -2,54 +2,60 @@
 
 [ext_resource type="Texture2D" uid="uid://dmdccd55ooiyl" path="res://Map Scenes/GUIResources/BaseArea/lobby.png" id="1_ll2xe"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ehp8u"]
+[ext_resource type="Texture2D" uid="uid://digb4038r1lbc" path="res://Map Scenes/Map Sprites/lobby_consoles.png" id="2_uayq0"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_uayq0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1653438255]
-position = Vector2(0, 8)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1299349025]
+[node name="Room" type="Sprite2D" parent="." unique_id=1299349025]
 y_sort_enabled = true
 position = Vector2(0, -2)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_ll2xe")
 offset = Vector2(500, 200)
+
+[node name="Consoles" type="Sprite2D" parent="." unique_id=1426091197]
+y_sort_enabled = true
+position = Vector2(4, 0)
+texture = ExtResource("2_uayq0")
+offset = Vector2(496, 198)
+
+[node name="Console 1" type="StaticBody2D" parent="Consoles" unique_id=1926332204]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Consoles/Console 1" unique_id=788245988]
+position = Vector2(-88, 49)
+polygon = PackedVector2Array(135, 93, 106, 76, 70, 92, -58, 28, -90, 45, 70, 125)
+
+[node name="Console 2" type="StaticBody2D" parent="Consoles" unique_id=93731776]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Consoles/Console 2" unique_id=1557469508]
+position = Vector2(170, -2)
+polygon = PackedVector2Array(-75, 121, -108, 106, -56, 84, -188, 18, -154, 0, 7, 80)
+
+[node name="Console 3" type="StaticBody2D" parent="Consoles" unique_id=270420168]
+physics_material_override = SubResource("PhysicsMaterial_ll2xe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Consoles/Console 3" unique_id=2029689682]
+position = Vector2(-52, -63)
+polygon = PackedVector2Array(22, 70, -10, 55, -105, 104, -74, 119)
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1870814885]
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=137202674]
-polygon = PackedVector2Array(-69, 198, 242, 43, -15, -86, -271, 43, 53, 205, -384, 43, -13, -132, 346, 43)
-
-[node name="Walls2" type="StaticBody2D" parent="." unique_id=1926332204]
-physics_material_override = SubResource("PhysicsMaterial_ll2xe")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls2" unique_id=788245988]
-polygon = PackedVector2Array(25, 70, 9, 62, -7, 70, -72, 38, -87, 46, -7, 86)
-
-[node name="Walls3" type="StaticBody2D" parent="." unique_id=93731776]
-physics_material_override = SubResource("PhysicsMaterial_ll2xe")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls3" unique_id=1557469508]
-position = Vector2(80, -40)
-polygon = PackedVector2Array(-30, 99, -47, 91, -22, 79, -88, 47, -71, 38, 9, 78)
-
-[node name="Walls4" type="StaticBody2D" parent="." unique_id=270420168]
-physics_material_override = SubResource("PhysicsMaterial_ll2xe")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls4" unique_id=2029689682]
-position = Vector2(-38, -68)
-polygon = PackedVector2Array(24, 70, 8, 63, -39, 87, -22, 95)
+polygon = PackedVector2Array(-55, 356, 481, 87, -29, -170, -542, 87, 18, 367, -644, 87, -27, -228, 658, 78)
 
 [node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_ehp8u")]
-position = Vector2(-15, -39)
+position = Vector2(-97, -56)
 
 [node name="Big Baddie" parent="." unique_id=1929128890 instance=ExtResource("3_uayq0")]
-position = Vector2(146, 38)
+position = Vector2(65, 203)
 
 [node name="Baddie2" parent="." unique_id=262312345 instance=ExtResource("2_ehp8u")]
-position = Vector2(-61, -53)
+position = Vector2(-150, -86)
 
 [node name="Baddie3" parent="." unique_id=270553193 instance=ExtResource("2_ehp8u")]
-position = Vector2(-13, -70)
+position = Vector2(-97, -102)

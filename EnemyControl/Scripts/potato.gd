@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
-@onready var player: CharacterBody2D = get_node("../Player")
+@onready var player = $"../../Player"
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var damage_numbers_origin = $DamageNumbersOrigin
 @onready var detection_zone = $DetectionArea/CollisionShape2D
 @onready var detection_area = $DetectionArea/CollisionShape2D
 
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
-const SPEED = 40.0
-@export var health = 24
-@export var dmg = 2
-var dead = false
-var player_in_area = false
-var player_hit = false
-var hit_cooldown = 0
+const SPEED: float = 40.0
+@export var health: int = 24
+@export var dmg: int = 2
+var dead: bool = false
+var player_in_area: bool = false
+var player_hit: bool = false
+var hit_cooldown: int = 0
 
 @export var item_drop: Array[PackedScene]
 @export var item_drop_chances: Array[float]

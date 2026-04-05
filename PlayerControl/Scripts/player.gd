@@ -6,8 +6,8 @@ extends CharacterBody2D
 
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
-const DASH_DURATION=0.2 # Dash time (seconds)
-var stamRegen=false
+const DASH_DURATION: float = 0.2 # Dash time (seconds)
+var stamRegen: bool = false
 
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate

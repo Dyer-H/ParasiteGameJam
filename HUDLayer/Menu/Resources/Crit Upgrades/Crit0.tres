@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_7imuh")
-crit_chance = 0.1
+crit_chance = 0.16
 name = "Crit (lvl 1)"
-price = 20
+price = 100
 description = "Doubles Crit Chance"
 metadata/_custom_type_script = "uid://be5pqxmjbkhtw"

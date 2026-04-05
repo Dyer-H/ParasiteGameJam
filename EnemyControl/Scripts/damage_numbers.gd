@@ -5,7 +5,7 @@ extends Node
 func display_number(value:int, position:Vector2, is_critical:bool):
 	var number = Label.new()
 	number.top_level = true
-	position += Vector2(randf_range(-6,6), randf_range(-4,0))
+	position += Vector2(randf_range(-7,7), randf_range(-5,1))
 	number.global_position = position
 	number.text = str(value)
 	number.z_index = 5
@@ -16,9 +16,9 @@ func display_number(value:int, position:Vector2, is_critical:bool):
 		color = "#B22" # Red
 		
 	number.label_settings.font_color = color
-	number.label_settings.font_size = 8
+	number.label_settings.font_size = 16
 	number.label_settings.outline_color = "#000" # Black
-	number.label_settings.outline_size = 1
+	number.label_settings.outline_size = 2
 	
 	call_deferred("add_child", number)
 	

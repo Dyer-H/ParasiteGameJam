@@ -237,12 +237,13 @@ animations = [{
 radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xn1xs"]
-radius = 129.24782
+radius = 80.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1se55"]
 radius = 10.049875
 
 [node name="Big Baddie" type="CharacterBody2D" unique_id=1361659599]
+scale = Vector2(2, 2)
 script = ExtResource("1_tv334")
 health = 70
 dmg = 5

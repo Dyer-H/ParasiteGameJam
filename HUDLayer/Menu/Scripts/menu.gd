@@ -7,7 +7,7 @@ extends Control
 
 const selectable_menu_item = preload("res://HUDLayer/Menu/Scenes/selectable_menu_item.tscn")
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
-var isItemSelected = false
+var isItemSelected: bool = false
 var selectedItem = 0
 
 #Can rearrange these

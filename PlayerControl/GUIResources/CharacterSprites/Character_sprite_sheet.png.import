@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmae0xxdxum6"
-path="res://.godot/imported/greenroom.png-f5b885a1643d06034b3b59ce4abd1abe.ctex"
+uid="uid://cwc0phdj47xh7"
+path="res://.godot/imported/Character_sprite_sheet.png-e03098b6d498291570e8c53ff2dd9d29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://greenroom.png"
-dest_files=["res://.godot/imported/greenroom.png-f5b885a1643d06034b3b59ce4abd1abe.ctex"]
+source_file="res://PlayerControl/GUIResources/CharacterSprites/Character_sprite_sheet.png"
+dest_files=["res://.godot/imported/Character_sprite_sheet.png-e03098b6d498291570e8c53ff2dd9d29.ctex"]
 
 [params]
 

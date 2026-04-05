@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="healthItemResource" format=3 uid="uid://bj3cy08ggdsyt"]
+[gd_resource type="Resource" script_class="healthItemResource" format=3 uid="uid://bprk3b54a6dpv"]
 
 [ext_resource type="Script" uid="uid://naxyopnxed6d" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/health_menu_item.gd" id="1_wj7n4"]
 
 [resource]
 script = ExtResource("1_wj7n4")
-health = 175
-name = "Health (lvl 2)"
-price = 80
-description = "Upgrades Maximum Health By +25 (Current: 150)"
+name = "Health (max lvl)"
+description = "None"
+max_lvl = true
 metadata/_custom_type_script = "uid://naxyopnxed6d"

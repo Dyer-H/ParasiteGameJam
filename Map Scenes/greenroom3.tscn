@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cn0ene3vqckiv"]
+
+[ext_resource type="Texture2D" uid="uid://phs03qk087ra" path="res://Map Scenes/Map Sprites/greenroom_3.png" id="1_w4xgt"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_etn4a"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_q347x"]
+
+[node name="greenroom3" type="TileMapLayer" unique_id=505148876]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412249993]
+texture = ExtResource("1_w4xgt")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=699136769]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=179732447]
+polygon = PackedVector2Array(-25, 200, 249, 61, -7, -67, -263, 62, 54, 219, -304, 59, -8, -108, 331, 65)
+
+[node name="Table_Chair" type="StaticBody2D" parent="." unique_id=935327687]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table_Chair" unique_id=1426782884]
+polygon = PackedVector2Array(-7, 124, 26, 142, 54, 127, 85, 145, 121, 125, 90, 108, 121, 92, 90, 76)
+
+[node name="Cabinets" type="StaticBody2D" parent="." unique_id=1290149626]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cabinets" unique_id=2082108102]
+polygon = PackedVector2Array(183, 55, 208, 41, 27, -50, -2, -32, 15, -22, 20, -25, 67, -1, 81, 6, 100, 15, 96, 17, 110, 25, 117, 21)
+
+[node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_etn4a")]
+position = Vector2(0, -53)
+
+[node name="Baddie2" parent="." unique_id=322197082 instance=ExtResource("2_etn4a")]
+position = Vector2(206, 51)
+
+[node name="Baddie3" parent="." unique_id=1855467563 instance=ExtResource("2_etn4a")]
+position = Vector2(211, 69)
+
+[node name="Baddie4" parent="." unique_id=734419500 instance=ExtResource("2_etn4a")]
+position = Vector2(-99, 127)
+
+[node name="Baddie5" parent="." unique_id=1480204898 instance=ExtResource("2_etn4a")]
+position = Vector2(-59, 92)
+
+[node name="Big Baddie" parent="." unique_id=1172472694 instance=ExtResource("3_q347x")]
+position = Vector2(1, 162)
+
+[node name="Big Baddie2" parent="." unique_id=963633497 instance=ExtResource("3_q347x")]
+position = Vector2(121, 104)

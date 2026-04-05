@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qnmwp4br2wld"
-path="res://.godot/imported/Health-Potion.png-9d1676deab1c067a0117d7956dfc3a15.ctex"
+uid="uid://phs03qk087ra"
+path="res://.godot/imported/greenroom_3.png-df7ac5a3fa5a1a82a5522a80e8e1bb3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Health-Potion.png"
-dest_files=["res://.godot/imported/Health-Potion.png-9d1676deab1c067a0117d7956dfc3a15.ctex"]
+source_file="res://Map Scenes/Map Sprites/greenroom_3.png"
+dest_files=["res://.godot/imported/greenroom_3.png-df7ac5a3fa5a1a82a5522a80e8e1bb3d.ctex"]
 
 [params]
 

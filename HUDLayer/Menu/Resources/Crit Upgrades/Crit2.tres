@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="critItemResource" format=3 uid="uid://bi2r0q7qgltda"]
+
+[ext_resource type="Script" uid="uid://be5pqxmjbkhtw" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/crit_menu_item.gd" id="1_j3ih3"]
+
+[resource]
+script = ExtResource("1_j3ih3")
+crit_chance = 0.32
+name = "Crit (lvl 3)"
+price = 300
+description = "Doubles Crit Chance"
+metadata/_custom_type_script = "uid://be5pqxmjbkhtw"

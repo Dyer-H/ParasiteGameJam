@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="healthItemResource" format=3 uid="uid://8af76mp546so"]
+
+[ext_resource type="Script" uid="uid://naxyopnxed6d" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/health_menu_item.gd" id="1_2ospy"]
+
+[resource]
+script = ExtResource("1_2ospy")
+health = 200
+name = "Health (lvl 3)"
+price = 120
+description = "Upgrades Maximum Health By +25 (Current: 175)"
+metadata/_custom_type_script = "uid://naxyopnxed6d"

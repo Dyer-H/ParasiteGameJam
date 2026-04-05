@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4reqimv2rpdi"
-path="res://.godot/imported/greenroom3.png-ce0714e63a2b8ca3a4771af11b2438df.ctex"
+uid="uid://digb4038r1lbc"
+path="res://.godot/imported/lobby_consoles.png-23850526b664b41614676552feb8c465.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Menu/Resources/Damage Upgrades/greenroom3.png"
-dest_files=["res://.godot/imported/greenroom3.png-ce0714e63a2b8ca3a4771af11b2438df.ctex"]
+source_file="res://Map Scenes/Map Sprites/lobby_consoles.png"
+dest_files=["res://.godot/imported/lobby_consoles.png-23850526b664b41614676552feb8c465.ctex"]
 
 [params]
 

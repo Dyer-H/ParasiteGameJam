@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ty4ggvywpv2"
-path="res://.godot/imported/redroom.png-d1a5c8d12796706566ad5e2800e5511d.ctex"
+uid="uid://bhnqk82byn1o8"
+path="res://.godot/imported/redhall.png-8812501ba55489efdcdda037215e0d7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUDLayer/Menu/Resources/Damage Upgrades/redroom.png"
-dest_files=["res://.godot/imported/redroom.png-d1a5c8d12796706566ad5e2800e5511d.ctex"]
+source_file="res://Map Scenes/Map Sprites/redhall.png"
+dest_files=["res://.godot/imported/redhall.png-8812501ba55489efdcdda037215e0d7f.ctex"]
 
 [params]
 

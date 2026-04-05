@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_10x3g")
-damage = 5
-name = "Damage (Lvl 2)"
-price = 60
-description = "Adds 2 damage to base bullet (no crit)"
+damage = 16
+name = "Damage (Lvl 3)"
+price = 250
+description = "Doubles Damage, Again! AGAIN!"
 metadata/_custom_type_script = "uid://cptayb7y8yo4p"

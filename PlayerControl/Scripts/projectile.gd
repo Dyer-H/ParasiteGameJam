@@ -1,6 +1,6 @@
 extends Area2D
 
-const bullet_speed=3000
+const bullet_speed: int = 3000
 var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
 func _ready():

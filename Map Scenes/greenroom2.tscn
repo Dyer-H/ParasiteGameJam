@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c2nhmtrxkwwjf"]
+
+[ext_resource type="Texture2D" uid="uid://bcjkk5jvig47y" path="res://Map Scenes/Map Sprites/greenroom_2.png" id="1_cmi3r"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_vt1sk"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_mwr4g"]
+
+[node name="greenroom2" type="TileMapLayer" unique_id=947961828]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=655279990]
+texture = ExtResource("1_cmi3r")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1390618703]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1221022402]
+polygon = PackedVector2Array(-25, 200, 248, 61, -7, -67, -264, 61, 24, 205, -308, 59, -6, -106, 291, 59)
+
+[node name="Cabinets" type="StaticBody2D" parent="." unique_id=1082495828]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cabinets" unique_id=956426089]
+polygon = PackedVector2Array(-235, 75, -168, 39, -161, 42, -142, 32, -172, 15, -263, 61)
+
+[node name="Shelf1" type="StaticBody2D" parent="." unique_id=568983441]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf1" unique_id=226890514]
+polygon = PackedVector2Array(-7, -36, 89, 12, 119, -4, 23, -52)
+
+[node name="Shelf2" type="StaticBody2D" parent="." unique_id=1561406701]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf2" unique_id=1741569233]
+polygon = PackedVector2Array(121, 29, 216, 78, 248, 61, 152, 12)
+
+[node name="Big Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_vt1sk")]
+position = Vector2(-48, 120)
+
+[node name="Big Baddie2" parent="." unique_id=1676456710 instance=ExtResource("2_vt1sk")]
+position = Vector2(17, 3)
+
+[node name="Big Baddie3" parent="." unique_id=1754608691 instance=ExtResource("2_vt1sk")]
+position = Vector2(107, 47)
+
+[node name="Baddie" parent="." unique_id=166468482 instance=ExtResource("3_mwr4g")]
+position = Vector2(-190, 76)
+
+[node name="Baddie2" parent="." unique_id=1225519754 instance=ExtResource("3_mwr4g")]
+position = Vector2(-145, 90)
+
+[node name="Baddie3" parent="." unique_id=1693482365 instance=ExtResource("3_mwr4g")]
+position = Vector2(-142, 56)
+
+[node name="Baddie4" parent="." unique_id=889748615 instance=ExtResource("3_mwr4g")]
+position = Vector2(-25, 101)
+
+[node name="Baddie5" parent="." unique_id=1938493955 instance=ExtResource("3_mwr4g")]
+position = Vector2(-11, 1)
+
+[node name="Baddie6" parent="." unique_id=1836047348 instance=ExtResource("3_mwr4g")]
+position = Vector2(7, 26)
