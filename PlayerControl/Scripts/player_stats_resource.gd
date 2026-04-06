@@ -18,6 +18,7 @@ class_name playerStats
 @export var max_stamina: int
 @export var gun_damage: int
 
+@export var num_bullets: int
 @export var bullet_range: float
 @export var crit_chance: float
 @export var dash_regen: float
@@ -28,6 +29,7 @@ class_name playerStats
 @export var health_level: int
 @export var stam_level: int
 @export var damage_level: int
+@export var bullet_level: int
 @export var range_level: int
 @export var crit_level: int
 @export var dash_level: int
@@ -77,6 +79,9 @@ func increment_stam_level() -> void:
 	
 func increment_damage_level() -> void:
 	damage_level += 1
+	
+func increment_bullet_level() -> void:
+	bullet_level += 1
 
 func increment_range_level() -> void:
 	range_level += 1

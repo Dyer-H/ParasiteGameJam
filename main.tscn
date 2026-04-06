@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="6_w48qg"]
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="7_vivmo"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://byteonoxpbnfi" path="res://background.jpg" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="9_yaehf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
@@ -15,6 +16,18 @@ font = ExtResource("4_dg77c")
 font_size = 56
 
 [node name="Main" type="Node2D" unique_id=546777818]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1803010625]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -710.0
+offset_top = -388.0
+offset_right = 701.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_4c57u")
 
 [node name="TileMapLayer" parent="." unique_id=1653438255 instance=ExtResource("1_kek77")]
 

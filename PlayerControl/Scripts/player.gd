@@ -35,7 +35,7 @@ func dash():
 	
 func shoot() -> void:
 	var dev=-15+randi_range(-5,5) # This is the starting deviation for the shot (degrees off from normal
-	for i in range(5): # range(number of pellets to generate)
+	for i in range(stats.num_bullets): # range(number of pellets to generate)
 		var newProjectile=projectile.instantiate() as Node2D
 		get_tree().current_scene.add_child(newProjectile)
 		newProjectile.global_position=global_position

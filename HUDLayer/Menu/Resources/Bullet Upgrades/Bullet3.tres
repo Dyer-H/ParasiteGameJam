@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="bulletItemResource" format=3 uid="uid://bs4mtri3brlow"]
+
+[ext_resource type="Script" uid="uid://dw8nggt4o6yer" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/bullet_menu_item.gd" id="1_4h162"]
+
+[resource]
+script = ExtResource("1_4h162")
+max_lvl = true
+metadata/_custom_type_script = "uid://dw8nggt4o6yer"

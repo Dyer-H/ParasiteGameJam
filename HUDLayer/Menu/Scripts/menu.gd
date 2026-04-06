@@ -17,6 +17,7 @@ enum ItemPositions{
 	HEALTH_ITEM,
 	STAM_ITEM,
 	DAMAGE_ITEM,
+	BULLET_ITEM,
 	RANGE_ITEM,
 	CRIT_ITEM,
 	DASH_ITEM,
@@ -87,6 +88,11 @@ func _on_upgrade_button_clicked() -> void:
 			stats.gun_damage = new_damage
 			stats.increment_damage_level()
 			_update_damage_upgrade()
+		ItemPositions.BULLET_ITEM:
+			var new_bullets = current_selection.item.num_bullets
+			stats.num_bullets = new_bullets
+			stats.increment_bullet_level()
+			_update_bullet_upgrade()
 		ItemPositions.RANGE_ITEM:
 			var new_range = current_selection.item.bullet_range
 			stats.bullet_range = new_range
@@ -131,6 +137,7 @@ func _set_initial_menu_items() -> void:
 	_update_health_upgrade()
 	_update_stam_upgrade()
 	_update_damage_upgrade()
+	_update_bullet_upgrade()
 	_update_range_upgrade()
 	_update_crit_upgrade()
 	_update_dash_upgrade() 
@@ -156,6 +163,11 @@ func _update_damage_upgrade() -> void:
 	var damage_resource_string = _generate_damage_resource_string_from_stat(stats.damage_level)
 	var damage_item = load(damage_resource_string)
 	menu_items[ItemPositions.DAMAGE_ITEM].set_menu_item(damage_item)
+
+func _update_bullet_upgrade() -> void:
+	var bullet_resource_string = _generate_bullet_resource_string_from_stat(stats.bullet_level)
+	var bullet_item = load(bullet_resource_string)
+	menu_items[ItemPositions.BULLET_ITEM].set_menu_item(bullet_item)
 
 func _update_range_upgrade() -> void:
 	var range_resource_string = _generate_range_resource_string_from_stat(stats.range_level)
@@ -224,6 +236,9 @@ func _generate_stam_resource_string_from_stat(upgrade_level: int) -> String:
 	
 func _generate_damage_resource_string_from_stat(upgrade_level: int) -> String:
 	return "res://HUDLayer/Menu/Resources/Damage Upgrades/Damage" + str(upgrade_level) + ".tres"
+
+func _generate_bullet_resource_string_from_stat(upgrade_level: int) -> String:
+	return "res://HUDLayer/Menu/Resources/Bullet Upgrades/Bullet" + str(upgrade_level) + ".tres"
 
 func _generate_range_resource_string_from_stat(upgrade_level: int) -> String:
 	return "res://HUDLayer/Menu/Resources/Range Upgrades/Range" + str(upgrade_level) + ".tres"

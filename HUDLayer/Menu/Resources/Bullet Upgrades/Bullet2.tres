@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="bulletItemResource" format=3 uid="uid://bs84cjs0sb2ua"]
+
+[ext_resource type="Script" uid="uid://dw8nggt4o6yer" path="res://HUDLayer/Menu/Scripts/Menu Item Data Classes/bullet_menu_item.gd" id="1_lnje8"]
+
+[resource]
+script = ExtResource("1_lnje8")
+num_bullets = 5
+name = "Bullet (lvl 3)"
+price = 300
+description = "Increases number of bullets by 1"
+metadata/_custom_type_script = "uid://dw8nggt4o6yer"

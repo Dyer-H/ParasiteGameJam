@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_qkbvy")
-player_speed = 80
+player_speed = 100
 name = "Speed (lvl 1)"
 price = 20
 description = "Upgrades Speed by 2x"
