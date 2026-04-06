@@ -2,7 +2,7 @@
 
 extends Node
 
-var tree:RoomGraph=RoomGraph.new()
+var tree:RoomGraph=RoomGraph
 
 # The array of map scenes
 var rooms:Array=[load("res://Map Scenes/greenhall1.tscn"),load("res://Map Scenes/greenhall2.tscn"),load("res://Map Scenes/greenroom1.tscn"),load("res://Map Scenes/greenroom1_2door.tscn"),load("res://Map Scenes/greenroom2.tscn"),load("res://Map Scenes/greenroom3.tscn")]
@@ -18,14 +18,14 @@ func _process(delta: float) -> void:
 
 func generateBranch(maxDepth:int):
 	var depth=0
-	var firstNode=RoomGraphNode.new()
+	var firstNode=RoomGraphNode
 	firstNode.room=load("res://Map Scenes/lobby.tscn") # Lobby is first room of segment
 	firstNode.id=0
 
 # Chance is how much the card drop % changes per room (key drop chance=chance/100)
 func generateRoom(chance:int,depth:int,maxDepth:int,previousRoom:RoomGraphNode,id:int):
 	if(depth!=maxDepth):
-		var newRoom=RoomGraphNode.new()
+		var newRoom=RoomGraphNode
 		newRoom.id=id
 		newRoom.parent=previousRoom
 		var chancePercent=randi_range(chance,100)
