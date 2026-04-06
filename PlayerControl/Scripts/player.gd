@@ -9,6 +9,13 @@ var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 const DASH_DURATION: float = 0.2 # Dash time (seconds)
 var stamRegen: bool = false
 
+func _ready() -> void:
+	var seg:RoomSegment=RoomSegment
+	seg.generateBranch(10,10)
+	
+	pass
+	
+
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
 func _physics_process(_delta: float) -> void:
