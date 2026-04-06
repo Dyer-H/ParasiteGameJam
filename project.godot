@@ -18,6 +18,9 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 globals="*uid://cxubem6hf5jlb"
 DamageNumbers="*uid://8skdr0lmrptw"
+RoomGraph="*uid://c2wagw1ginrop"
+RoomGraphNode="*uid://c3td4egh3ln0p"
+RoomSegment="*uid://gneqii8q7mpd"
 
 [display]
 

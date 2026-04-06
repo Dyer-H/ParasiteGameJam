@@ -1,13 +1,16 @@
 extends Node
 
 var id:int
-var parent:GraphNode
-var children:Array[GraphNode]
+var parent:RoomGraphNode
+var children:Array[RoomGraphNode]
+var containsKey:bool
+var room
 
 
 func _ready() -> void:
 	id=0
 	children=[]
+	containsKey=false
 	pass # Replace with function body.
 
 

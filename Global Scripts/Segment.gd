@@ -1,0 +1,39 @@
+# This is the script for holding room information and generation
+
+extends Node
+
+var tree:RoomGraph=RoomGraph.new()
+
+# The array of map scenes
+var rooms:Array=[load("res://Map Scenes/greenhall1.tscn"),load("res://Map Scenes/greenhall2.tscn"),load("res://Map Scenes/greenroom1.tscn"),load("res://Map Scenes/greenroom1_2door.tscn"),load("res://Map Scenes/greenroom2.tscn"),load("res://Map Scenes/greenroom3.tscn")]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func generateBranch(maxDepth:int):
+	var depth=0
+	var firstNode=RoomGraphNode.new()
+	firstNode.room=load("res://Map Scenes/lobby.tscn") # Lobby is first room of segment
+	firstNode.id=0
+
+# Chance is how much the card drop % changes per room (key drop chance=chance/100)
+func generateRoom(chance:int,depth:int,maxDepth:int,previousRoom:RoomGraphNode,id:int):
+	if(depth!=maxDepth):
+		var newRoom=RoomGraphNode.new()
+		newRoom.id=id
+		newRoom.parent=previousRoom
+		var chancePercent=randi_range(chance,100)
+		if(chancePercent==100):
+			newRoom.hasKey=true
+		newRoom.room=rooms[randi_range(0,5)]
+		
+		depth+=1
+	
+	
+	

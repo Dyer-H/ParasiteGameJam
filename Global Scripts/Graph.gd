@@ -1,12 +1,12 @@
 extends Node
 
-var startNode:GraphNode
-var nodes:Array[GraphNode]
+var startNode:RoomGraphNode
+var nodes:Array[RoomGraphNode]
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var tempNode:GraphNode=GraphNode.new()
+	var tempNode:RoomGraphNode=RoomGraphNode.new()
 	tempNode.id=0
 	startNode=tempNode
 	nodes.append(tempNode)
@@ -16,8 +16,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func addNode(parent:GraphNode,id:int): # Connection is nodeID we're connecting to, id is the id of the new node
-	var newNode:GraphNode=GraphNode.new()
+func addNode(parent:RoomGraphNode,id:int): # Connection is nodeID we're connecting to, id is the id of the new node
+	var newNode:RoomGraphNode=RoomGraphNode.new()
 	newNode.parent=parent
 	newNode.id=id
 	parent.children.append(newNode)
