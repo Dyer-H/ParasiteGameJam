@@ -461,7 +461,6 @@ script = ExtResource("3_00xxd")
 [node name="PickupRange" type="Area2D" parent="." unique_id=78876983]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupRange" unique_id=732242493]
-position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_00xxd")
 
 [node name="PlayerCollisionBox" type="CollisionShape2D" parent="." unique_id=486104916]
