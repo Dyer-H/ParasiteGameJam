@@ -28,9 +28,9 @@ func _physics_process(_delta: float) -> void:
 		# Make sure the collision area is on if it isn't dead
 		detection_area.disabled = false
 		if chase_on_hit:
-			move_to_position(player.position)
+			move_to_position(player.position + Vector2(0,10))
 		elif player_in_area:
-			move_to_position(player.position)
+			move_to_position(player.position + Vector2(0,10))
 		else:
 			animated_sprite.stop()
 	else:
