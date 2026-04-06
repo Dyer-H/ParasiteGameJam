@@ -10,6 +10,12 @@ func _ready() -> void:
 	self.value = stats.health
 	stats.changed.connect(_on_stats_changed)
 
-func _on_stats_changed() -> void:
+func _on_stats_changed(health: int = stats.health) -> void:
 	self.value = stats.health
 	self.max_value = stats.max_health
+	stats.health = health
+	if stats.health <= 0:
+		die()
+		
+func die():
+	get_tree().change_scene_to_file("res://game_over.tscn")

@@ -14,6 +14,7 @@ var dead: bool = false
 var player_in_area: bool = false
 var player_hit: bool = false
 var hit_cooldown: int = 0
+var chase_on_hit = false
 
 @export var item_drop: Array[PackedScene]
 @export var item_drop_chances: Array[float]
@@ -26,7 +27,9 @@ func _physics_process(_delta: float) -> void:
 	elif !dead:
 		# Make sure the collision area is on if it isn't dead
 		detection_area.disabled = false
-		if player_in_area:
+		if chase_on_hit:
+			move_to_position(player.position)
+		elif player_in_area:
 			move_to_position(player.position)
 		else:
 			animated_sprite.stop()
@@ -34,6 +37,7 @@ func _physics_process(_delta: float) -> void:
 		# Make sure the collision area is off if it is dead
 		detection_area.disabled = true
 	if player_hit and hit_cooldown <= 0:
+		print("hit")
 		stats.set_health(stats.health - dmg)
 		hit_cooldown = 25
 	if hit_cooldown >= 0:
@@ -71,6 +75,8 @@ func take_damage(damage:int, crit:float):
 	if is_crit:
 		damage = 2*damage
 	health -= damage
+	if not player_in_area:
+		chase_on_hit = true
 	# Displaying Damage Numbers
 	damage_numbers_origin.display_number(damage, damage_numbers_origin.global_position, is_crit)
 	

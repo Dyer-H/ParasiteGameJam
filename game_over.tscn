@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dyy6measvl5x4"]
+
+[ext_resource type="Script" uid="uid://cbws21winp0eg" path="res://game_over.gd" id="1_y26ei"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=764804633]
+script = ExtResource("1_y26ei")
+
+[node name="Label" type="Label" parent="." unique_id=849862823]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 821.0
+offset_top = 389.0
+offset_right = -798.0
+offset_bottom = -594.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 69
+text = "You Died"
+
+[node name="Button" type="Button" parent="." unique_id=1296074431]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 863.0
+offset_top = 493.0
+offset_right = -841.0
+offset_bottom = -542.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Retry"
+
+[node name="Button2" type="Button" parent="." unique_id=166456475]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 915.0
+offset_top = 556.0
+offset_right = -893.0
+offset_bottom = -479.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
