@@ -3,6 +3,7 @@ extends TextureRect
 @onready var button: Button = $BorderMargin/Button
 @onready var itemLabel: Label = $"BorderMargin/Button/Item Label"
 @onready var itemPrice: Label = $"BorderMargin/Button/Price Label"
+@onready var coinTexture: TextureRect = $"BorderMargin/Button/TextureRect"
 
 var selection_texture = preload("res://HUDLayer/Menu/GUIResources/white_background.jpg")
 var isSelected = false
@@ -29,5 +30,9 @@ func set_menu_item(menu_item: menuItemResource) -> void:
 	_populate_from_resource()
 
 func _populate_from_resource() -> void:
+	if item.max_lvl == false:
+		itemPrice.text = str(item.price)
+	else:
+		itemPrice.text = ""
+		coinTexture.visible = false
 	itemLabel.text = item.name
-	itemPrice.text = str(item.price)

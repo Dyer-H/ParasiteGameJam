@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_wj7n4")
 name = "Health (max lvl)"
-description = "None"
+description = "You have reached MAXIMUM tankiness (Current: 200)"
 max_lvl = true
 metadata/_custom_type_script = "uid://naxyopnxed6d"

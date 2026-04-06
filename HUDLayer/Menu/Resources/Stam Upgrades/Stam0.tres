@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_gckso")
-stamina = 150
+stamina = 125
 name = "Stamina (lvl 1)"
-price = 10
-description = "Increases Maximum Stamina by +50 (Current: 100)"
+price = 20
+description = "Increases Maximum Stamina by +25 (Current: 100)"
 metadata/_custom_type_script = "uid://bt4iv0kuywsvn"

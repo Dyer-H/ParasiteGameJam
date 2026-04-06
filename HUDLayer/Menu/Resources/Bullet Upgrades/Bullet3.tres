@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_4h162")
+name = "Bullet (max lvl)"
+description = "They call me the GUN SLINGER!!! !! ! . .. ... who am I kidding :("
 max_lvl = true
 metadata/_custom_type_script = "uid://dw8nggt4o6yer"

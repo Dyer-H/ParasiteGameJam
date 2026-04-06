@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_lu6ma")
-name = "Crit"
-description = "Nothing"
+name = "Crit (max lvl)"
+description = "K.O!"
 max_lvl = true
 metadata/_custom_type_script = "uid://be5pqxmjbkhtw"

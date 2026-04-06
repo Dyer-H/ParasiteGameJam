@@ -4,4 +4,8 @@
 
 [resource]
 script = ExtResource("1_fviue")
+stamina = 150
+name = "Stamina (lvl 2)"
+price = 50
+description = "Increases Maximum Stamina by 25 (Current: 125)"
 metadata/_custom_type_script = "uid://bt4iv0kuywsvn"

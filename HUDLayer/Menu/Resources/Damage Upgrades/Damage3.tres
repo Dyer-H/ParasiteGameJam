@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_6wf1f")
+name = "Damage (max lvl)"
+description = "Congrats!!! You are practically untouchable"
 max_lvl = true
 metadata/_custom_type_script = "uid://cptayb7y8yo4p"

@@ -7,5 +7,5 @@ script = ExtResource("1_lnje8")
 num_bullets = 5
 name = "Bullet (lvl 3)"
 price = 300
-description = "Increases number of bullets by 1"
+description = "Increases number of bullets by 1 (Current: 4)"
 metadata/_custom_type_script = "uid://dw8nggt4o6yer"

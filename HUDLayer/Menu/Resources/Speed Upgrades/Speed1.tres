@@ -4,7 +4,8 @@
 
 [resource]
 script = ExtResource("1_8nvoq")
-name = "Speed (max lvl)"
-description = "Nothing"
-max_lvl = true
+player_speed = 130
+name = "Speed (lvl 2)"
+price = 40
+description = "You walk on air now. Speed +20 (Current: 110)"
 metadata/_custom_type_script = "uid://bhbtt1t15gbqt"
