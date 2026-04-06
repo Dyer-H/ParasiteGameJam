@@ -16,6 +16,7 @@ texture = ExtResource("1_ll2xe")
 offset = Vector2(500, 200)
 
 [node name="Consoles" type="Sprite2D" parent="." unique_id=1426091197]
+z_index = 1
 y_sort_enabled = true
 position = Vector2(4, 0)
 texture = ExtResource("2_uayq0")
@@ -46,7 +47,7 @@ polygon = PackedVector2Array(22, 70, -10, 55, -105, 104, -74, 119)
 physics_material_override = SubResource("PhysicsMaterial_ll2xe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=137202674]
-polygon = PackedVector2Array(-55, 356, 481, 87, -29, -170, -542, 87, 18, 367, -644, 87, -27, -228, 658, 78)
+polygon = PackedVector2Array(-55, 356, 481, 87, -29, -170, -542, 87, 18, 367, -644, 87, -27, -228, 589, 87)
 
 [node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_ehp8u")]
 position = Vector2(-97, -56)
@@ -59,3 +60,26 @@ position = Vector2(-150, -86)
 
 [node name="Baddie3" parent="." unique_id=270553193 instance=ExtResource("2_ehp8u")]
 position = Vector2(-97, -102)
+
+[node name="Big Baddie2" parent="." unique_id=98851872 instance=ExtResource("3_uayq0")]
+position = Vector2(140, 138)
+
+[node name="Green Door" type="StaticBody2D" parent="." unique_id=460513825]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Green Door" unique_id=1611986719]
+polygon = PackedVector2Array(-286, -42, -266, -31, -235, -47, -255, -58)
+disabled = true
+
+[node name="Red Door" type="StaticBody2D" parent="." unique_id=1588723354]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Red Door" unique_id=1411153392]
+position = Vector2(492, 246)
+polygon = PackedVector2Array(-286, -42, -266, -31, -235, -47, -255, -58)
+disabled = true
+
+[node name="Blue Door" type="StaticBody2D" parent="." unique_id=1884661771]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Blue Door" unique_id=1564052482]
+position = Vector2(448, 0)
+polygon = PackedVector2Array(-274, -48, -240, -31, -222, -42, -255, -58)
+disabled = true

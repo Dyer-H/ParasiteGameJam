@@ -22,12 +22,7 @@ polygon = PackedVector2Array(-235, 75, -168, 39, -161, 42, -142, 32, -172, 15, -
 [node name="Shelf1" type="StaticBody2D" parent="." unique_id=568983441]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf1" unique_id=226890514]
-polygon = PackedVector2Array(-7, -36, 89, 12, 119, -4, 23, -52)
-
-[node name="Shelf2" type="StaticBody2D" parent="." unique_id=1561406701]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf2" unique_id=1741569233]
-polygon = PackedVector2Array(121, 29, 216, 78, 248, 61, 152, 12)
+polygon = PackedVector2Array(-7, -36, 217, 77, 248, 61, 23, -52)
 
 [node name="Big Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_vt1sk")]
 position = Vector2(-48, 120)
