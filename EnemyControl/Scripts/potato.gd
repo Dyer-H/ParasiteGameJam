@@ -24,7 +24,7 @@ var chase_on_hit = false
 func _physics_process(_delta: float) -> void:
 	if dead:
 		return
-	elif !dead:
+	elif !dead: 
 		# Make sure the collision area is on if it isn't dead
 		detection_area.disabled = false
 		if chase_on_hit:

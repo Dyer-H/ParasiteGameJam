@@ -8,19 +8,20 @@ var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
 const DASH_DURATION: float = 0.2 # Dash time (seconds)
 var stamRegen: bool = false
+var shot_cooldown: int = 0
 
 func _ready() -> void:
 	var seg:RoomSegment=RoomSegment
 	seg.generateBranch(10,10)
-	
 	pass
-	
 
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
 func _physics_process(_delta: float) -> void:
+	if (shot_cooldown > 0):
+		shot_cooldown -= 1
 	get_input()
-	if(Input.is_action_just_pressed("Shoot")):
+	if(Input.is_action_just_pressed("Shoot") && shot_cooldown == 0):
 		shoot()
 	if(Input.is_action_just_pressed("Dash")):
 		dash()
@@ -48,6 +49,7 @@ func shoot() -> void:
 		newProjectile.global_position=global_position
 		newProjectile.look_at(get_global_mouse_position())
 		newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
+	shot_cooldown = 20 #number of frames waited till next shot
 
 #gets vector based on values set in project settings
 #discr etizes then moves that direction
