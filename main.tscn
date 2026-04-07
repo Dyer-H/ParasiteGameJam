@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cynpmxbl61o7l"]
 
+[ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="1_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map Scenes/lobby.tscn" id="1_kek77"]
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
@@ -8,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="6_w48qg"]
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="7_vivmo"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
-[ext_resource type="Texture2D" uid="uid://byteonoxpbnfi" path="res://background.jpg" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="9_yaehf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
@@ -27,7 +27,7 @@ offset_right = 701.0
 offset_bottom = 442.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_4c57u")
+texture = ExtResource("1_4c57u")
 
 [node name="TileMapLayer" parent="." unique_id=1653438255 instance=ExtResource("1_kek77")]
 
