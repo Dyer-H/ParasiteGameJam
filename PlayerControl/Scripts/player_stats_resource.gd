@@ -25,6 +25,7 @@ class_name playerStats
 @export var player_speed: int
 
 @export var coins: int
+@export var curr_bullets: int
 
 @export var health_level: int
 @export var stam_level: int
@@ -69,6 +70,10 @@ func set_stamina(new_stamina: int) -> void:
 
 func set_max_stamina(new_stamina: int) -> void:
 	max_stamina = new_stamina
+	emit_changed()
+	
+func set_curr_bullets(new_bullets: int) -> void:
+	curr_bullets = new_bullets
 	emit_changed()
 	
 func increment_health_level() -> void:

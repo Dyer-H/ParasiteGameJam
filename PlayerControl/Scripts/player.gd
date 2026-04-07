@@ -36,7 +36,7 @@ func _physics_process(_delta: float) -> void:
 		stats.set_stamina(stats.stamina + 1)
 		regen_rate = 10
 	get_input()
-	if(Input.is_action_just_pressed("Shoot") && shot_cooldown == 0):
+	if(Input.is_action_just_pressed("Shoot") && shot_cooldown == 0 && stats.curr_bullets > 0):
 		shoot()
 	if(Input.is_action_just_pressed("Dash") && dash_cooldown == 0):
 		dash()
@@ -61,6 +61,7 @@ func shoot() -> void:
 		newProjectile.look_at(get_global_mouse_position())
 		newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
 	shot_cooldown = 20 #number of frames waited till next shot
+	stats.set_curr_bullets(stats.curr_bullets - 1)
 
 #gets vector based on values set in project settings
 #discr etizes then moves that direction

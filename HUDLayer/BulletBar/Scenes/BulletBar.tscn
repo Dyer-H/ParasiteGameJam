@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bxg4ydrqccank"]
+
+[ext_resource type="Script" uid="uid://q0fq87yoxcbf" path="res://HUDLayer/BulletBar/Scripts/bullet_bar.gd" id="1_yfaqm"]
+[ext_resource type="Texture2D" uid="uid://dkm12q3e28btm" path="res://HUDLayer/Menu/GUIResources/gray_background.jpg" id="2_ne5ew"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4jnu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4901368, 0.4901368, 0.4901368, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htmt5"]
+bg_color = Color(0.013104656, 0.7016843, 0.9744361, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+
+[node name="BulletBar" type="Control" unique_id=1310118411]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2099710845]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 30.0
+offset_right = 1406.0
+offset_bottom = 108.0
+theme_override_styles/background = SubResource("StyleBoxFlat_s4jnu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_htmt5")
+max_value = 8.0
+step = 1.0
+show_percentage = false
+script = ExtResource("1_yfaqm")
+
+[node name="GridContainer" type="GridContainer" parent="ProgressBar" unique_id=438466024]
+layout_mode = 0
+offset_left = 115.0
+offset_right = 767.0
+offset_bottom = 77.0
+theme_override_constants/h_separation = 113
+columns = 8
+
+[node name="TextureRect" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=1458885476]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=662898110]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=687594790]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=722446391]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=144071347]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=275924288]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="ProgressBar/GridContainer" unique_id=135093748]
+custom_minimum_size = Vector2(3, 77)
+layout_mode = 2
+texture = ExtResource("2_ne5ew")
+expand_mode = 1

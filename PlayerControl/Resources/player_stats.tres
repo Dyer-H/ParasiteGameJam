@@ -14,4 +14,5 @@ bullet_range = 0.18
 crit_chance = 0.08
 dash_regen = 2.0
 player_speed = 90
+curr_bullets = 8
 metadata/_custom_type_script = "uid://dihuvudx7mp07"
