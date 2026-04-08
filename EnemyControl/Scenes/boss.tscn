@@ -289,9 +289,9 @@ radius = 108.60904
 [node name="BOSS" type="CharacterBody2D" unique_id=1361659599]
 scale = Vector2(0.35, 0.35)
 script = ExtResource("1_kvofc")
-health = 600
-dmg = 15
-knockback_scalor = 500
+health = 1200
+dmg = 18
+knockback_scalor = 0
 item_drop = Array[PackedScene]([ExtResource("2_ef0k6"), ExtResource("3_ry61v")])
 item_drop_chances = Array[float]([0.6, 0.4])
 
