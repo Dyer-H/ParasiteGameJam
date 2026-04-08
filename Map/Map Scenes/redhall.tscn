@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bq78wao05tlu7"]
 
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_0nakr"]
 [ext_resource type="Texture2D" uid="uid://bhnqk82byn1o8" path="res://Map/Map Sprites/redhall.png" id="1_7ijoh"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_k6rh8"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_bxl0g"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_4m6nl"]
 
 [node name="redhall" type="TileMapLayer" unique_id=1691058809]
+script = ExtResource("1_0nakr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2097855607]
 texture = ExtResource("1_7ijoh")
@@ -37,3 +40,32 @@ position = Vector2(69, 68)
 
 [node name="Big Baddie3" parent="." unique_id=877187383 instance=ExtResource("3_bxl0g")]
 position = Vector2(161, 63)
+
+[node name="doors" type="Node" parent="." unique_id=1043703880]
+
+[node name="RHD1" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("4_4m6nl")]
+position = Vector2(-429, 316)
+destination_scene = "uid://bjdktwxl3yfvk"
+destination_door_tag = "reddoor"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/RHD1" index="0" unique_id=1591710312]
+position = Vector2(26, 13)
+
+[node name="Spawn" parent="doors/RHD1" index="1" unique_id=2100186104]
+position = Vector2(66, -4)
+
+[node name="RHD2" parent="doors" unique_id=1046032471 groups=["doors", "player"] instance=ExtResource("4_4m6nl")]
+position = Vector2(528, -169)
+destination_scene = "uid://cjnemkc6or1nc"
+destination_door_tag = "RDD"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/RHD2" index="0" unique_id=1591710312]
+position = Vector2(-10, 38)
+
+[node name="Spawn" parent="doors/RHD2" index="1" unique_id=2100186104]
+position = Vector2(-44, 58)
+
+[editable path="doors/RHD1"]
+[editable path="doors/RHD2"]

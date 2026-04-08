@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://b5416ofxwohkc"]
 
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_ounq0"]
 [ext_resource type="Texture2D" uid="uid://b623bpjd5ilui" path="res://Map/Map Sprites/redroom_2.png" id="1_xfh2e"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="2_jlslv"]
 
 [node name="redroom2" type="TileMapLayer" unique_id=455834997]
+script = ExtResource("1_ounq0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410287197]
 texture = ExtResource("1_xfh2e")
@@ -12,3 +15,19 @@ offset = Vector2(530, 110)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=360137877]
 polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 0, 0, -306, 561, 0)
+
+[node name="doors" type="Node" parent="." unique_id=1810730159]
+
+[node name="RDD" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("2_jlslv")]
+position = Vector2(-268, 93)
+destination_scene = "uid://bq78wao05tlu7"
+destination_door_tag = "RHD2"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/RDD" index="0" unique_id=1591710312]
+position = Vector2(23, 15)
+
+[node name="Spawn" parent="doors/RDD" index="1" unique_id=2100186104]
+position = Vector2(55, -4)
+
+[editable path="doors/RDD"]

@@ -24,4 +24,3 @@ func move_to_scene() -> void:
 	new_map = new_map.instantiate()
 	map_node.call_deferred("add_child", new_map)
 	new_map.set_player_spawn(destination_door_tag)
-	print(destination_door_tag)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="3_i8gpg"]
 
 [node name="redroom1" type="TileMapLayer" unique_id=455834997]
+position = Vector2(0, 44)
 script = ExtResource("1_msfko")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410287197]
@@ -20,12 +21,15 @@ polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 
 
 [node name="doors" type="Node" parent="." unique_id=1590731947]
 
-[node name="reddoor" parent="doors" unique_id=1761861975 instance=ExtResource("3_i8gpg")]
+[node name="RDD" parent="doors" unique_id=1761861975 instance=ExtResource("3_i8gpg")]
 position = Vector2(-269, 109)
-destination_scene = "uid://cynpmxbl61o7l"
-destination_door_tag = "Boos"
+destination_scene = "uid://bq78wao05tlu7"
+destination_door_tag = "RHD2"
 
-[node name="Spawn" parent="doors/reddoor" index="1" unique_id=2100186104]
-position = Vector2(50, -26)
+[node name="CollisionShape2D" parent="doors/RDD" index="0" unique_id=1591710312]
+position = Vector2(24, 38)
 
-[editable path="doors/reddoor"]
+[node name="Spawn" parent="doors/RDD" index="1" unique_id=2100186104]
+position = Vector2(59, -25)
+
+[editable path="doors/RDD"]

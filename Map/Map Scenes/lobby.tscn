@@ -19,7 +19,6 @@ texture = ExtResource("1_ll2xe")
 offset = Vector2(500, 200)
 
 [node name="Consoles" type="Sprite2D" parent="." unique_id=1426091197]
-z_index = 1
 y_sort_enabled = true
 position = Vector2(5, 0)
 texture = ExtResource("2_uayq0")
@@ -72,15 +71,28 @@ position = Vector2(140, 138)
 [node name="doors" type="Node" parent="." unique_id=207436467]
 
 [node name="greendoor" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("6_agg21")]
-position = Vector2(-529, -141)
+position = Vector2(-272, -80)
 destination_scene = "uid://ls5rrt878q5b"
 destination_door_tag = "Hall2"
 spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="doors/greendoor" index="0" unique_id=1591710312]
-position = Vector2(274, 98)
+position = Vector2(17, 37)
 
 [node name="Spawn" parent="doors/greendoor" index="1" unique_id=2100186104]
-position = Vector2(304, 118)
+position = Vector2(50, 58)
+
+[node name="reddoor" parent="doors" unique_id=2064558205 groups=["doors", "player"] instance=ExtResource("6_agg21")]
+position = Vector2(207, -82)
+destination_scene = "uid://bq78wao05tlu7"
+destination_door_tag = "RHD1"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/reddoor" index="0" unique_id=1591710312]
+position = Vector2(-11, 38)
+
+[node name="Spawn" parent="doors/reddoor" index="1" unique_id=2100186104]
+position = Vector2(-50, 61)
 
 [editable path="doors/greendoor"]
+[editable path="doors/reddoor"]
