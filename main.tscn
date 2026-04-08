@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cynpmxbl61o7l"]
 
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
-[ext_resource type="PackedScene" uid="uid://gfhb17nhlgjp" path="res://Map/Map Scenes/greenhall1.tscn" id="2_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map/Map Scenes/lobby.tscn" id="2_efxa6"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_dg77c"]
 [ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="5_ycdy4"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bxg4ydrqccank" path="res://HUDLayer/BulletBar/Scenes/BulletBar.tscn" id="9_efxa6"]
-[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="11_efxa6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("4_dg77c")
@@ -30,7 +29,7 @@ expand_mode = 1
 
 [node name="MapNode" type="Node2D" parent="." unique_id=1961329081]
 
-[node name="greenhall1" parent="MapNode" unique_id=985391034 instance=ExtResource("2_efxa6")]
+[node name="Lobby" parent="MapNode" unique_id=1653438255 instance=ExtResource("2_efxa6")]
 
 [node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
 
@@ -86,14 +85,4 @@ label_settings = SubResource("LabelSettings_6jrgu")
 zoom = Vector2(1.5, 1.5)
 
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("8_2cqfq")]
-position = Vector2(-369, 302)
-
-[node name="Boss" parent="." unique_id=1569971244 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
-position = Vector2(202, -61)
-destination_scene = "uid://cjnemkc6or1nc"
-destination_door_tag = "reddoor"
-
-[node name="Spawn" parent="Boss" index="1" unique_id=2100186104]
-position = Vector2(-39, 29)
-
-[editable path="Boss"]
+position = Vector2(-202, 182)
