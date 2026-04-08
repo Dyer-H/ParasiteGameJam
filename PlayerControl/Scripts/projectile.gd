@@ -10,11 +10,14 @@ func _ready():
 func _process(delta: float) -> void:
 	position += transform.x * delta * bullet_speed
 
-func get_damage():
+func get_damage() -> int:
 	return stats.gun_damage
 
-func get_crit():
+func get_crit() -> bool:
 	return stats.crit_chance
+	
+func get_dir() -> Vector2:
+	return position
 
 func free_node():
 	self.queue_free()

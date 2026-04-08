@@ -73,7 +73,7 @@ func play_animation(direction: Vector2):
 		Globals.DOWN_LEFT:
 			animated_sprite.play("down_left")
 			
-func take_damage(damage:int, crit:float):
+func take_damage(damage:int, crit:float, direction:Vector2):
 	var is_crit = crit > randf() # Calculating crit based off chance
 	if is_crit:
 		damage = 2*damage
@@ -82,7 +82,6 @@ func take_damage(damage:int, crit:float):
 		chase_on_hit = true
 	# Displaying Damage Numbers
 	damage_numbers_origin.display_number(damage, damage_numbers_origin.global_position, is_crit)
-	
 	
 	if health <= 0:
 		dead = true

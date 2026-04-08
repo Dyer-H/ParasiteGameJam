@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
 [ext_resource type="PackedScene" uid="uid://gfhb17nhlgjp" path="res://Map/Map Scenes/greenhall1.tscn" id="2_efxa6"]
-[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="3_dg77c"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_dg77c"]
 [ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="5_ycdy4"]
@@ -33,7 +32,6 @@ texture = ExtResource("8_4c57u")
 [node name="MapNode" type="Node2D" parent="." unique_id=1961329081]
 
 [node name="greenhall1" parent="MapNode" unique_id=985391034 instance=ExtResource("2_efxa6")]
-script = ExtResource("3_dg77c")
 
 [node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
 
@@ -87,7 +85,7 @@ label_settings = SubResource("LabelSettings_6jrgu")
 zoom = Vector2(1.5, 1.5)
 
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("8_2cqfq")]
-position = Vector2(-232, 177)
+position = Vector2(-369, 302)
 
 [node name="Boss" parent="." unique_id=1569971244 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
 position = Vector2(202, -61)

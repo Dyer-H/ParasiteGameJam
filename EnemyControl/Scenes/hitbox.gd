@@ -15,6 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.has_method("get_damage"):
 		var damage = area.get_damage()
 		var crit_chance = area.get_crit()
-		parent.take_damage(damage, crit_chance)
+		var direction = area.get_dir()
+		parent.take_damage(damage, crit_chance, direction)
 	if area.has_method("free_node"):
 		area.free_node()
