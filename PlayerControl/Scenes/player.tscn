@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxsg6j2ri1gim"]
 
 [ext_resource type="Script" uid="uid://cvcb3m7bibcxt" path="res://PlayerControl/Scripts/player.gd" id="1_bv3ae"]
+[ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="2_6vjeh"]
 [ext_resource type="Texture2D" uid="uid://cwc0phdj47xh7" path="res://PlayerControl/GUIResources/CharacterSprites/Character_sprite_sheet.png" id="2_x5hpd"]
 [ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="3_00xxd"]
 
@@ -449,6 +450,7 @@ height = 34.0
 [node name="Player" type="CharacterBody2D" unique_id=1364000813]
 y_sort_enabled = true
 script = ExtResource("1_bv3ae")
+projectile = ExtResource("2_6vjeh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=338616218]
 sprite_frames = SubResource("SpriteFrames_ap5lh")

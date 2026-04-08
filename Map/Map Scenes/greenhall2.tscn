@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_416cy"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_qlcy4"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_56yef"]
-[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="5_xv4rn"]
 
 [node name="greenhall2" type="TileMapLayer" unique_id=1545031703]
 script = ExtResource("1_iumfy")
@@ -17,9 +16,6 @@ texture = ExtResource("1_74gr8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1411035185]
 polygon = PackedVector2Array(385, 366, 459, 328, -501, -152, -565, -120, 413, 369, -616, -120, -501, -187, 505, 331)
-
-[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("5_xv4rn")]
-position = Vector2(201, 203)
 
 [node name="doors" type="Node" parent="." unique_id=548636779]
 

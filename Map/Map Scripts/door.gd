@@ -13,5 +13,5 @@ extends Area2D
 
 
 func _on_body_entered(body) -> void:
-	if body.is_in_group("player"):
+	if body is Player:
 		NavigationManager.go_to_scene(destination_scene, destination_door_tag)

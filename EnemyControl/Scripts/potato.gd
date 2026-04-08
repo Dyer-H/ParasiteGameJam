@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var player = $"../../Player"
+var player: CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var damage_numbers_origin = $DamageNumbersOrigin
 @onready var detection_zone = $DetectionArea/CollisionShape2D
@@ -18,6 +18,9 @@ var chase_on_hit = false
 
 @export var item_drop: Array[PackedScene]
 @export var item_drop_chances: Array[float]
+
+func _ready():
+	player = get_node("../../Player")
 
 #will probably change this later so that this doesn't get recalculated every frame
 #can probably get away with once every half second or something
