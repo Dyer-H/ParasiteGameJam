@@ -29,6 +29,8 @@ func _physics_process(_delta: float) -> void:
 		velocity = velocity * 3
 		move_and_slide()
 		velocity = velocity / 3
+	if (shot_cooldown > 0):
+		shot_cooldown -= 1
 	if (regen_rate > 0):
 		regen_rate -= 1
 	else:
