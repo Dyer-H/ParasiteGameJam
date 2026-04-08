@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="7_vivmo"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bxg4ydrqccank" path="res://HUDLayer/BulletBar/Scenes/BulletBar.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="11_efxa6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
@@ -78,6 +79,8 @@ label_settings = SubResource("LabelSettings_6jrgu")
 [node name="Coin" parent="HUD Layer" unique_id=1060038100 instance=ExtResource("6_w48qg")]
 
 [node name="CoinInput" parent="HUD Layer" unique_id=574592859 instance=ExtResource("7_vivmo")]
+
+[node name="BulletBar" parent="HUD Layer" unique_id=1310118411 instance=ExtResource("9_efxa6")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1851495139]
 zoom = Vector2(1.5, 1.5)
