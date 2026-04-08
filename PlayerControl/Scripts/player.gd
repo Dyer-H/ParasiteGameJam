@@ -47,7 +47,7 @@ func dash():
 		return
 	else:
 		if (stats.stamina > 33):
-			regen_rate = 100
+			regen_rate = stats.dash_regen
 			stats.set_stamina(stats.stamina - 33)
 			is_dashing = true
 			await get_tree().create_timer(0.2).timeout

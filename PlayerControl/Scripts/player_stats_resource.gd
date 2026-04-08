@@ -21,7 +21,7 @@ class_name playerStats
 @export var num_bullets: int
 @export var bullet_range: float
 @export var crit_chance: float
-@export var dash_regen: float
+@export var dash_regen: int
 @export var player_speed: int
 
 @export var coins: int
