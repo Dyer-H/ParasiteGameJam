@@ -4,19 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://qcapu1xh6wqb" path="res://PlayerControl/GUIResources/Gun/pellet.png" id="2_dgwo2"]
 
 [node name="projectile" type="Area2D" unique_id=850689398]
-scale = Vector2(0.2, 0.2)
+z_index = 2
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_qxf0c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302115727]
 light_mask = 0
-position = Vector2(0, -0.99999994)
+position = Vector2(0.23433861, -0.7364973)
 rotation = 1.5707964
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9665225, 0.79743433)
 texture = ExtResource("2_dgwo2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=925864610]
-position = Vector2(3.8146973e-06, 2.8437505)
-scale = Vector2(1.0000001, 1.4375)
-polygon = PackedVector2Array(-24.999998, 0, 24.999998, 0, 24.999998, -4.9999995, -24.999998, -4.9999995)
+position = Vector2(-5.0000005, 2.5)
+scale = Vector2(0.96010053, 1.5882903)
+polygon = PackedVector2Array(-15.326937, -0.45880222, 26.335371, -0.45880222, 26.335371, -3.6068416, -15.326937, -3.6068416)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
