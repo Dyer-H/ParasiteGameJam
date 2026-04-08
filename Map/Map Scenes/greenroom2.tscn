@@ -54,8 +54,6 @@ position = Vector2(-11, 1)
 [node name="Baddie6" parent="." unique_id=1836047348 instance=ExtResource("3_mwr4g")]
 position = Vector2(-115, 4)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1070856847]
-
 [node name="doors" type="Node" parent="." unique_id=305593852]
 
 [node name="Groom2" parent="doors" unique_id=1761861975 instance=ExtResource("4_185kd")]

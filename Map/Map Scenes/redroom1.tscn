@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c8knggrbg8r6r" path="res://Map/Map Sprites/redroom_1.png" id="1_h1hmt"]
 [ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_msfko"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="3_i8gpg"]
+[ext_resource type="PackedScene" uid="uid://crfdxp1hi0d7n" path="res://EnemyControl/Scenes/boss.tscn" id="4_7gyst"]
 
 [node name="redroom1" type="TileMapLayer" unique_id=455834997]
 script = ExtResource("1_msfko")
@@ -16,8 +17,6 @@ offset = Vector2(530, 110)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=360137877]
 polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 0, 0, -306, 561, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=53788391]
-
 [node name="doors" type="Node" parent="." unique_id=1590731947]
 
 [node name="reddoor" parent="doors" unique_id=1761861975 instance=ExtResource("3_i8gpg")]
@@ -27,5 +26,8 @@ destination_door_tag = "Boos"
 
 [node name="Spawn" parent="doors/reddoor" index="1" unique_id=2100186104]
 position = Vector2(50, -26)
+
+[node name="BOSS" parent="." unique_id=1361659599 instance=ExtResource("4_7gyst")]
+position = Vector2(-2.9999847, -84.000015)
 
 [editable path="doors/reddoor"]

@@ -49,7 +49,7 @@ func _physics_process(_delta: float) -> void:
 		detection_area.disabled = true
 	
 	if player_hit and hit_cooldown <= 0:
-		stats.set_health(stats.health - dmg)
+		stats.set_health(stats.health - dmg)		
 		hit_cooldown = 25
 	if hit_cooldown >= 0:
 		hit_cooldown -= 1
