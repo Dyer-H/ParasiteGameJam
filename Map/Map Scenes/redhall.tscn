@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bq78wao05tlu7"]
+
+[ext_resource type="Texture2D" uid="uid://bhnqk82byn1o8" path="res://Map/Map Sprites/redhall.png" id="1_7ijoh"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_k6rh8"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_bxl0g"]
+
+[node name="redhall" type="TileMapLayer" unique_id=1691058809]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2097855607]
+texture = ExtResource("1_7ijoh")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=464242035]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1435886812]
+polygon = PackedVector2Array(-387, 364, -459, 328, 501, -152, 564, -120, -409, 367, 588, -121, 502, -173, -492, 332)
+
+[node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_k6rh8")]
+position = Vector2(-212, 214)
+
+[node name="Baddie2" parent="." unique_id=913032127 instance=ExtResource("2_k6rh8")]
+position = Vector2(-127, 217)
+
+[node name="Big Baddie" parent="." unique_id=746600515 instance=ExtResource("3_bxl0g")]
+position = Vector2(-119, 183)
+
+[node name="Baddie3" parent="." unique_id=1881827920 instance=ExtResource("2_k6rh8")]
+position = Vector2(-81, 146)
+
+[node name="Baddie4" parent="." unique_id=1050372954 instance=ExtResource("2_k6rh8")]
+position = Vector2(188, 16)
+
+[node name="Baddie5" parent="." unique_id=729010754 instance=ExtResource("2_k6rh8")]
+position = Vector2(226, 34)
+
+[node name="Big Baddie2" parent="." unique_id=1384202789 instance=ExtResource("3_bxl0g")]
+position = Vector2(69, 68)
+
+[node name="Big Baddie3" parent="." unique_id=877187383 instance=ExtResource("3_bxl0g")]
+position = Vector2(161, 63)

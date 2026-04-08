@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bwvoh2rcxmeu7"]
+
+[ext_resource type="Texture2D" uid="uid://fmae0xxdxum6" path="res://Map/Map Sprites/greenroom_1.png" id="1_xrb6i"]
+[ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_cooli"]
+[ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_8bcm0"]
+[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="4_danl6"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="5_xh878"]
+[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="6_xh878"]
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1030943014]
+script = ExtResource("6_xh878")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789598699]
+texture = ExtResource("1_xrb6i")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1761325427]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=1501656678]
+polygon = PackedVector2Array(-21, 203, 261, 62, 6, -66, -246, 62, 29, 202, -286, 59, 7, -110, 298, 62)
+
+[node name="Table" type="StaticBody2D" parent="." unique_id=1346716162]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table" unique_id=441857845]
+polygon = PackedVector2Array(9, 93, 71, 61, -25, 11, -87, 45)
+
+[node name="Shelf1" type="StaticBody2D" parent="." unique_id=1184690644]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf1" unique_id=1949680388]
+polygon = PackedVector2Array(137, 28, 166, 14, 69, -34, 39, -19)
+
+[node name="Shelf2" type="StaticBody2D" parent="." unique_id=1675771318]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Shelf2" unique_id=341059217]
+polygon = PackedVector2Array(-216, 77, -121, 28, -150, 12, -247, 62)
+
+[node name="Big Baddie3" parent="." unique_id=1361659599 instance=ExtResource("2_cooli")]
+position = Vector2(189, 56)
+
+[node name="Baddie" parent="." unique_id=1125384050 instance=ExtResource("3_8bcm0")]
+position = Vector2(30, -24)
+
+[node name="Baddie2" parent="." unique_id=2027105306 instance=ExtResource("3_8bcm0")]
+position = Vector2(-81, -19)
+
+[node name="Baddie3" parent="." unique_id=129130736 instance=ExtResource("3_8bcm0")]
+position = Vector2(58, 131)
+
+[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("4_danl6")]
+position = Vector2(-30, 47)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1528650107]
+
+[node name="doors" type="Node" parent="." unique_id=600277584]
+
+[node name="Groom1" parent="doors" unique_id=1761861975 instance=ExtResource("5_xh878")]
+destination_scene = "uid://up827orxlmfe"
+destination_door_tag = "Hall1_#_2"
+
+[node name="CollisionShape2D" parent="doors/Groom1" index="0" unique_id=1591710312]
+position = Vector2(-112, 121)
+
+[node name="Spawn" parent="doors/Groom1" index="1" unique_id=2100186104]
+position = Vector2(-65, 79)
+
+[editable path="doors/Groom1"]

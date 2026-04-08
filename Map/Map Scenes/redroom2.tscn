@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5416ofxwohkc"]
+
+[ext_resource type="Texture2D" uid="uid://b623bpjd5ilui" path="res://Map/Map Sprites/redroom_2.png" id="1_xfh2e"]
+
+[node name="redroom2" type="TileMapLayer" unique_id=455834997]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410287197]
+texture = ExtResource("1_xfh2e")
+offset = Vector2(530, 110)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=2072971105]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=360137877]
+polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 0, 0, -306, 561, 0)

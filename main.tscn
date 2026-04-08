@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cynpmxbl61o7l"]
 
-[ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="1_4c57u"]
-[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map Scenes/lobby.tscn" id="1_kek77"]
+[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map/Map Scenes/lobby.tscn" id="1_kek77"]
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_dg77c"]
@@ -9,14 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="6_w48qg"]
 [ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="7_vivmo"]
 [ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
-[ext_resource type="PackedScene" uid="uid://bxg4ydrqccank" path="res://HUDLayer/BulletBar/Scenes/BulletBar.tscn" id="9_efxa6"]
-[ext_resource type="PackedScene" uid="uid://bvd2piu26bmad" path="res://PlayerControl/Scenes/projectile.tscn" id="9_yaehf"]
+[ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="8_4c57u"]
+[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="11_efxa6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
 font = ExtResource("4_dg77c")
 font_size = 56
 
 [node name="Main" type="Node2D" unique_id=546777818]
+script = ExtResource("11_dg77c")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1803010625]
 anchors_preset = 15
@@ -28,9 +29,10 @@ offset_right = 701.0
 offset_bottom = 442.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4c57u")
+texture = ExtResource("8_4c57u")
 
-[node name="TileMapLayer" parent="." unique_id=1653438255 instance=ExtResource("1_kek77")]
+[node name="Lobby" parent="." unique_id=1653438255 instance=ExtResource("1_kek77")]
+position = Vector2(1, -4)
 
 [node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
 
@@ -80,11 +82,30 @@ label_settings = SubResource("LabelSettings_6jrgu")
 
 [node name="CoinInput" parent="HUD Layer" unique_id=574592859 instance=ExtResource("7_vivmo")]
 
-[node name="BulletBar" parent="HUD Layer" unique_id=1310118411 instance=ExtResource("9_efxa6")]
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1851495139]
 zoom = Vector2(1.5, 1.5)
 
 [node name="Player" parent="." unique_id=1364000813 instance=ExtResource("8_2cqfq")]
 position = Vector2(-232, 177)
-projectile = ExtResource("9_yaehf")
+
+[node name="doors" type="Node" parent="." unique_id=195938018]
+
+[node name="greendoor" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
+position = Vector2(-262, -50)
+destination_scene = "uid://ls5rrt878q5b"
+destination_door_tag = "Hall2"
+spawn_direction = "right"
+
+[node name="Spawn" parent="doors/greendoor" index="1" unique_id=2100186104]
+position = Vector2(29, 23)
+
+[node name="Boss" parent="." unique_id=1569971244 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
+position = Vector2(202, -61)
+destination_scene = "uid://cjnemkc6or1nc"
+destination_door_tag = "reddoor"
+
+[node name="Spawn" parent="Boss" index="1" unique_id=2100186104]
+position = Vector2(-39, 29)
+
+[editable path="doors/greendoor"]
+[editable path="Boss"]

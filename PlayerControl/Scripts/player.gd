@@ -10,49 +10,38 @@ var stats = preload("res://PlayerControl/Resources/player_stats.tres")
 
 const DASH_DURATION: float = 0.2 # Dash time (seconds)
 var stamRegen: bool = false
-var shot_cooldown: int = 0
-var dash_cooldown: int = 25
-var initial_speed: int
-var regen_rate: int
 
-func _ready() -> void:
-	var seg:RoomSegment=RoomSegment
-	seg.generateBranch(10,10)
-	initial_speed = stats.player_speed
-	regen_rate = 10
-	pass
-
+func _ready():
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+	animated_sprite.play("move_" + direction)
+	
+	
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
 func _physics_process(_delta: float) -> void:
-	if (shot_cooldown > 0):
-		shot_cooldown -= 1
-	if (dash_cooldown > 0):
-		dash_cooldown -= 1
-	if (regen_rate > 0):
-		regen_rate -= 1
-	
-	if (dash_cooldown == 0):
-		stats.player_speed = initial_speed
-	if (stats.stamina < stats.max_stamina && stamRegen && regen_rate == 0):
-		stats.set_stamina(stats.stamina + 1)
-		regen_rate = 10
 	get_input()
-	if(Input.is_action_just_pressed("Shoot") && shot_cooldown == 0 && stats.curr_bullets > 0):
+	if(Input.is_action_just_pressed("Shoot")):
 		shoot()
-	if(Input.is_action_just_pressed("Dash") && dash_cooldown == 0):
+	if(Input.is_action_just_pressed("Dash")):
 		dash()
 
 # Boosts the player speed for a set time (DASH_DURATION)
 func dash():
 	if(stats.stamina > 33):
-		stamRegen=false
-		dash_cooldown = 10 #frames for dash
 		stats.set_stamina(stats.stamina - 33)
-		initial_speed = stats.player_speed
+		var initial_speed = stats.player_speed
 		stats.player_speed = initial_speed * 3
+		await get_tree().create_timer(DASH_DURATION).timeout # Create timer
+		stats.player_speed = initial_speed
+		stamRegen=false
 		await get_tree().create_timer(stats.dash_regen).timeout
 		stamRegen=true
+		while(stats.stamina < stats.max_stamina && stamRegen): # regen
+			stats.set_stamina(stats.stamina + 1)
+			await get_tree().create_timer(0.2).timeout
 	
 func shoot() -> void:
 	var dev=-15+randi_range(-5,5) # This is the starting deviation for the shot (degrees off from normal
@@ -62,8 +51,6 @@ func shoot() -> void:
 		newProjectile.global_position=global_position
 		newProjectile.look_at(get_global_mouse_position())
 		newProjectile.rotation_degrees+=(dev+(i*5-randi_range(-2,2))) # dev+(spread of each pellet)
-	shot_cooldown = 20 #number of frames waited till next shot
-	stats.set_curr_bullets(stats.curr_bullets - 1)
 
 #gets vector based on values set in project settings
 #discr etizes then moves that direction
