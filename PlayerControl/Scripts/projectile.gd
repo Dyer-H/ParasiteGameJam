@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 func get_damage() -> int:
 	return stats.gun_damage
 
-func get_crit() -> bool:
+func get_crit() -> float:
 	return stats.crit_chance
 	
 func get_dir() -> Vector2:
