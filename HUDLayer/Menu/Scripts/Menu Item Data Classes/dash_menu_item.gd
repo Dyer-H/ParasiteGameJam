@@ -1,4 +1,4 @@
 extends menuItemResource
 class_name dashItemResource
 
-@export var dash_regen: float
+@export var dash_regen: int

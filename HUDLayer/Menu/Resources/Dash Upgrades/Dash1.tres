@@ -4,7 +4,8 @@
 
 [resource]
 script = ExtResource("1_bgc50")
-name = "Dash"
-description = "Nothing"
-max_lvl = true
+dash_regen = 30
+name = "Dash (lvl 2)"
+price = 50
+description = "Decreases dash regen time by a lot"
 metadata/_custom_type_script = "uid://chwwuhbfiox6u"
