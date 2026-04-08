@@ -75,7 +75,11 @@ func set_max_stamina(new_stamina: int) -> void:
 func set_curr_bullets(new_bullets: int) -> void:
 	curr_bullets = new_bullets
 	emit_changed()
-	
+
+func set_player_speed(new_speed: int) -> void:
+	player_speed = new_speed
+	emit_changed()
+
 func increment_health_level() -> void:
 	health_level += 1
 

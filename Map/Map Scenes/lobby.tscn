@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ehp8u"]
 [ext_resource type="Texture2D" uid="uid://digb4038r1lbc" path="res://Map/Map Sprites/lobby_consoles.png" id="2_uayq0"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_uayq0"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="6_agg21"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
@@ -67,3 +68,19 @@ position = Vector2(-97, -102)
 
 [node name="Big Baddie2" parent="." unique_id=98851872 instance=ExtResource("3_uayq0")]
 position = Vector2(140, 138)
+
+[node name="doors" type="Node" parent="." unique_id=207436467]
+
+[node name="greendoor" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("6_agg21")]
+position = Vector2(-529, -141)
+destination_scene = "uid://ls5rrt878q5b"
+destination_door_tag = "Hall2"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/greendoor" index="0" unique_id=1591710312]
+position = Vector2(274, 98)
+
+[node name="Spawn" parent="doors/greendoor" index="1" unique_id=2100186104]
+position = Vector2(304, 118)
+
+[editable path="doors/greendoor"]

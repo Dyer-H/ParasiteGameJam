@@ -18,11 +18,12 @@ var regen_rate: int
 func _ready() -> void:
 	initial_speed = stats.player_speed
 	regen_rate = 10
-
+	stats.changed.connect(_on_speed_changed)
 
 #this function will have to pass delta to the next eventually
 #again because we don't want movement tied to framerate
 func _physics_process(_delta: float) -> void:
+	get_input()
 	if (shot_cooldown > 0):
 		shot_cooldown -= 1
 	if (dash_cooldown > 0):
@@ -35,7 +36,6 @@ func _physics_process(_delta: float) -> void:
 	if (stats.stamina < stats.max_stamina && stamRegen && regen_rate == 0):
 		stats.set_stamina(stats.stamina + 1)
 		regen_rate = 10
-	get_input()
 	if(Input.is_action_just_pressed("Shoot") && shot_cooldown == 0 && stats.curr_bullets > 0):
 		shoot()
 	if(Input.is_action_just_pressed("Dash") && dash_cooldown == 0):
@@ -47,7 +47,7 @@ func dash():
 		stamRegen=false
 		dash_cooldown = 10 #frames for dash
 		stats.set_stamina(stats.stamina - 33)
-		initial_speed = stats.player_speed
+		var initial_speed = stats.player_speed
 		stats.player_speed = initial_speed * 3
 		await get_tree().create_timer(stats.dash_regen).timeout
 		stamRegen=true
@@ -64,7 +64,7 @@ func shoot() -> void:
 	stats.set_curr_bullets(stats.curr_bullets - 1)
 
 #gets vector based on values set in project settings
-#discr etizes then moves that direction
+#discretizes then moves that direction
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var discretized_direction = Globals.discretize_movement_direction(input_direction.normalized())
@@ -94,7 +94,6 @@ func play_animation(direction: Vector2):
 		_: 
 			animated_sprite.stop()
 
-
 func _on_pickup_range_area_entered(area: Area2D) -> void:
 	if area.get_parent().has_method("pickup_coin"):
 		area.get_parent().pickup_coin()
@@ -102,3 +101,6 @@ func _on_pickup_range_area_entered(area: Area2D) -> void:
 	if area.get_parent().has_method("heal"):
 		var heal = area.get_parent().heal()
 		stats.set_health(stats.health+heal)
+
+func _on_speed_changed():
+	initial_speed = stats.player_speed
