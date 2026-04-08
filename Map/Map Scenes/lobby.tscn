@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bjdktwxl3yfvk"]
 
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_i0iym"]
 [ext_resource type="Texture2D" uid="uid://dmdccd55ooiyl" path="res://Map/GUIResources/BaseArea/lobby.png" id="1_ll2xe"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ehp8u"]
 [ext_resource type="Texture2D" uid="uid://digb4038r1lbc" path="res://Map/Map Sprites/lobby_consoles.png" id="2_uayq0"]
@@ -8,6 +9,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
 [node name="Lobby" type="TileMapLayer" unique_id=1653438255]
+script = ExtResource("1_i0iym")
 
 [node name="Room" type="Sprite2D" parent="." unique_id=1299349025]
 y_sort_enabled = true

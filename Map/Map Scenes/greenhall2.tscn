@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ls5rrt878q5b"]
 
 [ext_resource type="Texture2D" uid="uid://c1wwbm1hjtrtm" path="res://Map/Map Sprites/greenhall_2.png" id="1_74gr8"]
-[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="1_iumfy"]
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_bbi61"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_416cy"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_qlcy4"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_56yef"]
 
 [node name="greenhall2" type="TileMapLayer" unique_id=1545031703]
-script = ExtResource("1_iumfy")
+script = ExtResource("1_bbi61")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1745159297]
 texture = ExtResource("1_74gr8")
