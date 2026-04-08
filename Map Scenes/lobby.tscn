@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ehp8u"]
 [ext_resource type="Texture2D" uid="uid://digb4038r1lbc" path="res://Map Scenes/Map Sprites/lobby_consoles.png" id="2_uayq0"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_uayq0"]
+[ext_resource type="PackedScene" uid="uid://crfdxp1hi0d7n" path="res://EnemyControl/Scenes/boss.tscn" id="5_3miqx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ll2xe"]
 
@@ -83,3 +84,6 @@ disabled = true
 position = Vector2(448, 0)
 polygon = PackedVector2Array(-274, -48, -240, -31, -222, -42, -255, -58)
 disabled = true
+
+[node name="BOSS" parent="." unique_id=1925798740 instance=ExtResource("5_3miqx")]
+position = Vector2(369.99997, 46)

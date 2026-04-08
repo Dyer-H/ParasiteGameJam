@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqgvje7qkgtup" path="res://Drops/coin.tscn" id="2_e3aeq"]
 [ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scenes/detection_area.gd" id="3_01wqo"]
 [ext_resource type="PackedScene" uid="uid://cjuf1jyo4r2k5" path="res://Drops/health_potion.tscn" id="3_yglf5"]
-[ext_resource type="Texture2D" uid="uid://b47ms2t41rbng" path="res://Zmegasprite.png" id="4_temwr"]
+[ext_resource type="Texture2D" uid="uid://b47ms2t41rbng" path="res://EnemyControl/GUIResources/EnemySprites/Zmegasprite.png" id="4_temwr"]
 [ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scenes/hitbox.gd" id="4_xfn0n"]
 [ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="5_p16dw"]
 
