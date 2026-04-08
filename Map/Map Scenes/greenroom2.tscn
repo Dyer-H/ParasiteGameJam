@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_vt1sk"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_mwr4g"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_185kd"]
+[ext_resource type="PackedScene" uid="uid://bm7ai0w1w2c6x" path="res://EnemyControl/Scenes/spawner.tscn" id="6_kho30"]
 
 [node name="greenroom2" type="TileMapLayer" unique_id=947961828]
 script = ExtResource("1_iewam")
@@ -74,6 +75,9 @@ destination_door_tag = "Hall1"
 
 [node name="Spawn" parent="doors/Groom2_2" index="1" unique_id=2100186104]
 position = Vector2(19, 11)
+
+[node name="spawner" parent="." unique_id=1301613684 instance=ExtResource("6_kho30")]
+position = Vector2(3, 46)
 
 [editable path="doors/Groom2"]
 [editable path="doors/Groom2_2"]

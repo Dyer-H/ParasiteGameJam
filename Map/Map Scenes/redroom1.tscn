@@ -4,6 +4,11 @@
 [ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_msfko"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="3_i8gpg"]
 [ext_resource type="PackedScene" uid="uid://crfdxp1hi0d7n" path="res://EnemyControl/Scenes/boss.tscn" id="4_7gyst"]
+[ext_resource type="PackedScene" uid="uid://bm7ai0w1w2c6x" path="res://EnemyControl/Scenes/spawner.tscn" id="5_v4we0"]
+[ext_resource type="Script" uid="uid://b2cv0402vf86v" path="res://Map/Map Scenes/Boss_Lock.gd" id="6_byg0p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4we0"]
+radius = 51.24451
 
 [node name="redroom1" type="TileMapLayer" unique_id=455834997]
 position = Vector2(0, 44)
@@ -18,6 +23,23 @@ offset = Vector2(530, 110)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=360137877]
 polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 0, 0, -306, 561, 0)
 
+[node name="BOSS" parent="." unique_id=1361659599 instance=ExtResource("4_7gyst")]
+position = Vector2(60.000004, -103)
+health = 100
+dmg = 20
+
+[node name="spawner Left" parent="." unique_id=1301613684 instance=ExtResource("5_v4we0")]
+position = Vector2(-329, -10)
+
+[node name="spawner Down" parent="." unique_id=85404882 instance=ExtResource("5_v4we0")]
+position = Vector2(1, 104)
+
+[node name="spawner Right" parent="." unique_id=2114970641 instance=ExtResource("5_v4we0")]
+position = Vector2(327, -18)
+
+[node name="spawner Up" parent="." unique_id=1125775177 instance=ExtResource("5_v4we0")]
+position = Vector2(-3, -177)
+
 [node name="doors" type="Node" parent="." unique_id=1590731947]
 
 [node name="RDD" parent="doors" unique_id=1761861975 instance=ExtResource("3_i8gpg")]
@@ -26,16 +48,16 @@ destination_scene = "uid://bq78wao05tlu7"
 destination_door_tag = "RHD2"
 
 [node name="CollisionShape2D" parent="doors/RDD" index="0" unique_id=1591710312]
-position = Vector2(24, 38)
+position = Vector2(19, 42)
 
-<<<<<<< HEAD
-[node name="BOSS" parent="." unique_id=1361659599 instance=ExtResource("4_7gyst")]
-position = Vector2(-2.9999847, -84.000015)
-
-[editable path="doors/reddoor"]
-=======
 [node name="Spawn" parent="doors/RDD" index="1" unique_id=2100186104]
-position = Vector2(59, -25)
+position = Vector2(92, -5)
+
+[node name="Boss Lock" type="StaticBody2D" parent="." unique_id=1989978124]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Lock" unique_id=1980884348]
+position = Vector2(-262, 131)
+shape = SubResource("CircleShape2D_v4we0")
+script = ExtResource("6_byg0p")
 
 [editable path="doors/RDD"]
->>>>>>> 6676e0f16b57ac21a09db6a1c769bef8ad7ec8e4

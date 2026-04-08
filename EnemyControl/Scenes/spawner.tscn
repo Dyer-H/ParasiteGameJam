@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm7ai0w1w2c6x"]
 
-[ext_resource type="Script" uid="uid://csc8tb5il7sra" path="res://spawner.gd" id="1_yp5lu"]
+[ext_resource type="Script" uid="uid://csc8tb5il7sra" path="res://EnemyControl/Scripts/spawner.gd" id="1_yp5lu"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_mcln3"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_bphdf"]
 
@@ -8,4 +8,4 @@
 script = ExtResource("1_yp5lu")
 enemy_scene = ExtResource("3_bphdf")
 enemy_scene_big = ExtResource("2_mcln3")
-spawn_area = Rect2(-100, -100, 100, 100)
+spawn_area = Rect2(-90, -90, 90, 90)

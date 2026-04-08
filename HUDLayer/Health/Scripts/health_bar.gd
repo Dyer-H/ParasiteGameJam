@@ -18,6 +18,5 @@ func _on_stats_changed(health: int = stats.health) -> void:
 		die()
 		
 func die():
-	stats.set_coins(0)
 	
 	get_tree().change_scene_to_file("res://HUDLayer/Death/game_over.tscn")

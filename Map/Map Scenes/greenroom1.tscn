@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="2_cooli"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="3_8bcm0"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="5_xh878"]
+[ext_resource type="PackedScene" uid="uid://bm7ai0w1w2c6x" path="res://EnemyControl/Scenes/spawner.tscn" id="6_h5jay"]
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1030943014]
 script = ExtResource("1_vixxy")
@@ -57,5 +58,11 @@ position = Vector2(-112, 121)
 
 [node name="Spawn" parent="doors/Groom1" index="1" unique_id=2100186104]
 position = Vector2(-65, 79)
+
+[node name="spawner" parent="." unique_id=1301613684 instance=ExtResource("6_h5jay")]
+position = Vector2(-1, 12)
+
+[node name="spawner2" parent="." unique_id=1375146713 instance=ExtResource("6_h5jay")]
+position = Vector2(8, 49)
 
 [editable path="doors/Groom1"]

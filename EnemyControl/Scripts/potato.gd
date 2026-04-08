@@ -24,8 +24,8 @@ var kb:bool = false
 @export var item_drop_chances: Array[float]
 
 func _ready():
-	player = get_node("../../../Player")
-
+	player = get_node("/root/Main/Player")
+	
 #will probably change this later so that this doesn't get recalculated every frame
 #can probably get away with once every half second or something
 func _physics_process(_delta: float) -> void:

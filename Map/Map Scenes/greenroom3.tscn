@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_etn4a"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_q347x"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_7jn2e"]
+[ext_resource type="PackedScene" uid="uid://bm7ai0w1w2c6x" path="res://EnemyControl/Scenes/spawner.tscn" id="6_af71x"]
 
 [node name="greenroom3" type="TileMapLayer" unique_id=505148876]
 script = ExtResource("1_sf6oe")
@@ -70,6 +71,9 @@ position = Vector2(-3, 0)
 
 [node name="Spawn" parent="doors/Sceret_door" index="1" unique_id=2100186104]
 position = Vector2(-81, 10)
+
+[node name="spawner" parent="." unique_id=1301613684 instance=ExtResource("6_af71x")]
+position = Vector2(-4, 32)
 
 [editable path="doors/Groom3"]
 [editable path="doors/Sceret_door"]

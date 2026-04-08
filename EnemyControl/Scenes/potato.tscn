@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b8cafm4tw56jg" path="res://EnemyControl/Scripts/potato.gd" id="1_uq1l3"]
 [ext_resource type="PackedScene" uid="uid://dqgvje7qkgtup" path="res://Drops/coin.tscn" id="2_jasr4"]
-[ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scenes/hitbox.gd" id="3_1se55"]
+[ext_resource type="Script" uid="uid://bn0720hwp6v86" path="res://EnemyControl/Scripts/hitbox.gd" id="3_1se55"]
 [ext_resource type="PackedScene" uid="uid://cjuf1jyo4r2k5" path="res://Drops/health_potion.tscn" id="3_a7kam"]
-[ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scenes/detection_area.gd" id="3_xn1xs"]
+[ext_resource type="Script" uid="uid://cnpwglmornycm" path="res://EnemyControl/Scripts/detection_area.gd" id="3_xn1xs"]
 [ext_resource type="Texture2D" uid="uid://csw5113y8yqa7" path="res://EnemyControl/GUIResources/EnemySprites/Rat - Down 1.png" id="4_4o70i"]
 [ext_resource type="Texture2D" uid="uid://c7v0pr3wql76i" path="res://EnemyControl/GUIResources/EnemySprites/Rat - Down 2.png" id="5_ewiey"]
 [ext_resource type="Script" uid="uid://8skdr0lmrptw" path="res://EnemyControl/Scripts/damage_numbers.gd" id="5_qkpkm"]

@@ -5,11 +5,13 @@ extends Node2D
 @export var spawn_area: Rect2 # Define spawn area as a rectangle
 
 func _ready() -> void:
-	await get_tree().create_timer(3).timeout
+	var time = randi_range(3,5)
+	await get_tree().create_timer(time).timeout
 	spawn_enemy()
 	
 func awai() -> void:
-	await get_tree().create_timer(5).timeout
+	var time = randi_range(5,8)
+	await get_tree().create_timer(time).timeout
 	spawn_enemy()
 
 func spawn_enemy() -> void:
