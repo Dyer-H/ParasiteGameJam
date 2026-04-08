@@ -21,7 +21,7 @@ polygon = PackedVector2Array(385, 366, 459, 328, -501, -152, -565, -120, 413, 36
 
 [node name="Hall2" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("4_56yef")]
 position = Vector2(401, 324)
-destination_scene = "uid://cynpmxbl61o7l"
+destination_scene = "uid://bjdktwxl3yfvk"
 destination_door_tag = "greendoor"
 
 [node name="CollisionShape2D" parent="doors/Hall2" index="0" unique_id=1591710312]

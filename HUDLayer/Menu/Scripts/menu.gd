@@ -110,7 +110,7 @@ func _on_upgrade_button_clicked() -> void:
 			_update_dash_upgrade()
 		ItemPositions.SPEED_ITEM:
 			var new_speed = current_selection.item.player_speed
-			stats.player_speed = new_speed
+			stats.set_player_speed(new_speed)
 			stats.increment_speed_level()
 			_update_speed_upgrade()
 	current_selection.toggle_selection()
