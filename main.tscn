@@ -19,7 +19,7 @@ font_size = 56
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1803010625]
 custom_minimum_size = Vector2(2000, 1500)
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2

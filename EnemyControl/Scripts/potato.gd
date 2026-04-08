@@ -15,6 +15,8 @@ var player_in_area: bool = false
 var player_hit: bool = false
 var hit_cooldown: int = 0
 var chase_on_hit = false
+var knockback:Vector2 = Vector2.ZERO
+var vel:Vector2 = Vector2.ZERO
 
 @export var item_drop: Array[PackedScene]
 @export var item_drop_chances: Array[float]
@@ -39,6 +41,11 @@ func _physics_process(_delta: float) -> void:
 	else:
 		# Make sure the collision area is off if it is dead
 		detection_area.disabled = true
+	
+	knockback = knockback.move_toward(Vector2.ZERO, _delta)
+
+	velocity += knockback
+	move_and_slide()
 	if player_hit and hit_cooldown <= 0:
 		print("hit")
 		stats.set_health(stats.health - dmg)
@@ -72,8 +79,11 @@ func play_animation(direction: Vector2):
 			animated_sprite.play("down_right")
 		Globals.DOWN_LEFT:
 			animated_sprite.play("down_left")
-			
-func take_damage(damage:int, crit:float, direction:Vector2):
+
+func apply_knockback(from_position: Vector2):
+	knockback = from_position.direction_to(global_position) * 300
+
+func take_damage(damage:int, crit:float, direction:Vector2) -> void:
 	var is_crit = crit > randf() # Calculating crit based off chance
 	if is_crit:
 		damage = 2*damage
@@ -82,6 +92,8 @@ func take_damage(damage:int, crit:float, direction:Vector2):
 		chase_on_hit = true
 	# Displaying Damage Numbers
 	damage_numbers_origin.display_number(damage, damage_numbers_origin.global_position, is_crit)
+	
+	apply_knockback(direction)
 	
 	if health <= 0:
 		dead = true

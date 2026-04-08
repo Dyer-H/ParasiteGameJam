@@ -17,7 +17,7 @@ func get_crit() -> bool:
 	return stats.crit_chance
 	
 func get_dir() -> Vector2:
-	return position
+	return global_position
 
 func free_node():
 	self.queue_free()
