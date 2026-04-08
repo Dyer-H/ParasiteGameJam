@@ -28,3 +28,14 @@ position = Vector2(-80, 81)
 
 [node name="Baddie3" parent="." unique_id=1196150320 instance=ExtResource("3_qlcy4")]
 position = Vector2(-63, 117)
+
+[node name="Entrance Door" type="StaticBody2D" parent="." unique_id=1550031873]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Entrance Door" unique_id=469018346]
+polygon = PackedVector2Array(412, 352, 395, 344, 423, 328, 442, 337)
+
+[node name="Exit Door" type="StaticBody2D" parent="." unique_id=450599587]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit Door" unique_id=1888661972]
+position = Vector2(-941, -473)
+polygon = PackedVector2Array(412, 352, 395, 344, 426, 328, 443, 336)

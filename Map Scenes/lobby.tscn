@@ -65,25 +65,5 @@ position = Vector2(-97, -102)
 [node name="Big Baddie2" parent="." unique_id=98851872 instance=ExtResource("3_uayq0")]
 position = Vector2(140, 138)
 
-[node name="Green Door" type="StaticBody2D" parent="." unique_id=460513825]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Green Door" unique_id=1611986719]
-polygon = PackedVector2Array(-286, -42, -266, -31, -235, -47, -255, -58)
-disabled = true
-
-[node name="Red Door" type="StaticBody2D" parent="." unique_id=1588723354]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Red Door" unique_id=1411153392]
-position = Vector2(492, 246)
-polygon = PackedVector2Array(-286, -42, -266, -31, -235, -47, -255, -58)
-disabled = true
-
-[node name="Blue Door" type="StaticBody2D" parent="." unique_id=1884661771]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Blue Door" unique_id=1564052482]
-position = Vector2(448, 0)
-polygon = PackedVector2Array(-274, -48, -240, -31, -222, -42, -255, -58)
-disabled = true
-
 [node name="BOSS" parent="." unique_id=1925798740 instance=ExtResource("5_3miqx")]
-position = Vector2(369.99997, 46)
+position = Vector2(371, 51.000008)

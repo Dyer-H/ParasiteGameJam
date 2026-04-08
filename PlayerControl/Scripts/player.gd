@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var projectile:PackedScene
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var damage_numbers_origin = $DamageNumbersOrigin

@@ -12,3 +12,9 @@ offset = Vector2(530, 110)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=360137877]
 polygon = PackedVector2Array(-16, 263, 512, 0, 0, -257, -510, 0, 14, 262, -567, 0, 0, -306, 561, 0)
+
+[node name="SW Door" type="StaticBody2D" parent="." unique_id=1553688772]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SW Door" unique_id=1721083433]
+position = Vector2(-201, 68)
+polygon = PackedVector2Array(-53, 60, -39, 51, -68, 36, -84, 45)

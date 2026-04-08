@@ -40,3 +40,8 @@ position = Vector2(-81, -19)
 
 [node name="Baddie3" parent="." unique_id=129130736 instance=ExtResource("3_8bcm0")]
 position = Vector2(58, 131)
+
+[node name="Door" type="StaticBody2D" parent="." unique_id=542893836]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door" unique_id=965088700]
+polygon = PackedVector2Array(-103, 135, -84, 125, -114, 109, -136, 118)
