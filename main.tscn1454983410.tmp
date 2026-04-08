@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cynpmxbl61o7l"]
+
+[ext_resource type="PackedScene" uid="uid://bjdktwxl3yfvk" path="res://Map/Map Scenes/lobby.tscn" id="1_kek77"]
+[ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
+[ext_resource type="Script" uid="uid://bbeyltaxt8hui" path="res://Map/Map Scripts/navigation_manager.gd" id="3_dg77c"]
+[ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
+[ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_dg77c"]
+[ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="5_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://b1r2kx1utvxqm" path="res://HUDLayer/CoinDisplay/Scenes/Coin.tscn" id="6_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bbpxr1xliwipu" path="res://HUDLayer/CoinInput(Testing)/Scenes/CoinInput.tscn" id="7_vivmo"]
+[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://iijwrcfhggor" path="res://HUDLayer/Menu/GUIResources/black_background.jpg" id="8_4c57u"]
+[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="11_efxa6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jrgu"]
+font = ExtResource("4_dg77c")
+font_size = 56
+
+[node name="Main" type="Node2D" unique_id=546777818]
+script = ExtResource("11_dg77c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1803010625]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -710.0
+offset_top = -388.0
+offset_right = 701.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_4c57u")
+
+[node name="Map" type="Node" parent="." unique_id=1394242675]
+script = ExtResource("3_dg77c")
+
+[node name="Lobby" parent="Map" unique_id=1653438255 instance=ExtResource("1_kek77")]
+position = Vector2(1, -4)
+
+[node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
+
+[node name="HP_STAM" type="Control" parent="HUD Layer" unique_id=1913129958]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=829904280]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 340.0
+offset_bottom = 57.0
+script = ExtResource("2_4c57u")
+
+[node name="StaminaBar" type="ProgressBar" parent="HUD Layer/HP_STAM" unique_id=268769180]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 340.0
+offset_bottom = 113.0
+script = ExtResource("3_efxa6")
+
+[node name="HealthLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=871429175]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 78.0
+offset_bottom = 64.0
+text = "HP"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="StaminaLabel" type="Label" parent="HUD Layer/HP_STAM" unique_id=206372054]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 78.0
+offset_bottom = 120.0
+text = "ST"
+label_settings = SubResource("LabelSettings_6jrgu")
+
+[node name="Menu" parent="HUD Layer" unique_id=852909639 instance=ExtResource("5_ycdy4")]
+
+[node name="Coin" parent="HUD Layer" unique_id=1060038100 instance=ExtResource("6_w48qg")]
+
+[node name="CoinInput" parent="HUD Layer" unique_id=574592859 instance=ExtResource("7_vivmo")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1851495139]
+zoom = Vector2(1.5, 1.5)
+
+[node name="doors" type="Node" parent="." unique_id=195938018]
+
+[node name="greendoor" parent="doors" unique_id=1761861975 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
+position = Vector2(-262, -50)
+destination_scene = "uid://ls5rrt878q5b"
+destination_door_tag = "Hall2"
+spawn_direction = "right"
+
+[node name="Spawn" parent="doors/greendoor" index="1" unique_id=2100186104]
+position = Vector2(29, 23)
+
+[node name="Boss" parent="." unique_id=1569971244 groups=["doors", "player"] instance=ExtResource("11_efxa6")]
+position = Vector2(202, -61)
+destination_scene = "uid://cjnemkc6or1nc"
+destination_door_tag = "reddoor"
+
+[node name="Spawn" parent="Boss" index="1" unique_id=2100186104]
+position = Vector2(-39, 29)
+
+[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("8_2cqfq")]
+z_index = 2
+position = Vector2(-232, 158)
+
+[editable path="doors/greendoor"]
+[editable path="Boss"]
