@@ -51,7 +51,7 @@ position = Vector2(-59, 44)
 [node name="Hall1_2" parent="doors" unique_id=540687199 instance=ExtResource("4_r05gu")]
 position = Vector2(-424, 331)
 destination_scene = "uid://sedvhsaucxbw"
-destination_door_tag = "GrD2"
+destination_door_tag = "Gr1D2"
 
 [node name="Spawn" parent="doors/Hall1_2" index="1" unique_id=2100186104]
 position = Vector2(79, -32)
