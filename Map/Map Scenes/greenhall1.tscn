@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://gfhb17nhlgjp"]
 
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_6syq6"]
 [ext_resource type="Texture2D" uid="uid://cim2dn8edd5px" path="res://Map/Map Sprites/greenhall_1.png" id="1_dan2w"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_ubbm0"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_pn2i3"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_r05gu"]
-[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="5_ar615"]
-[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="5_huf3k"]
 
 [node name="greenhall1" type="TileMapLayer" unique_id=985391034]
-script = ExtResource("5_huf3k")
+script = ExtResource("1_6syq6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=395648306]
 texture = ExtResource("1_dan2w")
@@ -17,6 +16,7 @@ texture = ExtResource("1_dan2w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" unique_id=574998770]
 polygon = PackedVector2Array(-387, 364, -459, 328, 501, -152, 564, -120, -409, 367, 588, -121, 502, -173, -492, 332)
+disabled = true
 
 [node name="Baddie" parent="." unique_id=1361659599 instance=ExtResource("2_ubbm0")]
 position = Vector2(-212, 214)
@@ -36,9 +36,6 @@ position = Vector2(188, 16)
 [node name="Baddie5" parent="." unique_id=995011593 instance=ExtResource("2_ubbm0")]
 position = Vector2(226, 34)
 
-[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("5_ar615")]
-position = Vector2(449, -120)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=831163036]
 
 [node name="doors" type="Node" parent="." unique_id=667040364]
@@ -49,7 +46,7 @@ destination_scene = "uid://c2nhmtrxkwwjf"
 destination_door_tag = "Groom2_2"
 
 [node name="Spawn" parent="doors/Hall1" index="1" unique_id=2100186104]
-position = Vector2(-66, 43)
+position = Vector2(-59, 44)
 
 [node name="Hall1_2" parent="doors" unique_id=540687199 instance=ExtResource("4_r05gu")]
 position = Vector2(-424, 331)

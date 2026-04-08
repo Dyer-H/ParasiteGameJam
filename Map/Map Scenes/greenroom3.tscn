@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cn0ene3vqckiv"]
 
+[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="1_sf6oe"]
 [ext_resource type="Texture2D" uid="uid://phs03qk087ra" path="res://Map/Map Sprites/greenroom_3.png" id="1_w4xgt"]
 [ext_resource type="PackedScene" uid="uid://igexxt0tlnf6" path="res://EnemyControl/Scenes/potato.tscn" id="2_etn4a"]
 [ext_resource type="PackedScene" uid="uid://byujiagbkkn7m" path="res://EnemyControl/Scenes/big_baddie.tscn" id="3_q347x"]
 [ext_resource type="PackedScene" uid="uid://cp2wfqdotpuaw" path="res://Map/Map Scenes/door.tscn" id="4_7jn2e"]
-[ext_resource type="PackedScene" uid="uid://bxsg6j2ri1gim" path="res://PlayerControl/Scenes/player.tscn" id="5_tw6ib"]
-[ext_resource type="Script" uid="uid://bnarda21yxdms" path="res://Map/Map Scripts/level.gd" id="6_hn50i"]
 
 [node name="greenroom3" type="TileMapLayer" unique_id=505148876]
-script = ExtResource("6_hn50i")
+script = ExtResource("1_sf6oe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412249993]
 texture = ExtResource("1_w4xgt")
@@ -50,9 +49,6 @@ position = Vector2(1, 162)
 position = Vector2(121, 104)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=142195179]
-
-[node name="Player" parent="." unique_id=1364000813 instance=ExtResource("5_tw6ib")]
-position = Vector2(-49, 20)
 
 [node name="doors" type="Node" parent="." unique_id=1344517953]
 
