@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_mfake")
-bullet_range = 0.34
+bullet_range = 0.16
 name = "Range (lvl 3)"
 price = 100
 description = "Upgrades Range to 0.34"
