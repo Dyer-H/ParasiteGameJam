@@ -19,8 +19,9 @@ func _on_body_entered(body) -> void:
 
 func move_to_scene() -> void:
 	var map = map_node.get_child(0)
-	map.queue_free()
+	map.call_deferred("queue_free")
 	var new_map = load(destination_scene)
 	new_map = new_map.instantiate()
-	map_node.add_child(new_map)
+	map_node.call_deferred("add_child", new_map)
 	new_map.set_player_spawn(destination_door_tag)
+	print(destination_door_tag)
