@@ -61,19 +61,7 @@ destination_door_tag = "Hall1_2_2"
 [node name="Spawn" parent="doors/Groom3" index="1" unique_id=2100186104]
 position = Vector2(51, 27)
 
-[node name="Sceret_door" parent="doors" unique_id=1469553527 instance=ExtResource("4_7jn2e")]
-position = Vector2(229, 55)
-destination_scene = "uid://up827orxlmfe"
-destination_door_tag = "Hall1_3"
-
-[node name="CollisionShape2D" parent="doors/Sceret_door" index="0" unique_id=1591710312]
-position = Vector2(-3, 0)
-
-[node name="Spawn" parent="doors/Sceret_door" index="1" unique_id=2100186104]
-position = Vector2(-81, 10)
-
 [node name="spawner" parent="." unique_id=1301613684 instance=ExtResource("6_af71x")]
 position = Vector2(-4, 32)
 
 [editable path="doors/Groom3"]
-[editable path="doors/Sceret_door"]
