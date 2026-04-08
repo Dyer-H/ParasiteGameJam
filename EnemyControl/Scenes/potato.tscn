@@ -129,6 +129,7 @@ radius = 4.0
 scale = Vector2(2, 2)
 script = ExtResource("1_uq1l3")
 health = 50
+knockback_scalor = 2000
 item_drop = Array[PackedScene]([ExtResource("2_jasr4"), ExtResource("3_a7kam")])
 item_drop_chances = Array[float]([0.7, 0.3])
 

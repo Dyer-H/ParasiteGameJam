@@ -349,6 +349,7 @@ scale = Vector2(0.35, 0.35)
 script = ExtResource("1_tv334")
 health = 70
 dmg = 5
+knockback_scalor = 2000
 item_drop = Array[PackedScene]([ExtResource("2_e3aeq"), ExtResource("3_yglf5")])
 item_drop_chances = Array[float]([0.6, 0.4])
 
