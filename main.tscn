@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsrwjmihwrv5b" path="res://HUDLayer/Health/Scripts/health_bar.gd" id="2_4c57u"]
 [ext_resource type="PackedScene" uid="uid://gfhb17nhlgjp" path="res://Map/Map Scenes/greenhall1.tscn" id="2_efxa6"]
-[ext_resource type="Script" uid="uid://c0wc14imjjth5" path="res://Map/Map Scripts/map_load.gd" id="3_dg77c"]
 [ext_resource type="Script" uid="uid://wsyxfl54vxmk" path="res://HUDLayer/Health/Scripts/stamina_bar.gd" id="3_efxa6"]
 [ext_resource type="FontFile" uid="uid://beaqhvdw4hudx" path="res://HUDLayer/Health/GUIResources/PeaberryBase.ttf" id="4_dg77c"]
 [ext_resource type="PackedScene" uid="uid://b1aniu3pij8en" path="res://HUDLayer/Menu/Scenes/menu.tscn" id="5_ycdy4"]
@@ -19,21 +18,18 @@ font_size = 56
 [node name="Main" type="Node2D" unique_id=546777818]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1803010625]
-anchors_preset = 15
+custom_minimum_size = Vector2(2000, 1500)
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -710.0
-offset_top = -388.0
-offset_right = 701.0
-offset_bottom = 442.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_4c57u")
+expand_mode = 1
 
 [node name="MapNode" type="Node2D" parent="." unique_id=1961329081]
 
 [node name="greenhall1" parent="MapNode" unique_id=985391034 instance=ExtResource("2_efxa6")]
-script = ExtResource("3_dg77c")
 
 [node name="HUD Layer" type="CanvasLayer" parent="." unique_id=203542459]
 
